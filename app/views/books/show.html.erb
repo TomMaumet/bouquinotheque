@@ -1,0 +1,5 @@
+<h1><%= @book.title %></h1>
+<h3><%= @book.author %></h3>
+<%= image_tag @book.image_url, alt: @book.title, class: "book-cover"%>
+<ul><li><%= @book.publishing_year %></li></ul>
+<p><%= @book.summary %></p>
