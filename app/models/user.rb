@@ -9,4 +9,6 @@ class User < ApplicationRecord
   has_many :readings, dependent: :destroy
   validates :nickname, presence: true
   validates :city, presence: true
+
+  
 end
