@@ -1,5 +1,8 @@
 <h1>My playlist</h1>
 
 <div class="container">
+  <% @playlists.each do |playlist| %>
+    <%= playlist.title %>
+    <%= link_to playlist.title, playlist_path(playlist) %>
   <% end %>
 </div>

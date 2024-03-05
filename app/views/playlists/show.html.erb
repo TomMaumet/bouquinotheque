@@ -1,0 +1,13 @@
+<h1><%= @playlist.title %></h1>
+
+<div class="contain">
+  <div class="d-flex flex-wrap">
+    <div class="cards">
+      <% @readings.each do |reading| %>
+        <%= image_tag(reading.book.image_url) %>
+        <p><%= reading.book.title %></p>
+        <p><%= reading.book.author %></p>
+      <% end  %>
+    </div>
+  </div>
+</div>
