@@ -1,7 +1,7 @@
 class PlaylistsController < ApplicationController
 
   def index
+    @playlists = Playlist.last
     raise
-    @playlists = Playlist.all
   end
 end
