@@ -17,12 +17,12 @@ user2 = User.create!(nickname: "Thomas",
   city: "Bordeaux",
   age: 30)
 user3 = User.create!(nickname: "Bastien",
-   email: "bastien@mail.fr",
-   password: 'password',
-   password_confirmation: 'password',
-   avatar: "https://i.imgur.com/Mr2E09v.png",
-   city: "Bayonne",
-   age: 26)
+  email: "bastien@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/Mr2E09v.png",
+  city: "Bayonne",
+  age: 26)
 user4 = User.create!(nickname: "Camille",
   email: "camille@mail.fr",
   password: 'password',
@@ -428,6 +428,10 @@ reading20 = Reading.create!(
 
 puts 'Readings créés'
 
+Review.destroy_all
+
+puts 'Création des reviews'
+
 review1 = Review.create!(
   user: user1,
   book: book1,
@@ -459,3 +463,5 @@ review1 = Review.create!(
   title: "chef d'oeuvre",
   content: "pépite !"
 )
+
+puts 'Reviews créées'
