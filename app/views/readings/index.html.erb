@@ -1,17 +1,25 @@
 <center><h1>Ma bibliothèque</h1></center>
+
 <div class="flex-container">
   <ul style="list-style-type:none;">
     <% @readings.each do |reading| %>
       <li>
-        <div class="flex-item">
-          <%= reading.book.image_url %> <br>
-          <%= reading.book.title %> <br>
-          <%= reading.book.author %> <br>
-          <%= reading.reading_status %> <br>
-          <h3>Prêté à</h3><%= reading.shared_to %>
+        <div class="book-card">
+          <img src=reading.book class="card-image">
+          <div class="card-content">
+              <div>
+                <h4><%= reading.book.title %></h4>
+                <p><%= reading.book.author %></p>
+              </div>
+                <div class="reading-status">
+                  <%= '<div class="reading-status-bar" style="width:50%"></div>' if reading.reading_status == "reading" %>
+                  <%= '<div class="reading-status-bar" style="width:0%"></div>' if reading.reading_status == "unread" %>
+                  <%= '<div class="reading-status-bar" style="width:100%"></div>' if reading.reading_status == "read" %>
+                </div>
+                <i class="fa-solid fa-share"></i>
+                prêté à Paul
         </div>
       </li>
     <% end %>
   </ul>
 </div>
-
