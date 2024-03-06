@@ -1,11 +1,13 @@
 <h1><%= @playlist.title %></h1>
 
-<div class="contain">
+<div class="container">
    <div class="d-flex flex-wrap">
       <% @readings.each do |reading| %>
-        <div class="cards object-fit-fill" style="background: url(<%= reading.book.image_url %>)">
-          <p><%= reading.book.title %></p>
-          <p><%= reading.book.author %></p>
+        <div class="cards-playlist">
+            <%= image_tag(reading.book.image_url, class:"img-thumbnail") %>
+          <div class=" d-flex text-center ">
+            <p><%= reading.book.author %> - <%= reading.book.title %></p>
+          </div>
          </div>
       <% end  %>
   </div>
