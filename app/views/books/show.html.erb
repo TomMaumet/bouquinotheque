@@ -1,5 +1,26 @@
-<h1><%= @book.title %></h1>
-<h3><%= @book.author %></h3>
-<%= image_tag @book.image_url, alt: @book.title, class: "book-cover"%>
-<ul><li><%= @book.publishing_year %></li></ul>
-<p><%= @book.summary %></p>
+<div class="container book-show">
+  <div class="h1">
+    <%= @book.title %>
+    <h4><i class="fa-solid fa-star"></i><%= @book.ratings %></h4>
+  </div>
+  <h3><%= @book.author %></h3>
+  <%= image_tag @book.image_url, alt: @book.title, class: "book-cover"%>
+  <ul>
+    <li>
+      <%= @book.publisher %>, <%= @book.publishing_year %>
+    </li>
+    <li>
+      <%= @book.book_type %>: <%= @book.genre %>
+    </li>
+  </ul>
+  <p data-controller="display-all-summary">
+    <div data-display-all-summary-target="summary"><% @book.summary %></div>
+    <div data-action="click->display-all-summary#display">lire plus</div>
+    <div data-action="click->display-all-summary#display" class="d-none">lire mois</div>
+    Camille: trouve un moyen de mettre un display all pour afficher tout le résumé
+  </p>
+  <center>
+  < %= link_to "Ajouter à ma bibliothèque", book_readings_path, class: "btn btn-danger", data: { turbo_method: :post }% >
+  <%= link_to "Lire les avis des lecteur.ice.s", book_reviews_path(@book), class: "btn btn-danger"%></center>
+
+</div>

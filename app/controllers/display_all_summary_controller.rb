@@ -1,0 +1,2 @@
+class DisplayAllSummaryController < ApplicationController
+end
