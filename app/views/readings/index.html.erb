@@ -1,15 +1,17 @@
 <center><h1>Ma bibliothèque</h1></center>
 <div class="flex-container">
-<ul style="list-style-type:none;">
-  <% @readings.each do |reading| %>
-    <div class="flex-item">
+  <ul style="list-style-type:none;">
+    <% @readings.each do |reading| %>
       <li>
-        <%= reading.book.title %>
-        <%= reading.book.author %>
-        <%= reading.reading_status %>
-        <h3>Prêté à</h3><%= reading.shared_to %>
+        <div class="flex-item">
+          <%= reading.book.image_url %> <br>
+          <%= reading.book.title %> <br>
+          <%= reading.book.author %> <br>
+          <%= reading.reading_status %> <br>
+          <h3>Prêté à</h3><%= reading.shared_to %>
+        </div>
       </li>
-    </div>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
 </div>
+
