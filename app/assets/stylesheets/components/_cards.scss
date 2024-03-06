@@ -1,0 +1,52 @@
+.book-card {
+  display: flex;
+  height: 100px;
+  align-items: center;
+
+  .card-content {
+    padding:10px;
+    background-color: #ffffff;
+    border: 10px #f1f1f1 solid;
+    outline: 1px solid #8B2635;
+    width: 400px;
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: -1px;
+    z-index: 99;
+    align-items: center;
+    gap: 5px;
+    height: 100px
+  }
+
+  h4, p {
+    margin: 0px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-image {
+    z-index: 999;
+    border-radius: 10px 0px 0px 10px;
+    width: 65px;
+    height: 101px;
+    object-fit: cover}
+
+  .reatings {
+
+  }
+
+  .reading-statu {
+    width:100px;
+    background-color:#f1f1f1;
+    margin-top: 5px
+  }
+
+  .reading-status-bar {
+    background-color: green;height: 2px;
+  }
+
+  .book_status{
+
+  }}
