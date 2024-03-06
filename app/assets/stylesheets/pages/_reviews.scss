@@ -1,0 +1,19 @@
+.book-reviews {
+display: flex;
+gap: 10px
+}
+
+.book-review {
+width:50%;
+background-color: white;
+padding: 0px 1rem;
+border-radius: 10px;
+margin-bottom: 1rem;
+
+ h6 {margin: 0px}
+
+ .h5 {display: flex;
+  justify-content: space-between;}
+
+  p {margin-bottom:1rem}
+}
