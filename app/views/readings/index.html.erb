@@ -7,7 +7,7 @@
       <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
       <div class="card-content">
         <div>
-          <h4><%= reading.book.title %></h4>
+          <h1><%= reading.book.title %></h1>
           <p><%= reading.book.author %></p>
           <div class="reading-status">
             <% if reading.reading_status == "unread" %>
