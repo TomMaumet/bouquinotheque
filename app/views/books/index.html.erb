@@ -1,17 +1,18 @@
 <% @books.each do |book| %>
-</br>
-<div class="book-card">
-  <%= image_tag book.image_url, alt: book.title, class: "card-image"%>
-  <div class="card-content">
-    <div>
-      <h4><%= book.title %></h4>
-      <%= book.author %>
-    </div>
-    <div class="ratings">
-      <i class="fa-solid fa-star"></i><%= book.ratings %>
-    </div>
-  </div>
-</div>
-</br>
-
+  </br>
+    <%= link_to book_path(book) do %>
+      <div class="book-card">
+          <%= image_tag book.image_url, alt: book.title, class: "card-image"%>
+          <div class="card-content">
+            <div>
+              <h4><%= book.title %></h4>
+              <%= book.author %>
+            </div>
+            <div class="ratings">
+              <i class="fa-solid fa-star"></i><%= book.ratings %>
+            </div>
+          </div>
+      </div>
+    <% end %>
+  </br>
 <% end %>

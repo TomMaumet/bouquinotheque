@@ -2,7 +2,7 @@ class ReadingsController < ApplicationController
   before_action :set_reading, only: [:show, :update, :destroy]
 
   def index
-    @readings = Reading.all
+    @readings = Reading.where(user: current_user)
   end
 
   def show
