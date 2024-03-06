@@ -15,6 +15,7 @@ class ReadingsController < ApplicationController
 
   def update
     @reading.update(reading_params)
+    redirect_to reading_path(@reading)
   end
 
   # def new
