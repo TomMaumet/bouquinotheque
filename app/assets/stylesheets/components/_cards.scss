@@ -1,3 +1,24 @@
+.cards-playlist{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+  .image-book{
+    img{
+      max-width: 100%;
+    }
+
+  }
+  .text-playlist{
+    min-height: 70px;
+
+  }
+  p{
+    font-size: 1rem;
+
+  }
+}
+
 .book-card {
   display: flex;
   height: 100px;

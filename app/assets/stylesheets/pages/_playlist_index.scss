@@ -1,0 +1,15 @@
+.add-pages{
+  background-color: gray;
+  min-height: 83vh;
+  height: 100%;
+  max-height: 10vh;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+
+  .form{
+    background-color: white;
+    border-radius: 15px;
+
+  }
+}
