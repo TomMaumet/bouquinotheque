@@ -428,6 +428,10 @@ reading20 = Reading.create!(
 
 puts 'Readings créés'
 
+Review.destroy_all
+
+puts 'Création des reviews'
+
 review1 = Review.create!(
   user: user1,
   book: book1,
@@ -459,3 +463,8 @@ review1 = Review.create!(
   title: "chef d'oeuvre",
   content: "pépite !"
 )
+<<<<<<< HEAD
+=======
+
+puts 'Reviews créées'
+>>>>>>> fe8cba65aeb9a1ae0721ab8d51a7c081692a9ef2
