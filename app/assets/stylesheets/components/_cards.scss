@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
+
   .image-book{
     img{
       max-width: 100%;
@@ -21,45 +22,49 @@
 
 .book-card {
   display: flex;
-  height: 100px;
+  height: 125px;
   align-items: center;
+  margin-bottom: 1rem;
 
   .card-content {
     padding:10px;
     background-color: #ffffff;
     border: 10px #f1f1f1 solid;
-    outline: 1px solid #8B2635;
+    outline: 2.5px solid #8B2635;
     width: 400px;
     display: flex;
     border-radius: 0px 10px 10px 0px;
-    margin-left: -1px;
+    margin-left: -2.5px;
     z-index: 99;
     align-items: center;
     gap: 5px;
-    height: 100px
   }
 
-  h4, p {
+  h1, p {
     margin: 0px;
-    width: 200px;
+    width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
+  p { font-size:1.25rem}
+
   .card-image {
     z-index: 999;
     border-radius: 10px 0px 0px 10px;
-    width: 65px;
-    height: 101px;
+    width: 80px;
+    height: 123px;
+    position:relative;
     object-fit: cover}
 
   .reading-status {
     width:100px;
-    background-color:#f1f1f1;
+    background-color:$light-grey;
     margin-top: 5px
   }
 
   .reading-status-bar {
-    background-color: green;height: 2px;
+    background-color: green;
+    height: 5px;
   }}
