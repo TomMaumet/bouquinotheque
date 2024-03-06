@@ -106,7 +106,8 @@ book5 = Book.create!(
   image_url: "https://i.imgur.com/gcxaF5l.jpeg"
 )
 
-book6 = Book.create!(title: "Le Seigneur des anneaux, tome 1 : La fraternité de l'anneau",
+book6 = Book.create!(
+  title: "Le Seigneur des anneaux, tome 1 : La fraternité de l'anneau",
   summary: "Le récit des aventures de Frodo et de ses compagnons, traversant la Terre du Milieu au péril de leur vie pour détruire l'Anneau forgé par Sauron",
   author: "J.R.R Tolkien",
   genre: "fantasy",
@@ -115,9 +116,11 @@ book6 = Book.create!(title: "Le Seigneur des anneaux, tome 1 : La fraternité de
   EAN: "9782075134040",
   book_type: "roman",
   ratings: 4.38,
-  image_url: "https://imgur.com/9I2ySb7")
+  image_url: "https://imgur.com/9I2ySb7"
+)
 
-book7 = Book.create!(title: "La vérité sur l'affaire Harry Quebert",
+book7 = Book.create!(
+  title: "La vérité sur l'affaire Harry Quebert",
   summary: "Marcus Goldman, jeune écrivain à succès, est dans la tourmente: il est incapable d'écrire le nouveau roman qu'il doit remettre à son éditeur d'ici quelques mois.
   Le délai est près d'expirer quand soudain tout bascule pour lui : son ami et ancien professeur d'université, Harry Quebert, l'un des écrivains les plus respectés du pays, est rattrapé par son passé et se retrouve accusé d'avoir assassiné, en 1975, Nola Kellergan, une jeune fille de 15 ans, avec qui il aurait eu une liaison.",
   author: "Joël Dicker",
@@ -127,9 +130,11 @@ book7 = Book.create!(title: "La vérité sur l'affaire Harry Quebert",
   EAN: "9782877068161",
   book_type: "roman",
   ratings: 4.16,
-  image_url: "https://imgur.com/eOEM3KZ")
+  image_url: "https://imgur.com/eOEM3KZ"
+)
 
-book8 = Book.create!(title: "L'insoutenable légèreté de l'être",
+book8 = Book.create!(
+  title: "L'insoutenable légèreté de l'être",
   summary: "Tereza est jalouse. Sa jalousie, domptée le jour, se réveille la nuit, déguisée en rêves qui sont en fait des poèmes sur la mort. Sur son long chemin, la jeune femme est accompagnée car son mari, Tomas, mi don-Juan, mi-Tristan, déchiré entre son amour pour elle et ses tentations libertines insurmontables.
   Le destin de Sabina, une des maîtresses de Tomas, étend le tissus du roman au monde entier. Intelligente, sentimentale, elle quitte Franz, son grand amour genevois, et court après sa liberté, d'Europe en Amérique",
   author: "Milan Kundera",
@@ -139,9 +144,11 @@ book8 = Book.create!(title: "L'insoutenable légèreté de l'être",
   EAN: "9782070381654",
   book_type: "roman",
   ratings: 4.14,
-  image_url: "https://imgur.com/7SwaMMf")
+  image_url: "https://imgur.com/7SwaMMf"
+)
 
-book9 = Book.create!(title: "Moby Dick",
+book9 = Book.create!(
+  title: "Moby Dick",
   summary: "Moby Dick, c’est la monstrueuse baleine blanche, l’incarnation du Mal, cette figure de l’obsession et du double qui, des profondeurs glacées, accompagne le capitaine Achab habitué en surface aux combats titanesques des océans. Moby Dick est ce chef-d’œuvre total que tout le monde peut lire comme le plus formidable des romans d’aventures ; la quête aussi d’une humanité embarquée de force à bord d’une histoire qui reste pour elle un mystère…",
   author: "Hermann Melville",
   genre: "aventure",
@@ -150,9 +157,11 @@ book9 = Book.create!(title: "Moby Dick",
   EAN: "9782080705464",
   book_type: "roman",
   ratings: 4.38,
-  image_url: "https://imgur.com/AHFjmGb")
+  image_url: "https://imgur.com/AHFjmGb"
+)
 
-book10 = Book.create!(title: "Les yeux jaunes des crocodiles",
+book10 = Book.create!(
+  title: "Les yeux jaunes des crocodiles",
   summary: "Ce roman se passe à Paris. Et pourtant on y croise des crocodiles.
   Ce roman parle des hommes. Et des femmes. Celles que nous sommes, celles que nous voudrions être, celles que nous ne serons jamais, celles que nous deviendrons peut-être.
   Ce roman est l'histoire d'un mensonge. Mais aussi une histoire d'amours, d'amitiés, de trahisons, d'argent, de rêves.
@@ -164,4 +173,289 @@ book10 = Book.create!(title: "Les yeux jaunes des crocodiles",
   EAN: "9782253121206",
   book_type: "roman",
   ratings: 3.66,
-  image_url: "https://imgur.com/xdpKREB")
+  image_url: "https://imgur.com/xdpKREB"
+)
+
+book11 = Book.create!(
+  title: "Chanson douce",
+  summary: "Lorsque Myriam, mère de deux jeunes enfants, décide malgré les réticences de son mari de reprendre son activité au sein d'un cabinet d'avocats, le couple se met à la recherche d'une nounou. Après un casting sévère, ils engagent Louise, qui conquiert très vite l'affection des enfants et occupe progressivement une place centrale dans le foyer. Peu à peu le piège de la dépendance mutuelle va se refermer, jusqu'au drame.
+  À travers la description précise du jeune couple et celle du personnage fascinant et mystérieux de la nounou, c'est notre époque qui se révèle, avec sa conception de l'amour et de l'éducation, des rapports de domination et d'argent, des préjugés de classe ou de culture.
+  Le style sec et tranchant de Leïla Slimani, où percent des éclats de poésie ténébreuse, instaure dès les premières pages un suspense envoûtant.",
+  author: "Leïla Slimani",
+  genre: "thriller",
+  publisher: "Gallimard",
+  publishing_year: 2016,
+  EAN: "9782072764929",
+  book_type: "roman",
+  ratings: 3.93,
+  image_url: "https://i.imgur.com/Tmkfv7p.jpeg"
+)
+
+book12 = Book.create!(
+  title: "La somme de nos vies",
+  summary: "Camille, jeune fleuriste qui rêve sa vie, visite des appartements qu'elle n'a aucune intention d'acheter.
+  Marguerite, quatre-vingt-sept ans, met en vente son appartement qu'elle s'est pourtant juré de ne jamais quitter.
+  Derrière leurs fenêtres qui se font face, dans cette rue parisienne, la vie de l'une n'apparaît à l'autre qu'en reflet. Les mensonges de Camille à son entourage et les secrets de Marguerite enfouis soigneusement depuis l'enfance se croisent et se répondent.
+  Comment prendre sa vie à bras-le-corps quand on a décidé d'en vivre une autre ?",
+  author: "Sophie Astrabie",
+  genre: "contemporain",
+  publisher: "Flammarion",
+  publishing_year: 2020,
+  EAN: "9782290252437",
+  book_type: "roman",
+  ratings: 4.07,
+  image_url: "https://i.imgur.com/nhpv5LI.jpeg"
+)
+
+book13 = Book.create!(
+  title: "Hernani",
+  summary: "Bien que soit voué à la vengeance, bien qu'elle soit promise au duc Gomez, Hernani et dona Sol s'aiment. L'intensité de cette passion déchire le cœur du héros. Parce que le père du roi a tué le sien, il se doit d'exécuter son fils ; toutefois, son cœur lui souffle de vivre. Unis et désunis par une femme, les trois hommes doivent choisir entre l'honneur et l'amour. Leur grandeur causera leur chute. Avec ses personnages excessifs, ses multiples intrigues, son mélange de rire et de larmes, Hernani est l'acte de naissance du théâtre romantique.",
+  author: "Victor Hugo",
+  genre: "drame",
+  publisher: "Mame, Delaunay et Furne",
+  publishing_year: 1830,
+  EAN: "9782080709684",
+  book_type: "pièce de théâtre",
+  ratings: 3.53,
+  image_url: "https://i.imgur.com/2AYS7l1.jpeg"
+)
+
+book14 = Book.create!(
+  title: "En attendant Bojangles",
+  summary: "Sous le regard émerveillé de leur fils, ils dansent sur «Mr. Bojangles» de Nina Simone. Leur amour est magique, vertigineux, une fête perpétuelle. Chez eux, il n’y a de place que pour le plaisir, la fantaisie et les amis.
+  Celle qui donne le ton, qui mène le bal, c’est la mère, feu follet imprévisible et extravagant. C’est elle qui a adopté le quatrième membre de la famille, Mlle Superfétatoire, un grand oiseau exotique qui déambule dans l’appartement. C’est elle qui n’a de cesse de les entraîner dans un tourbillon de poésie et de chimères.
+  Un jour, pourtant, elle va trop loin. Et père et fils feront tout pour éviter l’inéluctable, pour que la fête continue, coûte que coûte.
+  L’amour fou n’a jamais si bien porté son nom.",
+  author: "Olivier Bourdeaut",
+  genre: "drame",
+  publisher: "Finitude",
+  publishing_year: 2016,
+  EAN: "9782070782369",
+  book_type: "roman",
+  ratings: 4.12,
+  image_url: "https://i.imgur.com/WaIuTTw.jpeg"
+)
+
+book15 = Book.create!(
+  title: "Goupil ou face",
+  summary: "Certains ont un chien, un chat ou un poisson rouge. Lou a une cyclothymie : un trouble de l’humeur de la famille des maladies bipolaires.
+  Que faire quand on découvre un petit renard sauvage dans son cerveau ? Peut-on l’apprivoiser, le dompter ? Et comment être heureux quand on doit cohabiter avec une créature si imprévisible ?
+  Un ouvrage de vulgarisation scientifique qui se nourrit de l’expérience personnelle de l’auteur pour dresser le portrait plein d’humour et de sensibilité d’un trouble psychiatrique encore largement méconnu.",
+  author: "Lou Lubie",
+  genre: "autobiographie",
+  publisher: "Vraoum",
+  publishing_year: 2016,
+  EAN: "9782413041511",
+  book_type: "bande dessinée",
+  ratings: 4.47,
+  image_url: "https://i.imgur.com/LtLmRRY.jpeg"
+)
+
+book16 = Book.create!(
+  title: "Lou !, tome 1 : Journal infime",
+  summary: "Sous le regard émerveillé de leur fils, ils dansent sur «Mr. Bojangles» de Nina Simone. Leur amour est magique, vertigineux, une fête perpétuelle. Chez eux, il n’y a de place que pour le plaisir, la fantaisie et les amis.
+  Celle qui donne le ton, qui mène le bal, c’est la mère, feu follet imprévisible et extravagant. C’est elle qui a adopté le quatrième membre de la famille, Mlle Superfétatoire, un grand oiseau exotique qui déambule dans l’appartement. C’est elle qui n’a de cesse de les entraîner dans un tourbillon de poésie et de chimères.
+  Un jour, pourtant, elle va trop loin. Et père et fils feront tout pour éviter l’inéluctable, pour que la fête continue, coûte que coûte.
+  L’amour fou n’a jamais si bien porté son nom.",
+  author: "Julien Neel",
+  genre: "jeunesse",
+  publisher: "Glénat",
+  publishing_year: 2004,
+  EAN: "9782723442756",
+  book_type: "bande dessinée",
+  ratings: 4.25,
+  image_url: "https://i.imgur.com/WeoluBq.jpeg"
+)
+
+book17 = Book.create!(
+  title: "Gaël Faye",
+  summary: "En 1992, Gabriel, dix ans, vit au Burundi avec son père français, entrepreneur, sa mère rwandaise et sa petite sœur, Ana, dans un confortable quartier d’expatriés. Gabriel passe le plus clair de son temps avec ses copains, une joyeuse bande occupée à faire les quatre cents coups. Un quotidien paisible, une enfance douce qui vont se disloquer en même temps que ce « petit pays » d’Afrique brutalement malmené par l’Histoire.
+  Gabriel voit avec inquiétude ses parents se séparer, puis la guerre civile se profiler, suivie du drame rwandais. Le quartier est bouleversé. Par vagues successives, la violence l’envahit, l’imprègne, et tout bascule. Gabriel se croyait un enfant, il va se découvrir métis, Tutsi, Français…",
+  author: "Gaël Faye",
+  genre: "autobiographie",
+  publisher: "Grasset",
+  publishing_year: 2016,
+  EAN: "9782246857334",
+  book_type: "roman",
+  ratings: 4.29,
+  image_url: "https://i.imgur.com/0M8n2EQ.jpeg"
+)
+
+book18 = Book.create!(
+  title: "Dans la solitude des champs de coton",
+  summary: "« Si un chien rencontre un chat – par hasard, ou tout simplement par probabilité, parce qu'il y a tant de chiens et de chats sur un même territoire qu'ils ne peuvent pas, à la fin, ne pas se croiser ; si deux hommes, deux espèces contraires, sans histoire commune, sans langage familier, se trouvent par fatalité face à face – non pas dans la foule ni en pleine lumière, car la foule et la lumière dissimulent les visages et les natures, mais sur un terrain neutre et désert, plat, silencieux, où l'on se voit de loin, où l'on s'entend marcher, un lieu qui interdit l'indifférence, ou le détour, ou la fuite ; lorsqu'ils s'arrêtent l'un en face de l'autre, il n'existe rien d'autre entre eux que de l'hostilité – qui n'est pas un sentiment, mais un acte, un acte d'ennemis, un acte de guerre sans motif. »",
+  author: "Bernard-Marie Koltès",
+  genre: "contemporain",
+  publisher: "éditions de Minuit",
+  publishing_year: 1986,
+  EAN: "9782707311030",
+  book_type: "pièce de théâtre",
+  ratings: 3.86,
+  image_url: "https://i.imgur.com/1FRuJ6D.jpeg"
+)
+
+book19 = Book.create!(
+  title: "En finir avec Eddy Bellegueule",
+  summary: "« Je suis parti en courant, tout à coup. Juste le temps d'entendre ma mère dire Qu'est-ce qui fait le débile là? Je ne voulais pas rester à leur côté, je refusais de partager ce moment avec eux. J'étais déjà loin, je n'appartenais plus à leur monde désormais, la lettre le disait.»",
+  author: "Édouard Louis",
+  genre: "contemporain",
+  publisher: "Éditions du Seuil",
+  publishing_year: 2014,
+  EAN: "9782021117707",
+  book_type: "pièce de théâtre",
+  ratings: 3.72,
+  image_url: "https://i.imgur.com/DwL3RQe.jpeg"
+)
+
+book20 = Book.create!(
+  title: "Astérix, tome 40 : L'Iris Blanc",
+  summary: "L’Iris Blanc est le nom d’une nouvelle école de pensée positive, venue de Rome qui commence à se propager dans les grandes villes, de Rome à Lutèce. César décide que cette méthode peut avoir un effet bénéfique sur les camps qui se trouvent autour du célèbre village gaulois. Mais les préceptes de cette école exercent aussi une influence sur les villageois qui croisent son chemin…
+  Qu’est-il arrivé à notre chef Gaulois préféré et pourquoi cette mine renfrognée ?",
+  author: "René Goscinny, Didier Conrad, Albert Uderzo, Fabcaro",
+  genre: "jeunesse",
+  publisher: "Les Éditions Albert René",
+  publishing_year: 2023,
+  EAN: "9782014001334",
+  book_type: "bande dessinée",
+  ratings: 3.82,
+  image_url: "https://i.imgur.com/Jxfuvu4.png"
+)
+
+puts 'Livres créés'
+
+Reading.destroy_all
+
+puts "Création des readings"
+
+reading1 = Reading.create!(
+  user: user1,
+  book: book1
+)
+
+reading2 = Reading.create!(
+  user: user1,
+  book: book2
+)
+
+reading3 = Reading.create!(
+  user: user1,
+  book: book3
+)
+
+reading4 = Reading.create!(
+  user: user1,
+  book: book4
+)
+reading5 = Reading.create!(
+  user: user1,
+  book: book5
+)
+
+reading6 = Reading.create!(
+  user: user2,
+  book: book6
+)
+
+reading7 = Reading.create!(
+  user: user2,
+  book: book7
+)
+
+reading8 = Reading.create!(
+  user: user2,
+  book: book8
+)
+
+reading9 = Reading.create!(
+  user: user2,
+  book: book9
+)
+
+reading10 = Reading.create!(
+  user: user2,
+  book: book10
+)
+
+reading11 = Reading.create!(
+  user: user3,
+  book: book11
+)
+
+reading12 = Reading.create!(
+  user: user3,
+  book: book12
+)
+
+reading13 = Reading.create!(
+  user: user3,
+  book: book13
+)
+
+reading14 = Reading.create!(
+  user: user3,
+  book: book14
+)
+
+reading15 = Reading.create!(
+  user: user3,
+  book: book15
+)
+
+reading16 = Reading.create!(
+  user: user4,
+  book: book16
+)
+
+reading17 = Reading.create!(
+  user: user4,
+  book: book17
+)
+
+reading18 = Reading.create!(
+  user: user4,
+  book: book18
+)
+
+reading19 = Reading.create!(
+  user: user4,
+  book: book19
+)
+
+reading20 = Reading.create!(
+  user: user4,
+  book: book20
+)
+
+puts 'Readings créés'
+
+review1 = Review.create!(
+  user: user1,
+  book: book1,
+  rating: 3,
+  title: "super",
+  content: "j'ai adoré"
+)
+
+review1 = Review.create!(
+  user: user2,
+  book: book1,
+  rating: 4,
+  title: "génial",
+  content: "j'ai vraiment adoré"
+)
+
+review1 = Review.create!(
+  user: user3,
+  book: book1,
+  rating: 2,
+  title: "nul",
+  content: "je n'ai pas adoré"
+)
+
+review1 = Review.create!(
+  user: user4,
+  book: book1,
+  rating: 5,
+  title: "chef d'oeuvre",
+  content: "pépite !"
+)
