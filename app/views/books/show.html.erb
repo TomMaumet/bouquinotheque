@@ -1,28 +1,44 @@
 <div class="container book-show">
-  <div class="h1">
-    <%= @book.title %>
-    <h4><i class="fa-solid fa-star"></i><%= @book.ratings %></h4>
-  </div>
-  <h3><%= @book.author %></h3>
-  <%= image_tag @book.image_url, alt: @book.title, class: "book-cover"%>
-  <ul>
-    <li>
-      <%= @book.publisher %>, <%= @book.publishing_year %>
-    </li>
-    <li>
-      <%= @book.book_type %>: <%= @book.genre %>
-    </li>
-  </ul>
-  <div data-controller="display-all-summary">
-    <p data-display-all-summary-target="summary"><%= @book.summary.truncate(200, separator: ' ') %> <a data-display-all-summary-target="show" data-action="click->display-all-summary#display" >lire plus</a></p>
-    <p data-display-all-summary-target="summary_all" class="d-none"><%= @book.summary %> <a data-display-all-summary-target="hide" data-action="click->display-all-summary#display">lire mois</a></p>
-  </div>
-  <center>
-  < %= link_to "Ajouter à ma bibliothèque", book_readings_path, class: "btn btn-danger", data: { turbo_method: :post }% >
-  <%= link_to "Lire les avis des lecteur.ice.s", book_reviews_path(@book), class: "btn btn-danger"%>
-
-  
-
-  <%= link_to "Lire les avis des lecteur.ice.s", book_reviews_path(@book), class: "btn btn-danger"%></center>
-
+	<div class="h1">
+		<%= @book.title %>
+		<h4><%= @book.ratings %><i class="fa-solid fa-star"></i></h4>
+	</div>
+	<h3><%= @book.author %></h3>
+	<div class="white-background"><%= image_tag @book.image_url, alt: @book.title, class: "book-cover"%>
+	<ul>
+		<li><i class="fa-solid fa-bookmark"></i><%= @book.publisher %>, <%= @book.publishing_year %></li>
+		<li><i class="fa-solid fa-bookmark"></i><%= @book.book_type.capitalize %>: <%= @book.genre %></li>
+	</ul>
+	<div data-controller="display-all-summary" class="summary">
+		<p data-display-all-summary-target="summary">
+			<%= @book.summary.truncate(200, separator: ' ') %>
+			<a data-display-all-summary-target="show" data-action="click->display-all-summary#display" >lire plus</a>
+		</p>
+		<p data-display-all-summary-target="summary_all" class="d-none">
+			<%= @book.summary %>
+			<a data-display-all-summary-target="hide" data-action="click->display-all-summary#display">lire mois</a>
+		</p>
+	</div></div>
+	<center>
+		< %= link_to "Ajouter à ma bibliothèque", book_readings_path, class: "btn btn-danger", data: { turbo_method: :post }% >
+		<%= link_to "Ajouter à ma liste de souhaits", book_reviews_path(@book), class: "btn btn-danger"%>
+		<h3>Avis des lecteur.ice.s</h3>
+		<div class="book-reviews">
+			<% @book.reviews[0,2].each do |review| %>
+			<div class="book-review">
+				<div class="h5">
+					<%= review.title %>
+					<h6>
+						<%= review.rating %>
+						/5
+					</h6>
+				</div>
+				<p>
+					<%= review.content %>
+				</p>
+			</div>
+			<% end %>
+		</div>
+		<%= link_to "Lire davantage d'avis", book_reviews_path(@book), class: "btn btn-danger"%>
+	</center>
 </div>
