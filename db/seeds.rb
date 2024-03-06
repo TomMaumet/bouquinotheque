@@ -329,101 +329,101 @@ puts "Création des readings"
 
 reading1 = Reading.create!(
   user: user1,
-  book: book1;
+  book: book1
 )
 
 reading2 = Reading.create!(
   user: user1,
-  book: book2;
+  book: book2
 )
 
 reading3 = Reading.create!(
   user: user1,
-  book: book3;
+  book: book3
 )
 
 reading4 = Reading.create!(
   user: user1,
-  book: book4;
+  book: book4
 )
 reading5 = Reading.create!(
   user: user1,
-  book: book5;
+  book: book5
 )
 
 reading6 = Reading.create!(
   user: user2,
-  book: book6;
+  book: book6
 )
 
 reading7 = Reading.create!(
   user: user2,
-  book: book7;
+  book: book7
 )
 
 reading8 = Reading.create!(
   user: user2,
-  book: book8;
+  book: book8
 )
 
 reading9 = Reading.create!(
   user: user2,
-  book: book9;
+  book: book9
 )
 
 reading10 = Reading.create!(
   user: user2,
-  book: book10;
+  book: book10
 )
 
 reading11 = Reading.create!(
   user: user3,
-  book: book11;
+  book: book11
 )
 
 reading12 = Reading.create!(
   user: user3,
-  book: book12;
+  book: book12
 )
 
 reading13 = Reading.create!(
   user: user3,
-  book: book13;
+  book: book13
 )
 
 reading14 = Reading.create!(
   user: user3,
-  book: book14;
+  book: book14
 )
 
 reading15 = Reading.create!(
   user: user3,
-  book: book15;
+  book: book15
 )
 
 reading16 = Reading.create!(
   user: user4,
-  book: book16;
+  book: book16
 )
 
 reading17 = Reading.create!(
   user: user4,
-  book: book17;
+  book: book17
 )
 
 reading18 = Reading.create!(
   user: user4,
-  book: book18;
+  book: book18
 )
 
 reading19 = Reading.create!(
   user: user4,
-  book: book19;
+  book: book19
 )
 
 reading20 = Reading.create!(
   user: user4,
-  book: book20;
+  book: book20
 )
 
 puts 'Readings créés'
