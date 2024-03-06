@@ -2,15 +2,15 @@
   <h1>Mes Favoris</h1>
 </div>
 
-<div class="container" data-controller='add-playlist'>
+<div class="container container-playlist" data-controller='add-playlist'>
   <div class="button-add btn btn-danger" data-action="click->add-playlist#open_pages">Ajouter une playlist</div>
     <div class=" add-pages container d-none" data-add-playlist-target="button" >
     <div class="row justify-content-center">
-      <div class="col-6 p-2">
+      <div class="form col-6 p-2">
         <h2>Donnez un nom à votre liste de favoris</h2>
         <%= simple_form_for @playlist_new do |f| %>
           <%= f.input :title %>
-          <%= f.button :submit , input_html: { class: "btn btn-danger" } %>
+          <%= f.button :submit , class: "btn btn-danger" %>
         <% end %>
       </div>
     </div>

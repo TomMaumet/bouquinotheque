@@ -1,4 +1,5 @@
 class PlaylistsController < ApplicationController
+  before_action :set_user, only: [:create]
 
   def index
     @playlists = Playlist.all
@@ -11,13 +12,22 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-    @playlist_new = Playlit.new(set_playlist)
-    raise
+    @playlist_new = Playlist.new(params_playlist)
+    @playlist_new.user_id = @user.id
+    if @playlist_new.save
+      redirect_to playlist_path(@playlist_new)
+    else
+      render playlists_path, status: :unprocessable_entity
+    end
   end
 
   private
 
-  def set_playlist
+  def params_playlist
     params.require(:playlist).permit(:title)
+  end
+
+  def set_user
+    @user = current_user
   end
 end
