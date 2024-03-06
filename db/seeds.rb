@@ -463,5 +463,4 @@ review1 = Review.create!(
   title: "chef d'oeuvre",
   content: "pépite !"
 )
-
 puts 'Reviews créées'

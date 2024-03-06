@@ -14,22 +14,4 @@
 </div>
 </br>
 
-<div class="book-card">
-  <img src="https://www.livredepoche.com/sites/default/files/images/livres/couv/9782253096337-001-T.jpeg" class="card-image">
-  <div class="card-content">
-    <div>
-      <h4>Les Misérables</h4>
-      <p>Victor Hugo</p>
-      <div class="reading_status_bar">
-        <%= '<div class="reading_status_bar" style="width:50%"></div>' if reading.status == "reading" %>
-        <%= '<div class="reading_status_bar" style="width:0%"></div>' if reading.status == "unread" %>
-        <%= '<div class="reading_status_bar" style="width:100%"></div>' if reading.status == "read" %>
-      </div>
-    </div>
-    <div class="book_status">
-      <i class="fa-solid fa-share"></i>
-        prêté à Paul
-    </div>
-  </div>
-</div>
 <% end %>
