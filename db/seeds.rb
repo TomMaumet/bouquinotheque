@@ -427,3 +427,35 @@ reading20 = Reading.create!(
 )
 
 puts 'Readings créés'
+
+review1 = Review.create!(
+  user: user1,
+  book: book1,
+  rating: 3,
+  title: "super",
+  content: "j'ai adoré"
+)
+
+review1 = Review.create!(
+  user: user2,
+  book: book1,
+  rating: 4,
+  title: "génial",
+  content: "j'ai vraiment adoré"
+)
+
+review1 = Review.create!(
+  user: user3,
+  book: book1,
+  rating: 2,
+  title: "nul",
+  content: "je n'ai pas adoré"
+)
+
+review1 = Review.create!(
+  user: user4,
+  book: book1,
+  rating: 5,
+  title: "chef d'oeuvre",
+  content: "pépite !"
+)

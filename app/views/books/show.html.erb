@@ -19,6 +19,10 @@
   </div>
   <center>
   < %= link_to "Ajouter à ma bibliothèque", book_readings_path, class: "btn btn-danger", data: { turbo_method: :post }% >
+  <%= link_to "Lire les avis des lecteur.ice.s", book_reviews_path(@book), class: "btn btn-danger"%>
+
+  
+
   <%= link_to "Lire les avis des lecteur.ice.s", book_reviews_path(@book), class: "btn btn-danger"%></center>
 
 </div>
