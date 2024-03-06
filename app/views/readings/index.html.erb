@@ -2,27 +2,29 @@
 <div class="flex-container">
 <ul style="list-style-type:none;">
   <% @readings.each do |reading| %>
-  <div class="book-card">
-  <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
-  <div class="card-content">
-    <div>
-      <h4><%= reading.book.title %></h4>
-      <p><%= reading.book.author %></p>
-      <div class="reading-status">
-        <% if reading.reading_status == "unread" %>
-          <div class="reading-status-bar" style="width:0%"></div>
-        <% elsif reading.reading_status == "reading" %>
-          <div class="reading-status-bar" style="width:50%"></div>
-        <% elsif reading.reading_status == "read" %>
-          <div class="reading-status-bar" style="width:100%"></div>
+    <%= link_to reading_path(reading) do %>
+      <div class="book-card">
+      <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
+      <div class="card-content">
+        <div>
+          <h4><%= reading.book.title %></h4>
+          <p><%= reading.book.author %></p>
+          <div class="reading-status">
+            <% if reading.reading_status == "unread" %>
+              <div class="reading-status-bar" style="width:0%"></div>
+            <% elsif reading.reading_status == "reading" %>
+              <div class="reading-status-bar" style="width:50%"></div>
+            <% elsif reading.reading_status == "read" %>
+              <div class="reading-status-bar" style="width:100%"></div>
+            <% end %>
+          </div>
+          </div>
+          <% if reading.shared_to %>
+        <div class="book_status">
+          <i class="fa-solid fa-share"></i>
+            prêté <%= reading.shared_to %>
+        </div>
         <% end %>
-      </div>
-      </div>
-      <% if reading.shared_to %>
-    <div class="book_status">
-      <i class="fa-solid fa-share"></i>
-        prêté <%= reading.shared_to %>
-    </div>
     <% end %>
   </div>
 </div>
