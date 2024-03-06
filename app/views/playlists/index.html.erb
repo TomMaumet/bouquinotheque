@@ -1,15 +1,8 @@
 <div class="text-center">
   <h1>Mes Favoris</h1>
 </div>
-
-<div class="container">
-  <% @playlists.each do |playlist| %>
-    <div>
-      <h3><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h3>
-    </div>
-  <% end %>
     <div class="button-add btn btn-danger"></div>
-    <div class=" add-pages container">
+    <div class=" add-pages container d-none">
       <div class="row justify-content-center h-75">
         <div class="col-6 p-2">
           <h2>Donnez un nom à votre liste de favoris</h2>
@@ -19,4 +12,11 @@
         </div>
       </div>
     </div>
+
+<div class="container">
+  <% @playlists.each do |playlist| %>
+    <div>
+      <h3><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h3>
+    </div>
+  <% end %>
 </div>
