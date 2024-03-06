@@ -281,6 +281,46 @@ book17 = Book.create!(
   image_url: "https://i.imgur.com/0M8n2EQ.jpeg"
 )
 
+book18 = Book.create!(
+  title: "Dans la solitude des champs de coton",
+  summary: "« Si un chien rencontre un chat – par hasard, ou tout simplement par probabilité, parce qu'il y a tant de chiens et de chats sur un même territoire qu'ils ne peuvent pas, à la fin, ne pas se croiser ; si deux hommes, deux espèces contraires, sans histoire commune, sans langage familier, se trouvent par fatalité face à face – non pas dans la foule ni en pleine lumière, car la foule et la lumière dissimulent les visages et les natures, mais sur un terrain neutre et désert, plat, silencieux, où l'on se voit de loin, où l'on s'entend marcher, un lieu qui interdit l'indifférence, ou le détour, ou la fuite ; lorsqu'ils s'arrêtent l'un en face de l'autre, il n'existe rien d'autre entre eux que de l'hostilité – qui n'est pas un sentiment, mais un acte, un acte d'ennemis, un acte de guerre sans motif. »",
+  author: "Bernard-Marie Koltès",
+  genre: "contemporain",
+  publisher: "éditions de Minuit",
+  publishing_year: 1986,
+  EAN: "9782707311030",
+  book_type: "pièce de théâtre",
+  ratings: 3.86,
+  image_url: "https://i.imgur.com/1FRuJ6D.jpeg"
+)
+
+book19 = Book.create!(
+  title: "En finir avec Eddy Bellegueule",
+  summary: "« Je suis parti en courant, tout à coup. Juste le temps d'entendre ma mère dire Qu'est-ce qui fait le débile là? Je ne voulais pas rester à leur côté, je refusais de partager ce moment avec eux. J'étais déjà loin, je n'appartenais plus à leur monde désormais, la lettre le disait.»",
+  author: "Édouard Louis",
+  genre: "contemporain",
+  publisher: "Éditions du Seuil",
+  publishing_year: 2014,
+  EAN: "9782021117707",
+  book_type: "pièce de théâtre",
+  ratings: 3.72,
+  image_url: "https://i.imgur.com/DwL3RQe.jpeg"
+)
+
+book20 = Book.create!(
+  title: "Astérix, tome 40 : L'Iris Blanc",
+  summary: "L’Iris Blanc est le nom d’une nouvelle école de pensée positive, venue de Rome qui commence à se propager dans les grandes villes, de Rome à Lutèce. César décide que cette méthode peut avoir un effet bénéfique sur les camps qui se trouvent autour du célèbre village gaulois. Mais les préceptes de cette école exercent aussi une influence sur les villageois qui croisent son chemin…
+  Qu’est-il arrivé à notre chef Gaulois préféré et pourquoi cette mine renfrognée ?",
+  author: "René Goscinny, Didier Conrad, Albert Uderzo, Fabcaro",
+  genre: "jeunesse",
+  publisher: "Les Éditions Albert René",
+  publishing_year: 2023,
+  EAN: "9782014001334",
+  book_type: "bande dessinée",
+  ratings: 3.82,
+  image_url: "https://i.imgur.com/Jxfuvu4.png"
+)
+
 puts 'Livres créés'
 
 Reading.destroy_all
@@ -298,33 +338,92 @@ reading2 = Reading.create!(
 )
 
 reading3 = Reading.create!(
-  user: user2,
+  user: user1,
   book: book3;
 )
 
 reading4 = Reading.create!(
-  user: user2,
+  user: user1,
   book: book4;
 )
-
 reading5 = Reading.create!(
-  user: user3,
+  user: user1,
   book: book5;
 )
 
 reading6 = Reading.create!(
-  user: user3,
+  user: user2,
   book: book6;
 )
 
 reading7 = Reading.create!(
-  user: user4,
+  user: user2,
   book: book7;
 )
 
 reading8 = Reading.create!(
-  user: user4,
+  user: user2,
   book: book8;
+)
+
+reading9 = Reading.create!(
+  user: user2,
+  book: book9;
+)
+
+reading10 = Reading.create!(
+  user: user2,
+  book: book10;
+)
+
+reading11 = Reading.create!(
+  user: user3,
+  book: book11;
+)
+
+reading12 = Reading.create!(
+  user: user3,
+  book: book12;
+)
+
+reading13 = Reading.create!(
+  user: user3,
+  book: book13;
+)
+
+reading14 = Reading.create!(
+  user: user3,
+  book: book14;
+)
+
+reading15 = Reading.create!(
+  user: user3,
+  book: book15;
+)
+
+reading16 = Reading.create!(
+  user: user4,
+  book: book16;
+)
+
+reading17 = Reading.create!(
+  user: user4,
+  book: book17;
+)
+
+reading18 = Reading.create!(
+  user: user4,
+  book: book18;
+)
+
+reading19 = Reading.create!(
+  user: user4,
+  book: book19;
+)
+
+reading20 = Reading.create!(
+  user: user4,
+  book: book20;
 )
 
 puts 'Readings créés'
