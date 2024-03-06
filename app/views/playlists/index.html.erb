@@ -1,8 +1,22 @@
-<h1>My playlist</h1>
+<div class="text-center">
+  <h1>Mes Favoris</h1>
+</div>
 
 <div class="container">
   <% @playlists.each do |playlist| %>
-    <%= playlist.title %>
-    <%= link_to playlist.title, playlist_path(playlist) %>
+    <div>
+      <h3><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h3>
+    </div>
   <% end %>
+    <div class="button-add btn btn-danger"></div>
+    <div class=" add-pages container">
+      <div class="row justify-content-center h-75">
+        <div class="col-6 p-2">
+          <h2>Donnez un nom à votre liste de favoris</h2>
+          <%= simple_form_for @playlist_new do |f| %>
+            <%= f.input :title %>
+          <% end %>
+        </div>
+      </div>
+    </div>
 </div>
