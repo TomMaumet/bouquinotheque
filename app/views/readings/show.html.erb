@@ -1,0 +1,52 @@
+<div class="container book-show">
+	<div class="h1">
+		<%= @reading.book.title %>
+		<% if @reading.my_rating %>
+		<h4><%= @reading.my_rating %><i class="fa-solid fa-star"></i></h4>
+		<% end %>
+	</div>
+	<h3><%= @reading.book.author %></h3>
+	<div class="reading-status">
+		<% if @reading.reading_status == "unread" %>
+		<div class="reading-status-bloc">
+			<div class="reading-status-bar" style="width:0%"></div>
+		</div>
+		  non lu
+		<% elsif @reading.reading_status == "reading" %>
+		<div class="reading-status-bloc">
+			<div class="reading-status-bar" style="width:50%"></div>
+		</div>
+		  en cours
+		<% elsif @reading.reading_status == "read" %>
+		<div class="reading-status-bloc">
+			<div class="reading-status-bar" style="width:100%"></div>
+		</div>
+		  lu
+		<% end %>
+	</div>
+	<div class="white-background">
+		<%= image_tag @reading.book.image_url, alt: @reading.book.title, class: "book-cover"%>
+		<ul>
+			<li><i class="fa-solid fa-bookmark"></i><%= @reading.book.publisher %>, <%= @reading.book.publishing_year %></li>
+			<li><i class="fa-solid fa-bookmark"></i><%= @reading.book.book_type.capitalize %>: <%= @reading.book.genre %></li>
+		</ul>
+		<div data-controller="display-all">
+			<% if @reading.comment %>
+			<p>
+				Commentaire personnel:
+				<%= @reading.comment %>
+			</p>
+			<% end %>
+			<a class="btn btn-danger" data-action="click->display-all#displayForm">Ajouter un commentaire personnel</a>
+			<div data-display-all-target="form" class="d-none">
+				<%= simple_form_for @reading do |f| %>
+				<%= f.input :comment, :as =>
+				 :text, label: "Commentaire" %>
+				<%= f.button :submit, data: {action: "click->display-all#displayForm"}%>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<%= link_to "Retirer ce livre de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûre ?" }, class: "btn btn-danger" %>
+</p>
+</div>
