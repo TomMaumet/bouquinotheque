@@ -13,14 +13,16 @@
       <%= @book.book_type %>: <%= @book.genre %>
     </li>
   </ul>
-  <p data-controller="display-all-summary">
-    <div data-display-all-summary-target="summary"><% @book.summary %></div>
-    <div data-action="click->display-all-summary#display">lire plus</div>
-    <div data-action="click->display-all-summary#display" class="d-none">lire mois</div>
-    Camille: trouve un moyen de mettre un display all pour afficher tout le résumé
-  </p>
+  <div data-controller="display-all-summary">
+    <p data-display-all-summary-target="summary"><%= @book.summary.truncate(200, separator: ' ') %> <a data-display-all-summary-target="show" data-action="click->display-all-summary#display" >lire plus</a></p>
+    <p data-display-all-summary-target="summary_all" class="d-none"><%= @book.summary %> <a data-display-all-summary-target="hide" data-action="click->display-all-summary#display">lire mois</a></p>
+  </div>
   <center>
   < %= link_to "Ajouter à ma bibliothèque", book_readings_path, class: "btn btn-danger", data: { turbo_method: :post }% >
+  <%= link_to "Lire les avis des lecteur.ice.s", book_reviews_path(@book), class: "btn btn-danger"%>
+
+  
+
   <%= link_to "Lire les avis des lecteur.ice.s", book_reviews_path(@book), class: "btn btn-danger"%></center>
 
 </div>
