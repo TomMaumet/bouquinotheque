@@ -7,6 +7,7 @@ class ReadingsController < ApplicationController
 
   def show
     @playlist_item = PlaylistItem.new
+    @playlists = Playlist.where(user: current_user)
   end
 
   def destroy
