@@ -20,7 +20,10 @@
 		</p>
 	</div></div>
 	<center>
-		< %= link_to "Ajouter à ma bibliothèque", book_readings_path, class: "btn btn-danger", data: { turbo_method: :post }% >
+<%= simple_form_for @reading do |f| %>
+        <%= f.input :book_id, :as => :hidden, :input_html => { :value => @book.id }  %>
+        <%= f.button :submit, "Ajouter à ma bibliothèque", class: "btn btn-danger" %>
+<% end %>
 		<%= link_to "Ajouter à ma liste de souhaits", book_reviews_path(@book), class: "btn btn-danger"%>
 		<h3>Avis des lecteur.ice.s</h3>
 		<div class="book-reviews">
