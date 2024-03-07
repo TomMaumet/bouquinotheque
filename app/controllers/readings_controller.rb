@@ -6,6 +6,7 @@ class ReadingsController < ApplicationController
   end
 
   def show
+    @playlist_item = PlaylistItem.new
   end
 
   def destroy

@@ -1,7 +1,8 @@
 require "test_helper"
 
 class PlaylistItemsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get create" do
+    get playlist_items_create_url
+    assert_response :success
+  end
 end
