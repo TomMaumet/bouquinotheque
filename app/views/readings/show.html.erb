@@ -90,7 +90,7 @@
   <div data-controller="display-all"><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter ce livre à une playlist</a>
 			<div data-display-all-target="form" class="d-none">
 				<%= simple_form_for [@reading, @playlist_item] do |f| %>
-				<%= f.input :playlist %>
+        <%= f.input :playlist, as: :select, collection: @playlists, include_blank: false %>
 				<%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
 				<% end %>
 			</div></div>
