@@ -1,0 +1,4 @@
+<%= simple_form_for @reading, id: "select-beast" do |f| %>
+        <%= f.association :book, label: "Titre", input_html: {data: {controller: "tom-select"}} %>
+        <%= f.button :submit, "Ajouter à ma bibliothèque" %>
+<% end %>

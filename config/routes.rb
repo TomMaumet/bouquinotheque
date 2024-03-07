@@ -7,11 +7,10 @@ Rails.application.routes.draw do
   resources :playlists, except: [:new, :edit]
 
   resources :books, only: [:index, :show, :create] do
-    resources :readings, only: [:create]
     resources :reviews, only: [:index, :create]
   end
 
-  resources :readings, only: [:index, :show, :update, :destroy]
+  resources :readings, only: [:index, :show, :update, :destroy, :new, :create]
 
   resources :playlists, except: [:create]
 
