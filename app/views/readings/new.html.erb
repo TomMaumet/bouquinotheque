@@ -1,5 +1,12 @@
+<div data-controller="scanner">
+
 <%= simple_form_for @reading, id: "select-beast" do |f| %>
   <%= f.association :book, label: "Titre", input_html: {data: {controller: "tom-select"}} %>
-  <%= f.input :EAN %>
+  <%= f.input :EAN, input_html: { data: { scanner_target: "EAN"} } %>
   <%= f.button :submit, "Ajouter à ma bibliothèque" %>
 <% end %>
+
+<button class="btn btn-danger" data-action="click->scanner#scan">Scanner le livre</button>
+<div id="interactive" class="viewport">
+</div>
+</div>
