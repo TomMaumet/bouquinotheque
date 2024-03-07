@@ -1,22 +1,43 @@
 <center><h1>Ma bibliothèque</h1></center>
+
+<div class="flex-container" style="padding: 20px">
+  <%= form_with url: readings_path, method: :get, class: "d-flex" do %>
+    <div >
+      <select class="form-control-sm" name="genre" id="genre-select">
+        <option value="">--Tout--</option>
+        <option value="autobiographie">Autobiographie</option>
+        <option value="aventure">Aventure</option>
+        <option value="contemporain">Contemporain</option>
+        <option value="drame">Drame</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="jeunesse">Jeunesse</option>
+        <option value="policier">Policier</option>
+        <option value="romance">Romance</option>
+        <option value="thriller">Thriller</option>
+      </select>
+      <%= submit_tag "Rechercher", class: "btn-add" %>
+    </div>
+  <% end %>
+</div>
+
 <div class="flex-container">
-<ul style="list-style-type:none;">
-  <% @readings.each do |reading| %>
-    <%= link_to reading_path(reading) do %>
-      <div class="book-card">
-      <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
-      <div class="card-content">
-        <div>
-          <h1><%= reading.book.title %></h1>
-          <p><%= reading.book.author %></p>
-          <div class="reading-status">
-            <% if reading.reading_status == "unread" %>
-              <div class="reading-status-bar" style="width:0%"></div>
-            <% elsif reading.reading_status == "reading" %>
-              <div class="reading-status-bar" style="width:50%"></div>
-            <% elsif reading.reading_status == "read" %>
-              <div class="reading-status-bar" style="width:100%"></div>
-            <% end %>
+  <ul style="list-style-type:none;">
+    <% @readings.each do |reading| %>
+      <%= link_to reading_path(reading) do %>
+        <div class="book-card">
+          <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
+          <div class="card-content">
+              <h1><%= reading.book.title %></h1>
+              <p><%= reading.book.author %></p>
+            <div class="reading-status">
+              <% if reading.reading_status == "unread" %>
+                <div class="reading-status-bar" style="width:0%"></div>
+              <% elsif reading.reading_status == "reading" %>
+                <div class="reading-status-bar" style="width:50%"></div>
+              <% elsif reading.reading_status == "read" %>
+                <div class="reading-status-bar" style="width:100%"></div>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>
