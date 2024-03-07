@@ -26,7 +26,7 @@ class ReadingsController < ApplicationController
 
   def create
     @reading = Reading.new
-      @book = Book.find(params[:reading][:book_id])
+    @book = Book.find(params[:reading][:book_id])
     @reading.book = @book
     @reading.user = current_user
     @reading.save
