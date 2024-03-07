@@ -1,10 +1,15 @@
 .book-reviews {
 display: flex;
-gap: 10px
+gap: 1rem;
+}
+
+.new-review {
+  width: 100%;
+  text-align: center
 }
 
 .book-review {
-width:50%;
+width:calc(50% - 1rem);
 background-color: white;
 padding: 0px 1rem;
 border-radius: 10px;

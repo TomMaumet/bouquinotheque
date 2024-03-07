@@ -6,7 +6,9 @@
   }
 
   h4 {
-    margin: 0px
+    margin: 0px;
+    width: 30%;
+    text-align: right;
   }
 
   img {
@@ -51,12 +53,13 @@
   .reading-status {
     display: flex;
     align-items: center;
+    gap: 1rem;
     justify-content: space-between;
     margin-bottom: 1rem
   }
 
   .reading-status-bloc {
-    width:250px;
+    width:60%;
     background-color:white;
     margin-top: 5px
   }
@@ -65,4 +68,28 @@
     background-color: green;
     height: 5px;
   }
+
+  .simple_form .div {
+    margin: 0px !important
+  }
+
+  .reading-shared {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: "Playfair display";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: #f1f0f0;
+    border-radius: 1rem
+  }
+
+  .shared_link {margin-left: -0.5rem;
+  position: absolute;}
+
+  .shared_link i {margin-top: 0.5rem}
+
+  .shared_link i:before {border-radius: 50%;
+  background-color: #f1f0f0;
+padding: 1rem}
 }

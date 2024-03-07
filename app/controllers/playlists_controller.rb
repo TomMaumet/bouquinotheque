@@ -1,8 +1,8 @@
 class PlaylistsController < ApplicationController
-  before_action :set_user, only: [:create]
+  before_action :set_user, only: [:create, :index]
 
   def index
-    @playlists = Playlist.all
+    @playlists = Playlist.all.where(user_id: @user.id)
     @playlist_new = Playlist.new
   end
 
