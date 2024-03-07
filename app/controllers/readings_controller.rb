@@ -26,7 +26,11 @@ class ReadingsController < ApplicationController
 
   def create
     @reading = Reading.new
-    @book = Book.find(params[:reading][:book_id])
+    if params[:reading][:book_id].present?
+      @book = Book.find(params[:reading][:book_id])
+    else
+      @book = Book.find_by(EAN: params[:reading][:EAN])
+    end
     @reading.book = @book
     @reading.user = current_user
     @reading.save
@@ -42,5 +46,4 @@ class ReadingsController < ApplicationController
   def reading_params
     params.require(:reading).permit(:comment, :my_rating, :reading_status, :shared_to)
   end
-
 end
