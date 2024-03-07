@@ -2,7 +2,11 @@ class ReadingsController < ApplicationController
   before_action :set_reading, only: [:show, :update, :destroy]
 
   def index
-    @readings = Reading.where(user: current_user)
+    if params[:genre].present?
+      @readings = Reading.joins(:book).where(books: { genre: params[:genre] }, user: current_user)
+    else
+      @readings = Reading.where(user: current_user)
+    end
   end
 
   def show
@@ -19,6 +23,7 @@ class ReadingsController < ApplicationController
     @reading.update(reading_params)
     redirect_to reading_path(@reading)
   end
+
 
   def new
     @reading = Reading.new
