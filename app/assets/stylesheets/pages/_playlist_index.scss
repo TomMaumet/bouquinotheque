@@ -6,10 +6,18 @@
   display: flex;
   align-items: center;
   border-radius: 15px;
+  position: relative;
 
   .form{
     background-color: white;
     border-radius: 15px;
+    text-align: center;
+  }
 
+  #cross_pages{
+    position: absolute;
+    top: 5%;
+    right: 6%;
+    color: $red;
   }
 }
