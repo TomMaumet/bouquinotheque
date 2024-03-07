@@ -1,1 +1,31 @@
-Les reviews de <%= @book.title %>
+<center>
+	<h1>Les avis des lecteur.ice.s de
+	<%= @book.title %></h1>
+</center>
+<div class="container d-flex flex-wrap" style="gap:1rem">
+	<% @reviews.each do |review| %>
+	  <div class="book-review">
+			<div class="h5">
+        <%= review.title %>
+        <h6>
+          <%= review.rating %>
+          /5
+        </h6>
+			</div>
+      <p>
+        <%= review.content %>
+      </p>
+		</div>
+	<% end %>
+  <div class="new-review" data-controller="display-all">
+	  <a data-action="click->display-all#displayForm" class="btn btn-success" data-display-all-target="button">Ajouter un avis</a>
+	  <div class="book-review d-none" data-display-all-target="form">
+      <%= simple_form_for [@book, @review] do |f| %>
+        <%= f.input :title, label: "Titre" %>
+        <%= f.input :rating, label: "Note", as: :select, collection: 0..5 %>
+        <%= f.input :content, as: :text, label: "Commentaire" %>
+        <%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
+      <% end %>
+    </div>
+	</div>
+</div>
