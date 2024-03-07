@@ -2,8 +2,12 @@ class ReadingsController < ApplicationController
   before_action :set_reading, only: [:show, :update, :destroy]
 
   def index
+    @genres = Book.pluck(:genre).uniq
+    @authors = Book.pluck(:author).uniq
     if params[:genre].present?
       @readings = Reading.joins(:book).where(books: { genre: params[:genre] }, user: current_user)
+    elsif params[:author].present?
+      @readings = Reading.joins(:book).where(books: { author: params[:author] }, user: current_user)
     else
       @readings = Reading.where(user: current_user)
     end

@@ -1,22 +1,22 @@
 <center><h1>Ma bibliothèque</h1></center>
 
 <div class="flex-container" style="padding: 20px">
-  <%= form_with url: readings_path, method: :get, class: "d-flex" do %>
+  <%= form_with url: readings_path, method: :get, class: "d-flex" do |f| %>
     <div >
       <select class="form-control-sm" name="genre" id="genre-select">
-        <option value="">--Tout--</option>
-        <option value="autobiographie">Autobiographie</option>
-        <option value="aventure">Aventure</option>
-        <option value="contemporain">Contemporain</option>
-        <option value="drame">Drame</option>
-        <option value="fantasy">Fantasy</option>
-        <option value="jeunesse">Jeunesse</option>
-        <option value="policier">Policier</option>
-        <option value="romance">Romance</option>
-        <option value="thriller">Thriller</option>
+          <option value="">--Genre--</option>
+        <% @genres.each do |genre| %>
+          <option value="<%= genre %>"><%= genre %></option>
+        <% end %>
+        </select>
+        <select class="form-control-sm" name="author" id="author-select">
+          <option value="">--Auteur--</option>
+        <% @authors.each do |author| %>
+          <option value="<%= author %>"><%= author %></option>
+        <% end %>
       </select>
-      <%= submit_tag "Rechercher", class: "btn-add" %>
-    </div>
+      </div>
+    <%= submit_tag "Rechercher", class: "btn-add" %>
   <% end %>
 </div>
 
