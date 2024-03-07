@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'playlist_items/create'
   root to: "readings#index"
 
   devise_for :users
@@ -11,6 +12,8 @@ Rails.application.routes.draw do
   end
 
   resources :readings, only: [:index, :show, :update, :destroy]
+
+  resources :playlists, except: [:create]
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
