@@ -1,5 +1,8 @@
-<div class="text-center mb-4">
-<h1><%= @playlist.title %></h1>
+<div id="title" class="text-center mb-4 d-flex">
+  <h1><%= @playlist.title %></h1>
+  <%= link_to playlist_path(@playlist), method: :destroy, data: { turbo_method: :delete, turbo_confirm: "Êtes vous sur ?"} do %>
+  <i id="trashcan"class="fa-solid fa-trash fa-xl"></i>
+  <% end %>
 </div>
 <div class="container">
    <div class="d-flex flex-wrap row ">
