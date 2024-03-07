@@ -268,7 +268,7 @@ book16 = Book.create!(
 )
 
 book17 = Book.create!(
-  title: "Gaël Faye",
+  title: "Petit Pays",
   summary: "En 1992, Gabriel, dix ans, vit au Burundi avec son père français, entrepreneur, sa mère rwandaise et sa petite sœur, Ana, dans un confortable quartier d’expatriés. Gabriel passe le plus clair de son temps avec ses copains, une joyeuse bande occupée à faire les quatre cents coups. Un quotidien paisible, une enfance douce qui vont se disloquer en même temps que ce « petit pays » d’Afrique brutalement malmené par l’Histoire.
   Gabriel voit avec inquiétude ses parents se séparer, puis la guerre civile se profiler, suivie du drame rwandais. Le quartier est bouleversé. Par vagues successives, la violence l’envahit, l’imprègne, et tout bascule. Gabriel se croyait un enfant, il va se découvrir métis, Tutsi, Français…",
   author: "Gaël Faye",

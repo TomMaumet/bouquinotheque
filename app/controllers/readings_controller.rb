@@ -6,6 +6,8 @@ class ReadingsController < ApplicationController
   end
 
   def show
+    @playlist_item = PlaylistItem.new
+    @playlists = Playlist.where(user: current_user)
   end
 
   def destroy
@@ -18,17 +20,18 @@ class ReadingsController < ApplicationController
     redirect_to reading_path(@reading)
   end
 
-  # def new
-  #   @book = Book.find(params[:book_id])
-  #   @reading = Reading.new
-  # end
+  def new
+    @reading = Reading.new
+  end
 
-  # def create
-  #   @reading = Reading.new(reading_params)
-  #   @reading.book = @book
-  #   @reading.save
-  #   redirect_to reading_path(@readings)
-  # end
+  def create
+    @reading = Reading.new
+      @book = Book.find(params[:reading][:book_id])
+    @reading.book = @book
+    @reading.user = current_user
+    @reading.save
+    redirect_to reading_path(@reading)
+  end
 
   private
 

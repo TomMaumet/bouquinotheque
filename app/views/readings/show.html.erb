@@ -6,23 +6,59 @@
 		<% end %>
 	</div>
 	<h3><%= @reading.book.author %></h3>
-	<div class="reading-status">
+	<div class="reading-status" data-controller="display-all">
 		<% if @reading.reading_status == "unread" %>
 		<div class="reading-status-bloc">
 			<div class="reading-status-bar" style="width:0%"></div>
 		</div>
-		  non lu
+		<div>
+			<a data-display-all-target="button" data-action="click->display-all#displayForm">non lu <i class="fa-solid fa-check"></i></a>
+		</div>
 		<% elsif @reading.reading_status == "reading" %>
 		<div class="reading-status-bloc">
 			<div class="reading-status-bar" style="width:50%"></div>
 		</div>
-		  en cours
+		<div>
+			<a data-display-all-target="button" data-action="click->display-all#displayForm">en cours <i class="fa-solid fa-check"></i></a>
+		</div>
 		<% elsif @reading.reading_status == "read" %>
 		<div class="reading-status-bloc">
 			<div class="reading-status-bar" style="width:100%"></div>
 		</div>
-		  lu
+		<div>
+			<a data-display-all-target="button" data-action="click->display-all#displayForm">lu <i class="fa-solid fa-check"></i></a>
+		</div>
 		<% end %>
+		<div data-display-all-target="form" class="d-none">
+			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
+			<div class="m-0">
+				<%= f.input :reading_status, label: false, as: :select, collection: [["lu", "read"], ["non lu", "unread"], ["en cours", "reading"]] %>
+			</div>
+			<%= f.button :submit, "modifier", data: {action: "click->display-all#displayForm"}, style: "display: inline" %>
+			<% end %>
+		</div>
+	</div>
+	<div data-controller="display-all">
+		<% if @reading.shared_to.present? %><div class="reading-shared">
+		<a data-display-all-target="button" data-action="click->display-all#displayForm">
+			prêté à
+			<%= @reading.shared_to %>
+		</a></div>
+    <div data-display-all-target="form" class="d-none">
+			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
+			<%= f.input :shared_to, label: false %>
+			<%= f.button :submit, "prêter", data: {action: "click->display-all#displayForm"}, style: "display: inline" %>
+			<% end %>
+		</div>
+		<% else %>
+		<a class="shared_link" data-display-all-target="button" data-action="click->display-all#displayForm"><i class="fa-solid fa-share"></i></a>
+		<div data-display-all-target="form" class="d-none">
+			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
+			<%= f.input :shared_to, label: false %>
+			<%= f.button :submit, "prêter", data: {action: "click->display-all#displayForm"}, style: "display: inline" %>
+			<% end %>
+		</div>
+    <% end %>
 	</div>
 	<div class="white-background">
 		<%= image_tag @reading.book.image_url, alt: @reading.book.title, class: "book-cover"%>
@@ -31,22 +67,31 @@
 			<li><i class="fa-solid fa-bookmark"></i><%= @reading.book.book_type.capitalize %>: <%= @reading.book.genre %></li>
 		</ul>
 		<div data-controller="display-all">
-			<% if @reading.comment %>
+			<% if @reading.comment.present? %>
 			<p>
 				Commentaire personnel:
 				<%= @reading.comment %>
 			</p>
 			<% end %>
-			<a class="btn btn-danger" data-action="click->display-all#displayForm">Ajouter un commentaire personnel</a>
+			<a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter un commentaire personnel</a>
 			<div data-display-all-target="form" class="d-none">
 				<%= simple_form_for @reading do |f| %>
+				<%= f.input :my_rating, :label =>
+				"Note", as: :select, collection: 0..5 %>
 				<%= f.input :comment, :as =>
-				 :text, label: "Commentaire" %>
+				:text, label: "Commentaire" %>
 				<%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
 				<% end %>
 			</div>
 		</div>
 	</div>
 	<%= link_to "Retirer ce livre de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûre ?" }, class: "btn btn-danger" %>
-</p>
+  </p>
+  <div data-controller="display-all"><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter ce livre à une playlist</a>
+			<div data-display-all-target="form" class="d-none">
+				<%= simple_form_for [@reading, @playlist_item] do |f| %>
+        <%= f.input :playlist, as: :select, collection: @playlists, include_blank: false %>
+				<%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
+				<% end %>
+			</div></div>
 </div>
