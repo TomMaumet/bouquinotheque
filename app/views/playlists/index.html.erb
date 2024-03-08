@@ -3,8 +3,9 @@
 </div>
 
 <div class="container container-playlist" data-controller='add-playlist'>
-  <div class="button-add btn btn-danger" data-action="click->add-playlist#open_pages">Ajouter une playlist</div>
-    <div class=" add-pages container d-none" data-add-playlist-target="button" >
+  <div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Ajouter une playlist</div>
+    <div class=" add-pages container d-none" data-add-playlist-target="page" >
+      <i id="cross_pages"class="fa-solid fa-xmark fa-2xl" data-action="click->add-playlist#close_page"></i>
     <div class="row justify-content-center">
       <div class="form col-6 p-2">
         <h2>Donnez un nom à votre liste de favoris</h2>
