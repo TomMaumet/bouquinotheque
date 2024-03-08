@@ -10,7 +10,7 @@
 		<% if @reading.reading_status == "unread" %>
 		<div class="reading-status-bloc">
 			<div class="reading-status-bar" style="width:0%"></div>
-		</div>
+    </div>
 		<div>
 			<a data-display-all-target="button" data-action="click->display-all#displayForm">non lu <i class="fa-solid fa-check"></i></a>
 		</div>
@@ -65,7 +65,7 @@
 				<%= @reading.comment %>
 			</p>
 			<% end %>
-			<center><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter un commentaire personnel</a></center>
+			<center><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Mon commentaire</a></center>
 			<div data-display-all-target="form" class="d-none">
 				<%= simple_form_for @reading do |f| %>
 				<%= f.input :my_rating, :label =>
@@ -77,12 +77,17 @@
 			</div>
 		</div>
 	</div>
-	<center><%= link_to "Retirer ce livre de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûre ?" }, class: "btn btn-danger" %>
-  <div data-controller="display-all"><a class="btn btn-danger" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter ce livre à une liste de favoris</a>
-			<div data-display-all-target="form" class="d-none">
-				<%= simple_form_for [@reading, @playlist_item] do |f| %>
+  <div class="btn-group d-flex justify-content-evenly mb-3">
+    <div data-controller="display-all"><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une playlist</a>
+      <div data-display-all-target="form" class="d-none">
+        <%= simple_form_for [@reading, @playlist_item] do |f| %>
         <%= f.input :playlist, as: :select, collection: @playlists, include_blank: false %>
-				<%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
-				<% end %>
-			</div></div></center>
-</div>
+        <%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
+        <% end %>
+      </div>
+    </div>
+    <div>
+      <%= link_to "Retirer de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûre ?" }, class: "btn btn-danger" %>
+      </p>
+    </div>
+  </div>
