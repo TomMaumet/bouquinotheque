@@ -21,6 +21,8 @@
 </div>
 
 <div class="container">
+<center><%= link_to "Ajouter un livre à ma bibliothèque", new_reading_path, class: "btn btn-success" %></center><br>
+
     <% @readings.each do |reading| %>
       <%= link_to reading_path(reading), class: "book-card" do %>
           <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
