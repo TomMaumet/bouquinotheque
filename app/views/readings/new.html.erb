@@ -1,12 +1,12 @@
-<div data-controller="scanner">
+<div class="container white-background my-3" data-controller="scanner"><center><h1>Ajouter un livre à ma bibliothèque</h1>
+
+<button class="btn btn-danger" data-action="click->scanner#scan">Scanner mon livre</button><br></center>
 
 <%= simple_form_for @reading do |f| %>
   <%= f.association :book, label: "Titre", input_html: {data: {controller: "tom-select"}, id: "select-beast", placeholder: "Select a person...", autocomplete: "off"} %>
   <%= f.input :EAN, input_html: { data: { scanner_target: "EAN" } } %>
-  <%= f.button :submit, "Ajouter à ma bibliothèque" %>
+  <center><%= f.button :submit, "Ajouter", class: "btn btn-danger" %></center>
 <% end %>
-
-<button class="btn btn-danger" data-action="click->scanner#scan">Scanner le livre</button>
 <div id="interactive" class="viewport">
 </div>
 </div>
