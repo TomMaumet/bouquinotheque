@@ -3,15 +3,15 @@
 </div>
 
 <div class="container container-playlist" data-controller='add-playlist'>
-  <div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Ajouter une playlist</div>
+  <div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Créer une liste de favoris</div>
     <div class=" add-pages container d-none" data-add-playlist-target="page" >
       <i id="cross_pages"class="fa-solid fa-xmark fa-2xl" data-action="click->add-playlist#close_page"></i>
     <div class="row justify-content-center">
       <div class="form col-6 p-2">
         <h2>Donnez un nom à votre liste de favoris</h2>
         <%= simple_form_for @playlist_new do |f| %>
-          <%= f.input :title %>
-          <%= f.button :submit , class: "btn btn-danger" %>
+          <%= f.input :title, label: "Titre" %>
+          <%= f.button :submit, value: "Valider" , class: "btn btn-danger"%>
         <% end %>
       </div>
     </div>
@@ -20,8 +20,20 @@
 
 <div class="container">
   <% @playlists.each do |playlist| %>
-    <div>
+    <div class="yes">
       <h3><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h3>
+    </div>
+    <div class="d-flex flex-wrap row ">
+      <% playlist.readings.first(3).each do |reading| %>
+        <% link_to @playlist %><div class="cards-playlist col-4">
+          <div class="image-book">
+            <%= image_tag(reading.book.image_url) %>
+          </div>
+          <div class="text-playlist d-flex">
+            <p><%= reading.book.author %> - <%= reading.book.title %></p>
+          </div>
+        </div>
+      <% end  %>
     </div>
   <% end %>
 </div>

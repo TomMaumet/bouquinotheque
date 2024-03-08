@@ -403,8 +403,8 @@ book27 = Book.create!(
   EAN: "9782290059463",
   book_type: "recueil",
   ratings: 3.35,
-  image_url: "https://i.imgur.com/SZ9IKjg.jpeg")
-
+  image_url: "https://i.imgur.com/SZ9IKjg.jpeg"
+)
 puts 'Livres créés'
 
 Reading.destroy_all
