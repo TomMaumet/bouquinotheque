@@ -2,7 +2,7 @@
   <h1 data-uptdate-playlist-target="title" ><%= @playlist.title %></h1>
   <div class="d-none" data-uptdate-playlist-target="form">
     <%= simple_form_for @playlist do |f| %>
-      <%= f.input :title %>
+      <%= f.input :title, label: 'Titre' %>
       <%= f.button :submit %>
     <% end %>
   </div>
