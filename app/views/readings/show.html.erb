@@ -61,7 +61,7 @@
 		<div data-controller="display-all">
 			<% if @reading.comment.present? %>
 			<p>
-				Commentaire personnel:
+				<strong>Commentaire personnel:</strong>
 				<%= @reading.comment %>
 			</p>
 			<% end %>
@@ -72,17 +72,17 @@
 				"Note", as: :select, collection: 0..5 %>
 				<%= f.input :comment, :as =>
 				:text, label: "Commentaire" %>
-				<%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
+				<center><%= f.button :submit, "Ajouter", data: {action: "click->display-all#displayForm"}, class: "btn btn-danger" %></center>
 				<% end %>
 			</div>
 		</div>
 	</div>
   <div class="btn-group d-flex justify-content-evenly mb-3">
-    <div data-controller="display-all"><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une playlist</a>
+    <div data-controller="display-all"><a class="btn btn-danger" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une liste de favoris</a>
       <div data-display-all-target="form" class="d-none">
         <%= simple_form_for [@reading, @playlist_item] do |f| %>
-        <%= f.input :playlist, as: :select, collection: @playlists, include_blank: false %>
-        <%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
+        <%= f.input :playlist, label: false, as: :select, collection: @playlists, include_blank: false %>
+        <%= f.button :submit,"Ajouter", data: {action: "click->display-all#displayForm"}, class: "btn btn-danger" %>
         <% end %>
       </div>
     </div>
