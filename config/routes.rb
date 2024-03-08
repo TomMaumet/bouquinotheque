@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :playlists, except: [:new, :edit]
 
-  resources :books, only: [:index, :show, :create] do
+  resources :books, only: [:index, :new, :show, :create] do
     resources :reviews, only: [:index, :create]
   end
 
@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   end
 
   resources :playlists, except: [:create]
+
+  get 'discovers', to: 'discovers#index'
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.

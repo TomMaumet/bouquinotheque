@@ -31,32 +31,26 @@
 		<% end %>
 		<div data-display-all-target="form" class="d-none">
 			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
-        <%= f.input :reading_status, label: false, as: :select, collection: [["lu", "read"], ["non lu", "unread"], ["en cours", "reading"]], input_html: { class: "mt-3" } %>
-        <%= f.button :submit, "modifier", data: {action: "click->display-all#displayForm"}, style: "display: inline" %>
+        <%= f.input :reading_status, label: false, as: :select, collection: [["lu", "read"], ["non lu", "unread"], ["en cours", "reading"]], input_html: { style: "margin-bottom: -1rem" } %>
+        <%= f.button :submit, "modifier", data: {action: "click->display-all#displayForm"} %>
 			<% end %>
 		</div>
 	</div>
 	<div data-controller="display-all">
-		<% if @reading.shared_to.present? %><div class="reading-shared">
+		<% if @reading.shared_to.present? %><div class="reading-shared" data-display-all-target="button">
 		<a data-display-all-target="button" data-action="click->display-all#displayForm">
 			prêté à
 			<%= @reading.shared_to %>
 		</a></div>
-    <div data-display-all-target="form" class="d-none">
-			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
-			<%= f.input :shared_to, label: false %>
-			<%= f.button :submit, "prêter", data: {action: "click->display-all#displayForm"}, style: "display: inline" %>
-			<% end %>
-		</div>
 		<% else %>
 		<a class="shared_link" data-display-all-target="button" data-action="click->display-all#displayForm"><i class="fa-solid fa-share"></i></a>
-		<div data-display-all-target="form" class="d-none">
+		<% end %>
+    <div data-display-all-target="form" class="d-none reading-shared">
 			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
-			<%= f.input :shared_to, label: false %>
-			<%= f.button :submit, "prêter", data: {action: "click->display-all#displayForm"}, style: "display: inline" %>
+			<%= f.input :shared_to, label: false, input_html: { style: "margin-bottom: -1rem" } %>
+			<%= f.button :submit, "prêter", data: {action: "click->display-all#displayForm"} %>
 			<% end %>
 		</div>
-    <% end %>
 	</div>
 	<div class="white-background">
 		<%= image_tag @reading.book.image_url, alt: @reading.book.title, class: "book-cover"%>
@@ -71,7 +65,7 @@
 				<%= @reading.comment %>
 			</p>
 			<% end %>
-			<a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter un commentaire personnel</a>
+			<center><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter un commentaire personnel</a></center>
 			<div data-display-all-target="form" class="d-none">
 				<%= simple_form_for @reading do |f| %>
 				<%= f.input :my_rating, :label =>
@@ -83,13 +77,12 @@
 			</div>
 		</div>
 	</div>
-	<%= link_to "Retirer ce livre de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûre ?" }, class: "btn btn-danger" %>
-  </p>
-  <div data-controller="display-all"><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter ce livre à une playlist</a>
+	<center><%= link_to "Retirer ce livre de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûre ?" }, class: "btn btn-danger" %>
+  <div data-controller="display-all"><a class="btn btn-danger" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter ce livre à une liste de favoris</a>
 			<div data-display-all-target="form" class="d-none">
 				<%= simple_form_for [@reading, @playlist_item] do |f| %>
         <%= f.input :playlist, as: :select, collection: @playlists, include_blank: false %>
 				<%= f.button :submit, data: {action: "click->display-all#displayForm"} %>
 				<% end %>
-			</div></div>
+			</div></div></center>
 </div>

@@ -296,7 +296,7 @@ book18 = Book.create!(
 
 book19 = Book.create!(
   title: "En finir avec Eddy Bellegueule",
-  summary: "« Je suis parti en courant, tout à coup. Juste le temps d'entendre ma mère dire Qu'est-ce qui fait le débile là? Je ne voulais pas rester à leur côté, je refusais de partager ce moment avec eux. J'étais déjà loin, je n'appartenais plus à leur monde désormais, la lettre le disait.»",
+  summary: "« Je suis parti en courant, tout à coup. Juste le temps d'entendre ma mère dire Qu'est-ce qui fait le débile là? Je ne voulais pas rester à leur côté, je refusais de partager ce moment avec eux. J'étais déjà loin, je n'appartenais plus à leur monde désormais, la lettre le disait. »",
   author: "Édouard Louis",
   genre: "contemporain",
   publisher: "Éditions du Seuil",
@@ -311,7 +311,7 @@ book20 = Book.create!(
   title: "Astérix, tome 40 : L'Iris Blanc",
   summary: "L’Iris Blanc est le nom d’une nouvelle école de pensée positive, venue de Rome qui commence à se propager dans les grandes villes, de Rome à Lutèce. César décide que cette méthode peut avoir un effet bénéfique sur les camps qui se trouvent autour du célèbre village gaulois. Mais les préceptes de cette école exercent aussi une influence sur les villageois qui croisent son chemin…
   Qu’est-il arrivé à notre chef Gaulois préféré et pourquoi cette mine renfrognée ?",
-  author: "René Goscinny, Didier Conrad, Albert Uderzo, Fabcaro",
+  author: "René Goscinny, Didier Conrad, Albert Uderzo & Fabcaro",
   genre: "jeunesse",
   publisher: "Les Éditions Albert René",
   publishing_year: 2023,
@@ -319,6 +319,19 @@ book20 = Book.create!(
   book_type: "bande dessinée",
   ratings: 3.82,
   image_url: "https://i.imgur.com/Jxfuvu4.png"
+)
+
+book27 = Book.create!(
+  title: "Chers voisins, tome 1",
+  summary: "« Connards, vous n'êtes pas seuls au monde » Mots doux et petites querelles de voisinage.",
+  author: "Aurélie C & Olivier V",
+  genre: "humour",
+  publisher: "J'ai lu",
+  publishing_year: 2013,
+  EAN: "9782290059463",
+  book_type: "recueil",
+  ratings: 3.35,
+  image_url: "https://i.imgur.com/SZ9IKjg.jpeg"
 )
 
 puts 'Livres créés'

@@ -44,12 +44,6 @@
     opacity: 0.75
   }
 
-  .white-background {
-    background-color:white;
-    padding: 1rem;
-    border-radius: 10px
-  }
-
   .reading-status {
     display: flex;
     align-items: center;
@@ -91,5 +85,5 @@
 
   .shared_link i:before {border-radius: 50%;
   background-color: #f1f0f0;
-padding: 1rem}
+  padding: 1rem}
 }

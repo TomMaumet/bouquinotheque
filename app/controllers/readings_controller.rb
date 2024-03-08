@@ -28,7 +28,6 @@ class ReadingsController < ApplicationController
     redirect_to reading_path(@reading)
   end
 
-
   def new
     @reading = Reading.new
   end
@@ -42,8 +41,11 @@ class ReadingsController < ApplicationController
     end
     @reading.book = @book
     @reading.user = current_user
-    @reading.save
+    if @reading.save
     redirect_to reading_path(@reading)
+    else
+      redirect_to new_book_path
+    end
   end
 
   private
