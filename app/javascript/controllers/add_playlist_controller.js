@@ -2,13 +2,12 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="add-playlist"
 export default class extends Controller {
-  static targets =  ["button"]
-  connect() {
-    console.log("coucou")
-    console.log(this.buttonTarget)
+  static targets =  ["page"]
+
+  open_page(){
+    this.pageTarget.classList.remove("d-none")
   }
-  open_pages(){
-    console.log("coucou")
-    this.buttonTarget.classList.remove("d-none")
+  close_page(){
+    this.pageTarget.classList.add("d-none")
   }
 }

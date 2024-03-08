@@ -7,7 +7,7 @@ class PlaylistItemsController < ApplicationController
     @playlist_item.playlist_id = @playlists.id
     @playlist_item.save
   end
-  
+
   private
 
   def set_playlist

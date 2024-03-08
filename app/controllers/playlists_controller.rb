@@ -1,5 +1,5 @@
 class PlaylistsController < ApplicationController
-  before_action :set_user, only: [:create, :index]
+  before_action :set_user, only: [:create, :show, :index]
 
   def index
     @playlists = Playlist.all.where(user_id: @user.id)
@@ -19,6 +19,18 @@ class PlaylistsController < ApplicationController
     else
       render playlists_path, status: :unprocessable_entity
     end
+  end
+
+  def update
+    @playlist = Playlist.find(params[:id])
+    @playlist.update(params_playlist)
+    redirect_to playlist_path(@playlist)
+  end
+
+  def destroy
+    @playlist = Playlist.find(params[:id])
+    @playlist.destroy
+    redirect_to playlists_path
   end
 
   private

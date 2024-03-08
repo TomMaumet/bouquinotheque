@@ -1,0 +1,12 @@
+#title{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  #trashcan{
+    position: absolute;
+    right: 1rem;
+    color: $red;
+  }
+
+}
