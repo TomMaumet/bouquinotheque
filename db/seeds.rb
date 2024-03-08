@@ -365,7 +365,7 @@ book23 = Book.create!(
   image_url: "https://i.imgur.com/B0Xg4BT.jpeg"
 )
 
-book25= Book.create!(
+book25 = Book.create!(
   title: "Inferno",
   summary: "Robert Langdon, professeur de symbologie à Harvard, se réveille en pleine nuit à l'hôpital. Désorienté, blessé à la tête, il n'a aucun souvenir des dernières trente-six heures. Pourquoi se retrouve-t-il à Florence ? D'où vient cet objet macabre que les médecins ont découvert dans ses affaires ? Quand son monde vire brutalement au cauchemar, Langdon décide de s'enfuir avec une jeune femme, Sienna Brooks. Rapidement, Langdon comprend qu'il est en possession d'un message codé, créé par un éminent scientifique qui a consacré sa vie à éviter la fin du monde, une obsession qui n'a d'égale que sa passion pour « Inferno », le grand poème épique de Dante. Pris dans une course contre la montre, Langdon et Sienna font tout pour retrouver l'ultime création du scientifique, véritable bombe à retardement, dont personne ne sait si elle va améliorer la vie sur terre ou la détruire…",
   genre: "thriller",
@@ -378,7 +378,7 @@ book25= Book.create!(
   image_url: "https://i.imgur.com/pBGCcR6.jpeg"
 )
 
-book26= Book.create!(
+book26 = Book.create!(
   title: "Origine",
   summary: "Bilbao, Espagne. Robert Langdon, le célèbre professeur en symbologie et iconographie religieuse, arrive au musée Guggenheim pour assister à une cérémonie historique avec l’annonce d’une découverte scientifique révolutionnaire. L’organisateur de cette soirée n’est autre que le grand futurologue Edmond Kirsch, un milliardaire de quarante ans dont les inventions et les prédictions audacieuses ont fait de lui une célébrité mondiale. Kirsch, qui a été dans sa jeunesse l’étudiant de Langdon à Harvard, est sur le point d’annoncer le résultat de ses recherches… et d’apporter enfin une réponse aux deux questions fondamentales de l’humanité.
   Dès le debut de la soirée, Langdon, comme les centaines d’autres invités, est fasciné par l’originalité de la cérémonie. Une évidence s’impose : la découverte de Kirsch va susciter une controverse bien plus profonde qu’il ne l’avait imaginé. Mais la soirée parfaitement orchestrée jusqu’alors va soudain virer au chaos. La découverte de Kirsch risque d’être perdue à jamais. Sous le choc, et en grand danger, Langdon est contraint de quitter précipitamment Bilbao. Dans sa fuite, il est accompagné de Ambra Vidal, la directrice du musée qui a préparé avec Kirsch cette soirée explosive. Tous deux s’envolent pour Barcelone, et se lancent dans une quête périlleuse pour retrouver un étrange mot de passe qui permettra de révéler au monde la découverte de Kirsch.
