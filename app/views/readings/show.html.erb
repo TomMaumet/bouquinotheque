@@ -31,10 +31,8 @@
 		<% end %>
 		<div data-display-all-target="form" class="d-none">
 			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
-			<div class="m-0">
-				<%= f.input :reading_status, label: false, as: :select, collection: [["lu", "read"], ["non lu", "unread"], ["en cours", "reading"]] %>
-			</div>
-			<%= f.button :submit, "modifier", data: {action: "click->display-all#displayForm"}, style: "display: inline" %>
+        <%= f.input :reading_status, label: false, as: :select, collection: [["lu", "read"], ["non lu", "unread"], ["en cours", "reading"]], input_html: { class: "mt-3" } %>
+        <%= f.button :submit, "modifier", data: {action: "click->display-all#displayForm"}, style: "display: inline" %>
 			<% end %>
 		</div>
 	</div>
