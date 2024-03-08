@@ -2,8 +2,7 @@
   <h1>Mes Favoris</h1>
 </div>
 
-<div class="container container-playlist" data-controller='add-playlist'>
-  <div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Créer une liste de favoris</div>
+<div class="container" data-controller='add-playlist'>
     <div class=" add-pages container d-none" data-add-playlist-target="page" >
       <i id="cross_pages"class="fa-solid fa-xmark fa-2xl" data-action="click->add-playlist#close_page"></i>
     <div class="row justify-content-center">
@@ -16,9 +15,6 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="container">
   <% @playlists.each do |playlist| %>
     <div class="yes">
       <h3><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h3>
@@ -36,4 +32,8 @@
       <% end  %>
     </div>
   <% end %>
+  <div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Créer une liste de favoris</div>
 </div>
+
+<%# <div class="container container-playlist" data-controller='add-playlist'> %>
+<%# </div> %>
