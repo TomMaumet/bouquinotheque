@@ -3,7 +3,7 @@
   <div class="d-none" data-uptdate-playlist-target="form">
     <%= simple_form_for @playlist do |f| %>
       <%= f.input :title, label: 'Titre' %>
-      <%= f.button :submit %>
+      <%= f.button :submit, value: "Valider" %>
     <% end %>
   </div>
   <i class="fa-solid fa-pen fa-xl ps-3" data-uptdate-playlist-target="pen" data-action="click->uptdate-playlist#display_title" ></i>
