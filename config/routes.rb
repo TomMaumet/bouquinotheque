@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :create]
   end
 
+<<<<<<< HEAD
   resources :readings, only: [:index, :show, :update, :destroy, :new, :create] do
+=======
+  resources :readings, only: [:new, :index, :show, :update, :destroy, :create] do
+>>>>>>> master
     resources :playlist_items, only: [:create]
   end
 
