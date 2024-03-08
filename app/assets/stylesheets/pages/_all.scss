@@ -8,3 +8,9 @@ body {display: flex;
 flex-direction: column}
 
 .body-block {flex-grow: 1}
+
+.white-background {
+  background-color:white;
+  padding: 1rem;
+  border-radius: 10px
+}

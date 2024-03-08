@@ -1,0 +1,14 @@
+<div class="container white-background my-3"><center><h1>Ajouter un nouveau livre</h1></center>
+<%= simple_form_for @book do |f| %>
+  <%= f.input :title, label: "Titre" %>
+  <%= f.input :summary, as: :text, label: "Résumé" %>
+  <%= f.input :author, label: "Auteur.ice.s" %>
+  <%= f.input :book_type, label: "Type d'ouvrage" %>
+  <%= f.input :genre, label: "Genre" %>
+  <%= f.input :publisher, label: "Maison d'édition" %>
+  <%= f.input :publishing_year, label: "Première année d'étition" %>
+  <%= f.input :ratings, label: "Note" %>
+  <%= f.input :EAN, label: "EAN" %>
+  <%= f.input :image_url, label: "Première de couverture" %>
+  <%= f.button :submit, "Ajouter", class: "btn btn-danger" %>
+<% end %></div>

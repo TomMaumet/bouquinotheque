@@ -10,6 +10,7 @@ class Book < ApplicationRecord
   validates :publishing_year, presence: true
   validates :summary, presence: true
   validates :EAN, presence: true
+  validates :ratings, presence: true
   validates :book_type, presence: true
   validates :image_url, presence: true
 end

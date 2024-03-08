@@ -20,11 +20,9 @@
   <% end %>
 </div>
 
-<div class="flex-container">
-  <ul style="list-style-type:none;">
+<div class="container">
     <% @readings.each do |reading| %>
-      <%= link_to reading_path(reading) do %>
-        <div class="book-card">
+      <%= link_to reading_path(reading), class: "book-card" do %>
           <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
           <div class="card-content">
               <h1><%= reading.book.title %></h1>
@@ -39,8 +37,9 @@
               <% end %>
             </div>
           </div>
-        </div>
+          <% if reading.shared_to.present? %>
+                <i class="fa-solid fa-share"></i>
+              <% end %>
       <% end %>
     <% end %>
-  </ul>
 </div>

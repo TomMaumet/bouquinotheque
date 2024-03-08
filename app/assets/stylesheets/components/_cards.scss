@@ -20,24 +20,23 @@
   }
 }
 
-.book-card {
+a.book-card {
   display: flex;
   height: 125px;
   align-items: center;
   margin-bottom: 1rem;
+  text-decoration: none;
+  color: $grey;
+  width: fit-content;
 
   .card-content {
     padding:10px;
     background-color: #ffffff;
     border: 10px #f1f1f1 solid;
     outline: 2.5px solid #8B2635;
-    width: 400px;
-    display: flex;
     border-radius: 0px 10px 10px 0px;
-    margin-left: -2.5px;
     z-index: 99;
-    align-items: center;
-    gap: 5px;
+    margin-left: -1px;
   }
 
   h1, p {
@@ -48,15 +47,18 @@
     text-overflow: ellipsis;
   }
 
-  p { font-size:1.25rem}
+  p {
+    font-size:1.25rem
+  }
 
   .card-image {
     z-index: 999;
     border-radius: 10px 0px 0px 10px;
     width: 80px;
-    height: 123px;
+    height: 119px;
     position:relative;
-    object-fit: cover}
+    object-fit: cover
+  }
 
   .reading-status {
     width:100px;
@@ -67,4 +69,14 @@
   .reading-status-bar {
     background-color: green;
     height: 5px;
-  }}
+  }
+
+  .fa-share:before {margin-top: -75px;
+    margin-left: -35px;
+    border-radius: 50%;
+    padding: 1rem;
+    z-index: 999;
+    position: absolute;
+    background-color: $light-grey;
+  }
+}
