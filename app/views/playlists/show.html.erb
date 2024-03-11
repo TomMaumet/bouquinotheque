@@ -15,9 +15,7 @@
    <div class="d-flex flex-wrap row ">
       <% @readings.each do |reading| %>
         <% link_to @playlist %><div class="cards-playlist col-6 ">
-          <div class="image-book">
-            <%= image_tag(reading.book.image_url) %>
-          </div>
+            <%= image_tag reading.book.image_url, class: "image-book" %>
           <div class="text-playlist d-flex">
             <p><%= reading.book.author %> - <%= reading.book.title %></p>
           </div>

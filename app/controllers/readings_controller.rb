@@ -42,7 +42,7 @@ class ReadingsController < ApplicationController
     @reading.book = @book
     @reading.user = current_user
     if @reading.save
-    redirect_to reading_path(@reading)
+      redirect_to reading_path(@reading)
     else
       redirect_to new_book_path
     end

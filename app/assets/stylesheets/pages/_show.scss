@@ -1,6 +1,6 @@
 .book-show {
-  .h1 {
-    display:flex;
+  .h3 {
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -13,22 +13,22 @@
 
   img {
     width: 100%;
-    border-radius: 10px
+    border-radius: 1rem
   }
 
   li {
-    list-style:none;
+    list-style: none;
   }
 
   ul {
     margin:1rem 0px;
-  padding: 0px
-}
+    padding: 0px
+  }
 
   .fa-solid {
     padding: 1rem;
-  color: $yellow
-}
+    color: $yellow
+  }
 
   p {
     margin: 0px;
@@ -37,8 +37,8 @@
 
   .summary a {
     color: $green;
-  font-style:italic;
-}
+    font-style:italic;
+  }
 
   .summary a:hover {
     opacity: 0.75
@@ -78,12 +78,18 @@
     border-radius: 1rem
   }
 
-  .shared_link {margin-left: -0.5rem;
-  position: absolute;}
+  .shared_link {
+    margin-left: -0.5rem;
+    position: absolute;
+  }
 
-  .shared_link i {margin-top: 0.5rem}
+  .shared_link i {
+    margin-top: 0.5rem
+  }
 
-  .shared_link i:before {border-radius: 50%;
-  background-color: #f1f0f0;
-  padding: 1rem}
+  .shared_link i:before {
+    border-radius: 50%;
+    background-color: #f1f0f0;
+    padding: 1rem
+  }
 }
