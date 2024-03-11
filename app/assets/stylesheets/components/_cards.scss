@@ -1,14 +1,11 @@
 .cards-playlist {
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
 
-  .image-book{
-    img {
-      max-width: 100%;
-    }
+  .image-book {
+  max-width: 100%;
   }
   .text-playlist {
     min-height: 70px;
@@ -29,9 +26,9 @@ a.book-card {
   width: fit-content;
 
   .card-content {
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: #ffffff;
-    border: 1rem #f1f1f1 solid;
+    border: 0.5rem #f1f1f1 solid;
     outline: 2.5px solid #8B2635;
     border-radius: 0px 1rem 1rem 0px;
     z-index: 99;
@@ -54,7 +51,7 @@ a.book-card {
     z-index: 999;
     border-radius: 10px 0px 0px 10px;
     width: 80px;
-    height: 119px;
+    height: 111.5px;
     position:relative;
     object-fit: cover
   }

@@ -46,7 +46,7 @@
 		<a class="shared_link" data-display-all-target="button" data-action="click->display-all#displayForm"><i class="fa-solid fa-share"></i></a>
 		<% end %>
     <div data-display-all-target="form" class="d-none reading-shared">
-			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
+			<%= simple_form_for @reading, html: { class: "d-flex align-items-center justify-content-center"} do |f| %>
 			<%= f.input :shared_to, label: false, input_html: { style: "margin-bottom: -1rem" } %>
 			<%= f.button :submit, "prêter", data: {action: "click->display-all#displayForm"} %>
 			<% end %>
