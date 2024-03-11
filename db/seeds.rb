@@ -8,28 +8,48 @@ user1 = User.create!(nickname: "Admin",
   password_confirmation: 'password',
   avatar: "https://i.imgur.com/WdjuE7y.jpeg",
   city: "Paris",
-  age: 30)
+  age: 30,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
 user2 = User.create!(nickname: "Thomas",
   email: "thomas@mail.fr",
   password: 'password',
   password_confirmation: 'password',
   avatar: "https://i.imgur.com/6VpQxPy.jpeg",
   city: "Bordeaux",
-  age: 30)
+  age: 30,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
 user3 = User.create!(nickname: "Bastien",
   email: "bastien@mail.fr",
   password: 'password',
   password_confirmation: 'password',
   avatar: "https://i.imgur.com/Mr2E09v.png",
   city: "Bayonne",
-  age: 26)
+  age: 26,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
 user4 = User.create!(nickname: "Camille",
   email: "camille@mail.fr",
   password: 'password',
   password_confirmation: 'password',
   avatar: "https://i.imgur.com/7VtAuwV.jpeg",
   city: "Toulouse",
-  age: 25)
+  age: 25,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5
+)
 
 puts 'Utilisateurs créés'
 
