@@ -5,7 +5,9 @@
   gap: 1rem;
 
   .image-book {
-  max-width: 100%;
+  width: 200px;
+  height: 300px;
+  object-fit: cover
   }
   .text-playlist {
     min-height: 70px;
@@ -13,6 +15,12 @@
 
   p {
     font-size: 1rem;
+  }
+
+  .scroll-box {
+  width: 300px;
+  overflow: auto;
+  height: 100px
   }
 }
 

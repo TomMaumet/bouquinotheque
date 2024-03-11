@@ -1,0 +1,32 @@
+<% @title = @user.nickname %>
+
+<div class="container white-background d-flex">
+  <%= image_tag @user.avatar, alt: @user.nickname, class: "profile-avatar"%>
+    <ul>
+      <li><%= @user.age %> ans</li>
+      <li><%= @user.city %></li>
+    </ul>
+</div>
+
+<% if @user != current_user && @friend_relationships.where.not(friend: current_user) %>
+  <%= simple_form_for @new_friend do |f| %>
+    <%= f.input :friend_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
+    <%= f.input :user_id, :as => :hidden, :input_html => { :value => @user.id }  %>
+    <%= f.button :submit, "Ajouter en ami.e", class: "btn btn-danger" %>
+  <% end %>
+<% end %>
+
+<div data-controller="display-all" class="container white-background">
+  <div data-display-all-target="summary">
+    <div class="d-flex gap1">
+      <%= render 'friend_relationship_partial', collection: @friend_relationships[0,5] %>
+    </div>
+    <a data-action="click->display-all#displaySummary" data-display-all-target="summary">voir plus</a>
+  </div>
+  <div class="d-none" data-display-all-target="summary_all">
+    <div class="d-flex gap1">
+      <%= render 'friend_relationship_partial', collection: @friend_relationships %>
+    </div>
+    <a data-action="click->display-all#displaySummary" data-display-all-target="summary">voir moins</a>
+  </div>
+</div>

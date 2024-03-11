@@ -548,3 +548,13 @@ review1 = Review.create!(
   content: "pépite !"
 )
 puts 'Reviews créées'
+
+friend1 = FriendRelationship.create!(
+  user: user1,
+  friend: user2
+)
+
+friend2 = FriendRelationship.create!(
+  user: user1,
+  friend: user3
+)

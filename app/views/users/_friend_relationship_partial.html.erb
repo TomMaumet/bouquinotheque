@@ -1,0 +1,12 @@
+<% @friend_relationships.each do |relationship| %>
+  <%= link_to user_path(relationship.friend) do %>
+    <div style="text-align:center">
+      <%= image_tag relationship.friend.avatar, alt: relationship.friend.nickname, class: "avatar" %>
+      <h4>
+        <%= relationship.friend.nickname %> <%= link_to friend_relationships_path(relationship), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûr.e ?" } do %>
+        <i class="fa-solid fa-xmark"></i>
+        <% end %>
+      </h4>
+    </div>
+  <% end %>
+<% end %>

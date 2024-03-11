@@ -5,8 +5,6 @@ export default class extends Controller {
   static targets = ["summary", "summary_all", "form", "button"]
 
   connect() {
-    console.log("coucou")
-    console.log(this.formTarget)
   }
 
   displaySummary() {
