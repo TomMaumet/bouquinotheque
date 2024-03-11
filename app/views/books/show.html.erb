@@ -1,9 +1,7 @@
+<% @title = @book.title %>
+
 <div class="container book-show">
-	<div class="h1">
-		<%= @book.title %>
-		<h4><%= @book.ratings %><i class="fa-solid fa-star"></i></h4>
-	</div>
-	<h3><%= @book.author %></h3>
+	<div class="h3"><%= @book.author %> <h4><%= @book.ratings %><i class="fa-solid fa-star"></i></h4></div>
 	<div class="white-background"><%= image_tag @book.image_url, alt: @book.title, class: "book-cover"%>
 	<ul>
 		<li><i class="fa-solid fa-bookmark"></i><%= @book.publisher %>, <%= @book.publishing_year %></li>

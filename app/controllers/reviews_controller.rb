@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def index
     @book = Book.find(params[:book_id])
-    @reviews = Review.all
+    @reviews = Review.where(book: @book)
     @review = Review.new
   end
 

@@ -1,11 +1,11 @@
+<% @title = @reading.book.title %>
+
 <div class="container book-show">
-	<div class="h1">
-		<%= @reading.book.title %>
-		<% if @reading.my_rating %>
-		<h4><%= @reading.my_rating %><i class="fa-solid fa-star"></i></h4>
-		<% end %>
-	</div>
-	<h3><%= @reading.book.author %></h3>
+	<div class="h3"><%= @reading.book.author %>
+  <% if @reading.my_rating.present? %>
+  <h4><%= @reading.my_rating %><i class="fa-solid fa-star"></i></h4>
+  <% end %>
+  </div>
 	<div class="reading-status" data-controller="display-all">
 		<% if @reading.reading_status == "unread" %>
 		<div class="reading-status-bloc">
