@@ -15,9 +15,15 @@ class BooksController < ApplicationController
   end
 
   def new
-    result = JSON.parse(URI.open("https://www.googleapis.com/books/v1/volumes?q=isbn:9782221252055").read)
-    title = result["items"][0]["volumeInfo"]["title"]
-    @book = Book.new(title: title)
+    result = JSON.parse(URI.open("https://www.googleapis.com/books/v1/volumes?q=isbn:9782014001334").read)
+    book_id = result["items"][0]["id"]
+    book_form = JSON.parse(URI.open("https://www.googleapis.com/books/v1/volumes/#{book_id}").read)
+    title = book_form["volumeInfo"]["title"]
+    author = book_form["volumeInfo"]["authors"]
+    summary = book_form["volumeInfo"]["description"]
+    publisher = book_form["volumeInfo"]["publisher"]
+    publishing_year = book_form["volumeInfo"]["publishedDate"]
+    @book = Book.new(title: title, author: author, summary: summary, publisher: publisher, publishing_year: publishing_year)
   end
 
   def create
