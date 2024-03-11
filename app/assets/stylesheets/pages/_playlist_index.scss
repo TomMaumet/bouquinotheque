@@ -21,3 +21,12 @@
     color: $red;
   }
 }
+
+.container-detail {
+  display: flex;
+  overflow-x: auto;
+}
+
+.container-detail::-webkit-scrollbar {
+  display: none;
+}

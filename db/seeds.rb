@@ -405,6 +405,89 @@ book27 = Book.create!(
   ratings: 3.35,
   image_url: "https://i.imgur.com/SZ9IKjg.jpeg"
 )
+
+book28 = Book.create!(
+  title: "Veiller sur elle - Prix Goncourt 2023 ",
+  summary: "« Au grand jeu du destin, Mimo a tiré les mauvaises cartes. Né pauvre, il est confié en apprentissage à un sculpteur de pierre sans envergure. Mais il a du génie entre les mains. Toutes les fées ou presque se sont penchées sur Viola Orsini. Héritière d'une famille prestigieuse, elle a passé son enfance à l'ombre d'un palais génois. Mais elle a trop d'ambition pour se résigner à la place qu'on lui assigne.
+  Ces deux-là n'auraient jamais dû se rencontrer. Au premier regard, ils se reconnaissent et se jurent de ne jamais se quitter. Viola et Mimo ne peuvent ni vivre ensemble, ni rester longtemps loin de l'autre. Liés par une attraction indéfectible, ils traversent des années de fureur quand l'Italie bascule dans le fascisme. Mimo prend sa revanche sur le sort, mais à quoi bon la gloire s'il doit perdre Viola ?
+  Un roman plein de fougue et d'éclats, habité par la grâce et la beauté.",
+  author: "Jean-Baptiste Andrea",
+  genre: "historique",
+  publisher: "Iconoclaste",
+  publishing_year: 2023,
+  EAN: "9782378803759",
+  book_type: "Roman",
+  ratings: 4.33,
+  image_url: ""
+)
+
+book29 = Book.create!(
+  title: "Holly",
+  summary: "« Êtes-vous prêt à franchir la porte du 93 Ridge Road ?
+  Dans une jolie maison victorienne d’une petite ville du Midwest, Emily et Rodney Harris, anciens professeurs d’université, mènent une vie de retraités actifs. Malgré leur grand âge, les années semblent n’avoir pas avoir de prise sur eux.
+  À quelques pas de leur demeure, on a retrouvé le vélo de Bonnie Dahl, récemment disparue. Elle n’est pas la première à se volatiliser dans ce périmètre. Chose étrange : à chaque fois, il s’agit de jeunes gens.
+  Quels secrets inavouables cachent les murs tapissés de livres des époux Harris ?
+  Sur l’insistance de la mère de Bonnie, Holly Gibney accepte de reprendre du service. Elle est loin d’imaginer ce qui l’attend : une plongée dans la folie humaine, là où l’épouvante n’a pas de limite.
+  Avec ce nouveau chef-d’œuvre, on retrouve un Stephen King au sommet de l’horreur, et son enquêtrice Holly, célèbre héroïne de la trilogie Mr Mercedes et de L’Outsider.",
+  author: "Stephen King",
+  genre: "thriller",
+  publisher: "ALBIN MICHEL",
+  publishing_year: 2024,
+  EAN: "9782226481474",
+  book_type: "Livre broché",
+  ratings: 4.26,
+  image_url: ""
+)
+
+book30 = Book.create!(
+  title: "Quelqu'un d'autre",
+  summary: "« Côte d'Azur - Printemps 2023
+  Au large de Cannes, un yacht dérive entre les îles de Lérins.À son bord repose Oriana Di Pietro, éditrice italienne et héritière d'une célèbre famille milanaise. Agressée sauvagement, elle succombera après dix jours de coma.
+  Qui a tué Oriana ?
+  Un homme et trois femmes livrent leur version de l'histoire : Adrien, le mari de la victime, pianiste de jazz séduisant et mystérieux ; l'insaisissable Adèle, sa jeune maîtresse ; Justine, la policière locale chargée de l'enquête et Oriana enfin, à travers le récit bouleversant des dernières semaines de sa vie.
+  Personne ne ment.
+  Mais personne n'est d'accord sur la vérité.",
+  author: "Guillaume Musso",
+  genre: "romance",
+  publisher: "Calmann-Lévy",
+  publishing_year: 2024,
+  EAN: "9782702183694",
+  book_type: "Livre broché",
+  ratings: 4.2,
+  image_url: ""
+)
+
+book31 = Book.create!(
+  title: "La tresse",
+  summary: "« Inde. Smita est une Intouchable. Elle rêve de voir sa fille échapper à sa condition misérable et entrer à l’école.
+  Sicile. Giulia travaille dans l’atelier de son père. Lorsqu’il est victime d’un accident, elle découvre que l’entreprise familiale est ruinée.
+  Canada. Sarah, avocate réputée, va être promue à la tête de son cabinet quand elle apprend qu’elle est gravement malade.
+  Liées sans le savoir par ce qu’elles ont de plus intime et de plus singulier, Smita, Giulia et Sarah refusent le sort qui leur est réservé et décident de se battre. Vibrantes d’humanité, leurs histoires tissent une tresse d’espoir et de solidarité.
+  Trois femmes, trois vies, trois continents. Une même soif de liberté.",
+  author: "Leatitia Colombani",
+  genre: "romance",
+  publisher: "Le Livre de Poche",
+  publishing_year: 2018,
+  EAN: "9782253906568",
+  book_type: "Livre de poche",
+  ratings: 4.5,
+  image_url: ""
+)
+
+book32 = Book.create!(
+  title: "Les quatre accords toltèques: La voie de la liberté personnelle",
+  summary: "Castaneda a fait découvrir au grand public les enseignements des chamans mexicains qui ont pour origine la tradition toltèque, gardienne des connaissances de Quetzacoatl, le serpent à plumes. Dans ce livre, Don Miguel révèle la source des croyances limi-tatrices qui nous privent de joie et créent des souffrances inutiles. Il montre en des termes très simples comment on peut se libérer du conditionnement collectif - le rêve de la planète, basé sur la peur - afin de retrouver la dimension d'a mour inconditionnel qui est à notre origine et constitue le fondement de s enseignements toltèques. Les quatre accords proposent un puissant code de conduite capable de transformer rapidement notre vie en une expérience de liberté, de vrai bonheur et d'amour. Le monde fascinant de la Connaissance véritable et incarnée est enfin à la portée de chacun.",
+  author: "Sabrina Philippe ",
+  genre: "Romans de développement personnel",
+  publisher: "JOUVENCE",
+  publishing_year: 2016,
+  EAN: "9782889116546",
+  book_type: "Livre de poche",
+  ratings: 4.7,
+  image_url: ""
+)
+
+
 puts 'Livres créés'
 
 Reading.destroy_all

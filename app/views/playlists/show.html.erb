@@ -12,14 +12,26 @@
   <% end %>
 </div>
 <div class="container">
-   <div class="d-flex flex-wrap row ">
       <% @readings.each do |reading| %>
-        <% link_to @playlist %><div class="cards-playlist col-6 ">
-            <%= image_tag reading.book.image_url, class: "image-book" %>
-          <div class="text-playlist d-flex">
-            <p><%= reading.book.author %> - <%= reading.book.title %></p>
-          </div>
+      <%= link_to reading_path(reading), class: "book-card" do %>
+          <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
+          <div class="card-content">
+              <h1><%= reading.book.title %></h1>
+              <p><%= reading.book.author %></p>
+            <div class="reading-status">
+              <% if reading.reading_status == "unread" %>
+                <div class="reading-status-bar" style="width:0%"></div>
+              <% elsif reading.reading_status == "reading" %>
+                <div class="reading-status-bar" style="width:50%"></div>
+              <% elsif reading.reading_status == "read" %>
+                <div class="reading-status-bar" style="width:100%"></div>
+              <% end %>
+            </div>
         </div>
-      <% end  %>
+        <% if reading.shared_to.present? %>
+          <i class="fa-solid fa-share"></i>
+        <% end %>
+      <% end %>
+    <% end %>
   </div>
 </div>

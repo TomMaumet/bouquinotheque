@@ -1,7 +1,8 @@
 <% @title = "Mes listes de favoris" %>
 
+<div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Nouvelle liste</div>
+
 <div class="container container-playlist" data-controller='add-playlist'>
-  <div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Créer une liste de favoris</div>
     <div class=" add-pages container d-none" data-add-playlist-target="page" >
       <i id="cross_pages"class="fa-solid fa-xmark fa-2xl" data-action="click->add-playlist#close_page"></i>
     <div class="row justify-content-center">
@@ -21,11 +22,11 @@
     <div class="yes">
       <h3><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h3>
     </div>
-    <div class="d-flex flex-wrap row scroll-box">
+    <div class="container-detail">
       <% playlist.readings.first(5).each do |reading| %>
-        <% link_to @playlist %><div class="cards-playlist col-4">
+        <% link_to @playlist %><div class="cards-playlist col-4 p-2">
             <%= image_tag reading.book.image_url, class: "image-book" %>
-          <div class="text-playlist d-flex">
+          <div class="text-playlist d-inline">
             <h5><%= reading.book.author %></h5>
             <p><%= reading.book.title %></p>
           </div>
