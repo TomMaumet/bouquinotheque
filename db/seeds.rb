@@ -418,7 +418,7 @@ book28 = Book.create!(
   EAN: "9782378803759",
   book_type: "Roman",
   ratings: 4.33,
-  image_url: ""
+  image_url: "https://i.imgur.com/JyqvMh2.jpeg"
 )
 
 book29 = Book.create!(
@@ -436,7 +436,7 @@ book29 = Book.create!(
   EAN: "9782226481474",
   book_type: "Livre broché",
   ratings: 4.26,
-  image_url: ""
+  image_url: "https://i.imgur.com/xhmGoDp.jpeg"
 )
 
 book30 = Book.create!(
@@ -454,7 +454,7 @@ book30 = Book.create!(
   EAN: "9782702183694",
   book_type: "Livre broché",
   ratings: 4.2,
-  image_url: ""
+  image_url: "https://i.imgur.com/hc4qe25.jpeg"
 )
 
 book31 = Book.create!(
@@ -471,7 +471,7 @@ book31 = Book.create!(
   EAN: "9782253906568",
   book_type: "Livre de poche",
   ratings: 4.5,
-  image_url: ""
+  image_url: "https://i.imgur.com/TLbsZbn.jpeg"
 )
 
 book32 = Book.create!(
@@ -484,7 +484,7 @@ book32 = Book.create!(
   EAN: "9782889116546",
   book_type: "Livre de poche",
   ratings: 4.7,
-  image_url: ""
+  image_url: "https://i.imgur.com/iFeadDz.jpeg"
 )
 
 
