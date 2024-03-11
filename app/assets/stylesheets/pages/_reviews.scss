@@ -1,6 +1,6 @@
 .book-reviews {
-display: flex;
-gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .new-review {
@@ -9,16 +9,22 @@ gap: 1rem;
 }
 
 .book-review {
-width:calc(50% - 1rem);
-background-color: white;
-padding: 0px 1rem;
-border-radius: 10px;
-margin-bottom: 1rem;
+  width: calc(50% - 1rem);
+  background-color: white;
+  padding: 0px 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 
- h6 {margin: 0px}
+  h6 {
+    margin: 0px
+  }
 
- .h5 {display: flex;
-  justify-content: space-between;}
+  .h5 {
+    display: flex;
+    justify-content: space-between;
+  }
 
-  p {margin-bottom:1rem}
+  p {
+    margin-bottom:1rem
+  }
 }

@@ -1,6 +1,4 @@
-<div class="text-center">
-  <h1>Mes Favoris</h1>
-</div>
+<% @title = "Mes listes de favoris" %>
 
 <div class="container container-playlist" data-controller='add-playlist'>
   <div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Créer une liste de favoris</div>
@@ -26,9 +24,7 @@
     <div class="d-flex flex-wrap row ">
       <% playlist.readings.first(3).each do |reading| %>
         <% link_to @playlist %><div class="cards-playlist col-4">
-          <div class="image-book">
-            <%= image_tag(reading.book.image_url) %>
-          </div>
+            <%= image_tag reading.book.image_url, class: "image-book" %>
           <div class="text-playlist d-flex">
             <p><%= reading.book.author %> - <%= reading.book.title %></p>
           </div>
