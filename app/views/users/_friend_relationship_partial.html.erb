@@ -3,8 +3,11 @@
     <div style="text-align:center">
       <%= image_tag relationship.friend.avatar, alt: relationship.friend.nickname, class: "avatar" %>
       <h4>
-        <%= relationship.friend.nickname %> <%= link_to friend_relationships_path(relationship), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûr.e ?" } do %>
-        <i class="fa-solid fa-xmark"></i>
+        <%= relationship.friend.nickname %>
+        <% if @user == current_user %>
+          <%= link_to friend_relationship_path(relationship), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûr.e ?" } do %>
+            <i class="fa-solid fa-xmark"></i>
+          <% end %>
         <% end %>
       </h4>
     </div>

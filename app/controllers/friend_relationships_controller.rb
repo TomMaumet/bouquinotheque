@@ -6,6 +6,7 @@ class FriendRelationshipsController < ApplicationController
 
   def destroy
     @friend_relationship = FriendRelationship.find(params[:id])
+    @friend_relationship.destroy
   end
 
   def friend_relationships_params
