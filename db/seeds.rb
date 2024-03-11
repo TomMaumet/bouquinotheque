@@ -394,7 +394,7 @@ book26 = Book.create!(
 )
 
 book27 = Book.create!(
-  title: "Chers voisins, tome 1",
+  title: "  ",
   summary: "« Connards, vous n'êtes pas seuls au monde » Mots doux et petites querelles de voisinage.",
   author: "Aurélie C & Olivier V",
   genre: "humour",

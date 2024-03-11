@@ -8,3 +8,4 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "bootstrap", to: "bootstrap.min.js", preload: true
 pin "@popperjs/core", to: "popper.js", preload: true
 pin "@ericblade/quagga2", to: "@ericblade--quagga2.js" # @1.8.4
+pin "isbn" # @0.4.0
