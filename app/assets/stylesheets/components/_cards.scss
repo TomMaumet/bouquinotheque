@@ -1,17 +1,21 @@
 .cards-playlist {
-
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content:space-evenly;
   gap: 1rem;
 
-  .image-book{
-    img {
-      max-width: 100%;
-    }
+  .image-book {
+    width: 200px;
+    height: 300px;
   }
+
   .text-playlist {
     min-height: 70px;
+    max-width:  200px;;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
   }
 
   p {
