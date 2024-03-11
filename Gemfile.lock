@@ -142,6 +142,7 @@ GEM
     irb (1.11.2)
       rdoc
       reline (>= 0.4.2)
+    isbn (2.0.11)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -305,6 +306,7 @@ DEPENDENCIES
   error_highlight (>= 0.4.0)
   font-awesome-sass (~> 6.1)
   importmap-rails
+  isbn
   jbuilder
   pg (~> 1.1)
   puma (>= 5.0)

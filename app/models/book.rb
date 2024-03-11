@@ -1,3 +1,5 @@
+require 'isbn'
+
 class Book < ApplicationRecord
   has_many :readings
   has_many :suggestions
@@ -13,4 +15,8 @@ class Book < ApplicationRecord
   validates :ratings, presence: true
   validates :book_type, presence: true
   validates :image_url, presence: true
+
+  def isbn
+    return ISBN.ten(self.EAN)
+  end
 end
