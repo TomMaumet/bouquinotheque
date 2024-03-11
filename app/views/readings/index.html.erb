@@ -1,27 +1,30 @@
 <% @title = "ma bibliothèque" %>
 <div class="flex-container" style="padding: 20px">
   <%= form_with url: readings_path, method: :get, class: "d-flex" do |f| %>
-    <div >
-      <select class="form-control-sm" name="genre" id="genre-select">
-          <option value="">--Genre--</option>
-        <% @genres.each do |genre| %>
-          <option value="<%= genre %>"><%= genre %></option>
-        <% end %>
-        </select>
-        <select class="form-control-sm" name="author" id="author-select">
-          <option value="">--Auteur--</option>
-        <% @authors.each do |author| %>
-          <option value="<%= author %>"><%= author %></option>
-        <% end %>
-      </select>
-      </div>
+    <div>
+      <input list="genre-select" name="genre">
+        <datalist id="genre-select">
+          <option value="">Genre</option>
+          <% @genres.each do |genre| %>
+            <option value="<%= genre %>"><%= genre %></option>
+          <% end %>
+        </datalist>
+      </input>
+      <input name="author" list="author-select">
+        <datalist id="author-select">
+          <option value="">Auteur.rice.s</option>
+          <% @authors.each do |author| %>
+            <option value="<%= author %>"><%= author %></option>
+          <% end %>
+        </datalist>
+      </input>
+    </div>
     <%= submit_tag "Rechercher", class: "btn-add" %>
   <% end %>
 </div>
 
 <div class="container">
 <center><%= link_to "Ajouter un livre à ma bibliothèque", new_reading_path, class: "btn btn-success" %></center><br>
-
     <% @readings.each do |reading| %>
       <%= link_to reading_path(reading), class: "book-card" do %>
           <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>

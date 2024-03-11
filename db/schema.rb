@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_05_160252) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_11_094453) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,6 +36,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_160252) do
     t.string "EAN"
     t.string "book_type"
     t.string "image_url"
+  end
+
+  create_table "friend_relationships", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "friend_id"
+    t.index ["friend_id"], name: "index_friend_relationships_on_friend_id"
+    t.index ["user_id"], name: "index_friend_relationships_on_user_id"
   end
 
   create_table "playlist_items", force: :cascade do |t|
@@ -86,7 +95,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_160252) do
     t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "sender_id"
     t.index ["book_id"], name: "index_suggestions_on_book_id"
+    t.index ["sender_id"], name: "index_suggestions_on_sender_id"
     t.index ["user_id"], name: "index_suggestions_on_user_id"
   end
 
@@ -106,6 +117,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_160252) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "friend_relationships", "users"
+  add_foreign_key "friend_relationships", "users", column: "friend_id"
   add_foreign_key "playlist_items", "playlists"
   add_foreign_key "playlist_items", "readings"
   add_foreign_key "playlists", "users"
@@ -115,4 +128,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_05_160252) do
   add_foreign_key "reviews", "users"
   add_foreign_key "suggestions", "books"
   add_foreign_key "suggestions", "users"
+  add_foreign_key "suggestions", "users", column: "sender_id"
 end

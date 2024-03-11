@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: "readings#index"
 
   devise_for :users
+  resources :users, only: [:show]
+  resources :friend_relationships, only: [:create, :destroy]
 
   resources :playlists, except: [:new, :edit]
 
