@@ -1,5 +1,3 @@
-require 'isbn'
-
 class Book < ApplicationRecord
   has_many :readings
   has_many :suggestions

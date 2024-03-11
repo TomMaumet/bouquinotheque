@@ -1,0 +1,7 @@
+<% @suggestions.each do |suggestion| %>
+<%= suggestion.sender.nickname %>
+<%= suggestion.book.title %>
+<%= suggestion.book.author %>
+<%= suggestion.book.ratings %>
+<%= suggestion.comment %>
+<% end %>
