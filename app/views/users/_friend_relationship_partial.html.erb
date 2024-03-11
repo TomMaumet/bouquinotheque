@@ -1,11 +1,11 @@
-<% @friend_relationships.each do |relationship| %>
-  <%= link_to user_path(relationship.friend) do %>
+<% @friends.each do |friend| %>
+  <%= link_to user_path(friend) do %>
     <div style="text-align:center">
-      <%= image_tag relationship.friend.avatar, alt: relationship.friend.nickname, class: "avatar" %>
+      <%= image_tag friend.avatar, alt: friend.nickname, class: "avatar" %>
       <h4>
-        <%= relationship.friend.nickname %>
+        <%= friend.nickname %>
         <% if @user == current_user %>
-          <%= link_to friend_relationship_path(relationship), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûr.e ?" } do %>
+          <%= link_to friend_relationship_path(friend: friend), data: {turbo_method: :delete, turbo_confirm: "êtes vous sûr.e ?" } do %>
             <i class="fa-solid fa-xmark"></i>
           <% end %>
         <% end %>

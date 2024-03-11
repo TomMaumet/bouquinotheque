@@ -7,6 +7,8 @@ class BooksController < ApplicationController
   def show
     @reading = Reading.new
     @book = Book.find(params[:id])
+    @new_suggestion = Suggestion.new
+    @friends = current_user.friends
   end
 
   def new
