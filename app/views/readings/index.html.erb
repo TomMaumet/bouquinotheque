@@ -4,24 +4,24 @@
     <%= form_with url: readings_path, method: :get, html: {class: "d-flex", data: {update_filters_input_target: "form"}} do |f| %>
       <div>
         <%= select_tag :tri,
-          options_for_select([['titre A - Z',"title a to z"], ['titre Z - A',"title z to a"], ['auteur.ice A - Z',"author a to z"], ['auteur.ice Z - A',"author z to a"]],
-          params[:tri]), include_blank: "Trier par", class: "form-control", data: {update_filters_input_target: "inputTri", action: "change->update-filters-input#tri"} %>
+          options_for_select([['Titre A - Z',"title a to z"], ['Titre Z - A',"title z to a"], ['Auteur.ice A - Z',"author a to z"], ['Auteur.ice Z - A',"author z to a"]],params[:tri]),
+          include_blank: "↑↓", class: "form-control", data: { update_filters_input_target: "inputTri", action: "change->update-filters-input#tri" } %>
       </div>
       <div>
         <%= select_tag :reading_status,
-          options_for_select([['lu',"read"], ['en cours',"reading"], ['non lu',"unread"]],
-          params[:reading_status]), include_blank: "Statut", class: "form-control", data: {update_filters_input_target: "inputStatus", action: "change->update-filters-input#status"} %>
+          options_for_select([['Lu.e',"read"], ['En cours',"reading"], ['Non lu.e',"unread"]], params[:reading_status]),
+          include_blank: "Statut", class: "form-control", data: { update_filters_input_target: "inputStatus", action: "change->update-filters-input#status" } %>
       </div>
       <div>
-      <%= f.text_field :genre, class: "form-control", list: "genre-select", data: {update_filters_input_target: "inputGenre", action: "keyup->update-filters-input#genre"} %>
+        <%= f.text_field :genre, placeholder: "Genre", class: "form-control", list: "genre-select", data: {update_filters_input_target: "inputGenre", action: "keyup->update-filters-input#genre"} %>
           <datalist id="genre-select">
             <% @genres.each do |genre| %>
             <option value="<%= genre %>"><%= genre %></option>
             <% end %>
           </datalist>
-        </div>
-        <div>
-        <%= f.text_field :author, include_blank: "Auteur.ice.s", class: "form-control", list: "author-select", data: {update_filters_input_target: "inputAuthor", action: "keyup->update-filters-input#author"} %>
+      </div>
+      <div>
+        <%= f.text_field :author, placeholder: "Auteur.ice.s", include_blank: "Auteur.ice.s", class: "form-control", list: "author-select", data: {update_filters_input_target: "inputAuthor", action: "keyup->update-filters-input#author"} %>
           <datalist id="author-select">
             <% @authors.each do |author| %>
               <option value="<%= author %>"><%= author %></option>
@@ -31,7 +31,9 @@
     <% end %>
   </div>
 
-  <center><%= link_to "Ajouter un livre à ma bibliothèque", new_reading_path, class: "btn btn-success" %></center><br>
+  <%= link_to new_reading_path, class: "btn-add" do %>
+    <i class="fa-solid fa-plus"></i>
+  <% end %><br>
 
   <div class="container" data-update-filters-input-target="readings">
       <%= render 'reading_partial', readings: @readings %>
