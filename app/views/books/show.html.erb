@@ -8,7 +8,7 @@
       <%= image_tag @book.image_url, alt: @book.title, class: "book-cover"%>
       <ul>
          <li><%= @book.publisher %>, <%= @book.publishing_year %></li>
-         <li><%= @book.book_type.capitalize %>: <%= @book.genre %></li>
+         <li><%= @book.book_type&.capitalize %>: <%= @book.genre %></li>
       </ul>
       <div data-controller="display-all" class="summary">
          <p data-display-all-target="summary">
