@@ -1,4 +1,4 @@
-.add-pages{
+.add-pages {
   background-color: gray;
   min-height: 83vh;
   height: 100%;
@@ -8,13 +8,13 @@
   border-radius: 15px;
   position: relative;
 
-  .form{
+  .form {
     background-color: white;
     border-radius: 15px;
     text-align: center;
   }
 
-  #cross_pages{
+  #cross_pages {
     position: absolute;
     top: 5%;
     right: 6%;
@@ -25,6 +25,7 @@
 .container-detail {
   display: flex;
   overflow-x: auto;
+  padding: 1rem;
 }
 
 .container-detail::-webkit-scrollbar {

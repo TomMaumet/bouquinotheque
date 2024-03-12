@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :users, only: [:show]
+  resources :book_stores, only: [:index]
   resources :friend_relationships, only: [:create, :destroy]
 
   resources :playlists, except: [:new, :edit]
