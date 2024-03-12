@@ -55,9 +55,15 @@
 	<div class="white-background">
 		<%= image_tag @reading.book.image_url, alt: @reading.book.title, class: "book-cover"%>
 		<ul>
-			<li><%= @reading.book.publisher %>, <%= @reading.book.publishing_year %></li>
-			<li><%= @reading.book.book_type?.capitalize %>: <%= @reading.book.genre %></li>
-		</ul>
+			<li><% if @reading.book.publisher.present? %>
+         <%= @reading.book.publisher %>,
+         <% end %><%= @reading.book.publishing_year %></li>
+         <li><% if @reading.book.book_type.present? %>
+         <%= @reading.book.book_type&.capitalize %>:
+         <% end %>
+         <%= @reading.book.genre %>
+         </li>
+    </ul>
 		<div data-controller="display-all">
 			<% if @reading.comment.present? %>
 			<p>
