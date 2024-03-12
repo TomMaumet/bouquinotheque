@@ -54,7 +54,7 @@ class ReadingsController < ApplicationController
     if @reading.save
       redirect_to reading_path(@reading)
     else
-      redirect_to new_book_path
+      redirect_to new_book_path(reading_params)
     end
   end
 
@@ -65,6 +65,6 @@ class ReadingsController < ApplicationController
   end
 
   def reading_params
-    params.require(:reading).permit(:comment, :my_rating, :reading_status, :shared_to)
+    params.require(:reading).permit(:comment, :my_rating, :reading_status, :shared_to, :title, :EAN)
   end
 end

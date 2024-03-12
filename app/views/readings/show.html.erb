@@ -56,7 +56,7 @@
 		<%= image_tag @reading.book.image_url, alt: @reading.book.title, class: "book-cover"%>
 		<ul>
 			<li><i class="fa-solid fa-bookmark"></i><%= @reading.book.publisher %>, <%= @reading.book.publishing_year %></li>
-			<li><i class="fa-solid fa-bookmark"></i><%= @reading.book.book_type.capitalize %>: <%= @reading.book.genre %></li>
+			<li><i class="fa-solid fa-bookmark"></i><%= @reading.book.book_type&.capitalize %>: <%= @reading.book.genre %></li>
 		</ul>
 		<div data-controller="display-all">
 			<% if @reading.comment.present? %>
