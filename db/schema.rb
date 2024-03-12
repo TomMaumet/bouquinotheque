@@ -21,6 +21,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_11_161916) do
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone_number"
+    t.string "details"
+    t.string "webpage"
+    t.string "store_type"
   end
 
   create_table "books", force: :cascade do |t|

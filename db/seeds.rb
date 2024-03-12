@@ -774,7 +774,12 @@ review1 = Review.create!(
   title: "chef d'oeuvre",
   content: "pépite !"
 )
+
 puts 'Reviews créées'
+
+FriendRelationship.destroy_all
+
+puts 'Création des friends'
 
 friend1 = FriendRelationship.create!(
   user: user1,
@@ -785,3 +790,65 @@ friend2 = FriendRelationship.create!(
   user: user1,
   friend: user3
 )
+
+puts 'Friends créés'
+
+BookStore.destroy_all
+
+puts 'Création des libraries'
+
+book_store1 = BookStore.create!(
+  store_type: "généraliste",
+  name: "Mollat",
+  address: "15 rue Vital-Carles, 33080 Bordeaux",
+  details: "du lundi au samedi de 9h30 à 19h30",
+  phone_number: "05 56 56 40 40",
+  webpage: "https://www.mollat.com/"
+)
+
+book_store2 = BookStore.create!(
+  store_type: "généraliste",
+  name: "La Mauvaise Réputation",
+  address: "19 rue des Argentiers, 33000 Bordeaux",
+  details: "du lundi au samedi de 10h ou 14h à 19h",
+  phone_number: "05 56 79 73 54",
+  webpage: "http://lamauvaisereputation.free.fr/accueil"
+)
+
+book_store3 = BookStore.create!(
+  store_type: "généraliste",
+  name: "La Machine à lire",
+  address: "8 place du Parlement, 33000 Bordeaux",
+  details: "le lundi de 14h à 20h et du mardi au samedi de 10h à 20h",
+  phone_number: "05 56 48 03 87",
+  webpage: "http://www.lamachinealire.com/"
+)
+
+book_store4 = BookStore.create!(
+  store_type: "littérature anglophone",
+  name: "Bradley’s bookshop",
+  address: "1 rue de la Merci, 33000 Bordeaux",
+  details: "du mardi au samedi de 10h à 19h",
+  phone_number: "05 56 52 10 57",
+  webpage: "http://www.bradleys-bookshop.com/"
+)
+
+book_store5 = BookStore.create!(
+  store_type: "café librairie",
+  name: "Librairie Georges Talence",
+  address: "300 cours de la Libération, 33400 Talence",
+  details: "le lundi de 14h à 19h et du mardi au samedi de 9h30 à 19h30",
+  phone_number: "05 56 04 68 00",
+  webpage: "http://www.librairiegeorges.com/"
+)
+
+book_store6 = BookStore.create!(
+  store_type: "littérature jeunesse",
+  name: "Librairie comptines",
+  address: "5 rue Duffour Dubergier Bordeaux",
+  details: "du mardi au vendredi de 10h30 à 19h et le samedi de 10h à 19h",
+  phone_number: "05 56 44 55 56",
+  webpage: "http://librairiecomptines.hautetfort.com/"
+)
+
+puts 'Librairies créées'

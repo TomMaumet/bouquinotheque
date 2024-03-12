@@ -1,0 +1,10 @@
+<% @title = "Libraries à proximité de ${current_user.city}" %>
+
+<% @book_stores.each do |book_store| %>
+<h1><%= book_store.name %></h1>
+<ul><li><%= book_store.store_type %></li>
+<li><%= book_store.address %></li>
+<li><%= book_store.details %></li>
+<li><%= book_store.phone_number %></li>
+<li><%= link_to "Visiter le site internet", book_store.webpage %></li></ul>
+<% end %>
