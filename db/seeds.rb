@@ -1,3 +1,5 @@
+FriendRelationship.destroy_all
+
 User.destroy_all
 
 puts "Création des utilisateurs"
@@ -633,7 +635,6 @@ review1 = Review.create!(
 
 puts 'Reviews créées'
 
-FriendRelationship.destroy_all
 
 puts 'Création des friends'
 
