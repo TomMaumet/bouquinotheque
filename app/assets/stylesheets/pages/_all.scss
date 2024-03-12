@@ -13,8 +13,37 @@ flex-direction: column}
   background-color:white;
   padding: 1rem;
   border-radius: 1rem;
+
+  li {
+    list-style: none;
+  }
+
+  li:before {
+    content: '\f02e';
+    font-family: "Font Awesome 6 Free";
+    padding-right: 1rem;
+    color: $yellow
+  }
+
+  ul {
+    margin: 1rem 0px;
+    padding: 0px
+  }
 }
 
 .gap1 {
   gap: 1rem
+}
+
+.btn-add i:before {
+  position: fixed;
+  bottom: 6rem;
+  right: 1rem;
+  z-index: 99999;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 2rem;
+  width: 64px;
+  background-color: $yellow;
+  color: white
 }

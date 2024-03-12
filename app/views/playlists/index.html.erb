@@ -1,27 +1,23 @@
 <% @title = "Mes listes de favoris" %>
-
-
-<div class="container container-playlist" data-controller='add-playlist'>
-    <div class="button-add btn btn-danger" data-action="click->add-playlist#open_page">Nouvelle liste</div>
-    <div class=" add-pages container d-none" data-add-playlist-target="page" >
-      <i id="cross_pages"class="fa-solid fa-xmark fa-2xl" data-action="click->add-playlist#close_page"></i>
-    <div class="row justify-content-center">
-      <div class="form col-6 p-2">
-        <h2>Donnez un nom à votre liste de favoris</h2>
+<div data-controller='display-all'>
+    <div class="btn-add" data-action="click->display-all#displayForm" data-display-all-target="button">
+    <i class="fa-solid fa-plus"></i>
+    </div>
+    <div class="add-page d-none" data-display-all-target="form">
+    <i id="cross_pages" class="fa-solid fa-xmark fa-2xl" data-action="click->display-all#displayForm"></i>
+      <div class="form">
+        <h2>Titre</h2>
         <%= simple_form_for @playlist_new do |f| %>
-          <%= f.input :title, label: "Titre" %>
-          <%= f.button :submit, value: "Valider" , class: "btn btn-danger"%>
+          <%= f.input :title, label: false %>
+          <%= f.button :submit, value: "Valider", class: "btn btn-danger", data: { action: "click->display-all#displayForm", display_all_target: "button" }%>
         <% end %>
-      </div>
     </div>
   </div>
 </div>
 
 <div class="container">
   <% @playlists.each do |playlist| %>
-    <div class="yes">
       <h3><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h3>
-    </div>
     <div class="container-detail gap1">
       <% playlist.readings.first(6).each do |reading| %>
         <% link_to @playlist %><div class="cards-playlist white-background">

@@ -1,5 +1,6 @@
 .book-reviews {
   display: flex;
+  justify-content: bewteen;
   gap: 1rem;
 }
 
@@ -9,11 +10,10 @@
 }
 
 .book-review {
-  width: calc(50% - 1rem);
+  width: 50%;
   background-color: white;
   padding: 0px 1rem;
   border-radius: 1rem;
-  margin-bottom: 1rem;
 
   h6 {
     margin: 0px

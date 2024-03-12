@@ -1,3 +1,5 @@
+FriendRelationship.destroy_all
+
 User.destroy_all
 
 puts "Création des utilisateurs"
@@ -431,7 +433,7 @@ book29 = Book.create!(
   Avec ce nouveau chef-d’œuvre, on retrouve un Stephen King au sommet de l’horreur, et son enquêtrice Holly, célèbre héroïne de la trilogie Mr Mercedes et de L’Outsider.",
   author: "Stephen King",
   genre: "thriller",
-  publisher: "ALBIN MICHEL",
+  publisher: "Albin Michel",
   publishing_year: 2024,
   EAN: "9782226481474",
   book_type: "Livre broché",
@@ -478,8 +480,8 @@ book32 = Book.create!(
   title: "Les quatre accords toltèques: La voie de la liberté personnelle",
   summary: "Castaneda a fait découvrir au grand public les enseignements des chamans mexicains qui ont pour origine la tradition toltèque, gardienne des connaissances de Quetzacoatl, le serpent à plumes. Dans ce livre, Don Miguel révèle la source des croyances limi-tatrices qui nous privent de joie et créent des souffrances inutiles. Il montre en des termes très simples comment on peut se libérer du conditionnement collectif - le rêve de la planète, basé sur la peur - afin de retrouver la dimension d'a mour inconditionnel qui est à notre origine et constitue le fondement de s enseignements toltèques. Les quatre accords proposent un puissant code de conduite capable de transformer rapidement notre vie en une expérience de liberté, de vrai bonheur et d'amour. Le monde fascinant de la Connaissance véritable et incarnée est enfin à la portée de chacun.",
   author: "Sabrina Philippe ",
-  genre: "Romans de développement personnel",
-  publisher: "JOUVENCE",
+  genre: "développement personnel",
+  publisher: "Jouvence",
   publishing_year: 2016,
   EAN: "9782889116546",
   book_type: "Livre de poche",
@@ -633,7 +635,6 @@ review1 = Review.create!(
 
 puts 'Reviews créées'
 
-FriendRelationship.destroy_all
 
 puts 'Création des friends'
 
@@ -701,10 +702,28 @@ book_store5 = BookStore.create!(
 book_store6 = BookStore.create!(
   store_type: "littérature jeunesse",
   name: "Librairie comptines",
-  address: "5 rue Duffour Dubergier Bordeaux",
+  address: "5 rue Duffour Dubergier, 33000 Bordeaux",
   details: "du mardi au vendredi de 10h30 à 19h et le samedi de 10h à 19h",
   phone_number: "05 56 44 55 56",
   webpage: "http://librairiecomptines.hautetfort.com/"
+)
+
+book_store7 = BookStore.create!(
+  store_type: "généraliste",
+  name: "Gibert Toulouse",
+  address: "3 Rue du Taur, 31000 Toulouse",
+  details: "du lundi au samedi de 10h à 19h",
+  phone_number: "05 61 11 17 77",
+  webpage: "https://www.gibert.com/stores/toulouse-gibert-joseph-librairie"
+)
+
+book_store8 = BookStore.create!(
+  store_type: "généraliste",
+  name: "Ombres Blanches",
+  address: "50 Rue Léon Gambetta, 31000 Toulouse",
+  details: "du lundi au samedi de 10h à 19h",
+  phone_number: "05 34 45 53 33",
+  webpage: "https://www.ombres-blanches.fr/"
 )
 
 puts 'Librairies créées'

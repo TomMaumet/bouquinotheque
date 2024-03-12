@@ -8,9 +8,7 @@ class User < ApplicationRecord
   has_many :playlists, dependent: :destroy
   has_many :suggestions, dependent: :destroy
   has_many :readings, dependent: :destroy
-  has_many :friend_relationships, dependent: :destroy #(user_id)
-#  has_many :second_friend_relationships, dependent: :destroy #(friend_id)
-
+  has_many :friend_relationships, dependent: :destroy
   validates :nickname, presence: true
   validates :city, presence: true
 
