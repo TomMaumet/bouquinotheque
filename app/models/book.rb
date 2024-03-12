@@ -36,10 +36,7 @@ class Book < ApplicationRecord
     Vector[self.thriller_score, self.romance_score, self.aventure_score, self.jeunesse_score]
   end
 
-  private
-
   def isbn
     return ISBN.ten(self.EAN)
   end
-
 end

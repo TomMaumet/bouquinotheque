@@ -61,5 +61,5 @@
 <div class="d-flex justify-content-center flex-column align-items-center">
    <h3>Acheter ce livre </h3>
    <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>' class="btn btn-danger">Voir sur Amazon</a>
-   <%= link_to "Voir les librairies à proximité de ${current_user.city}", book_store_path, class: "btn btn-danger" %>
+   <%= link_to "Voir les librairies à proximité de ${current_user.city}", book_stores_path, class: "btn btn-danger" %>
 </div>

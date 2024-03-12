@@ -21,3 +21,19 @@
         <% end %>
     </div>
 </div>
+
+<div class="container">
+  <h3>Mes recommandations</h3>
+  <div class="container-detail gap1">
+      <% current_user.recs_books.first(6).each do |recommandation| %>
+        <%= link_to book_path(recommandation[:book]), class: 'text-decoration-none' do %>
+        <div class="cards-playlist white-background">
+          <%= image_tag recommandation[:book].image_url, class: "image-book" %>
+          <h4><%= recommandation[:book].title %></h4>
+          <p><%= recommandation[:book].author %></p>
+          <p><%= recommandation[:similarity].to_i %></p>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+</div>
