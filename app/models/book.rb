@@ -32,6 +32,10 @@ class Book < ApplicationRecord
     #since cosine is a decimal between 0 and 1, multiplying by 100 and then rounding to the nearest integer gives a nice scoring system from 0 to 100
   end
 
+  def new_rating_vector
+    Vector[self.thriller_score, self.romance_score, self.aventure_score, self.jeunesse_score]
+  end
+
   private
 
   def isbn

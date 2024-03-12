@@ -13,6 +13,7 @@ class User < ApplicationRecord
   # has_many :second_friend_relationships, dependent: :destroy #(friend_id)
   validates :nickname, presence: true
   validates :city, presence: true
+  after_create :create_user_profil_recommandation
 
   def create_user_profil_recommandation
     @total_reviews = 1
@@ -52,19 +53,18 @@ class User < ApplicationRecord
     numerator = user_vector.inner_product(book_vector)
     denominator = user_vector.r * book_vector.r
     # this will give the cosine similarity
-    score = numerator/denominator*100
-    return score.to_i
+    score = numerator/ denominator*100
+    return score
   end
 
-  def book_recs
+  def recs_books
     book_rec_array = []
     self.create_user_profil_recommandation
     Book.all.each do |book|
-      score = book.similarity_score_book(self)
+      score = self.similarity_score(book)
       book_rec_array.push( { book: book, similarity: score } )
     end
-    @ranked = book_rec_array.sort_by{|rec| -rec[:similarity]}
-    return @ranked
+    book_rec_array.sort_by{|rec| -rec[:similarity]}
   end
 
   def friends
