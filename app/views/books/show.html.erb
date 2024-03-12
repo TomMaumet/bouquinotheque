@@ -55,7 +55,7 @@
     <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
     <%= f.input :user_id, label: false, as: :select, collection: @friends.map { |friend| [friend.nickname, friend.id] }, include_blank: false %>
     <%= f.input :comment %>
-    <%= f.button :submit, "Suggérer" %>
+    <%= f.button :submit, "Suggérer", data: { display_all_target: "button", action: "click->display-all#displayForm"} %>
   <% end %>
   </div>
   </center>
