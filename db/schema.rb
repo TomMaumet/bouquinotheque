@@ -40,6 +40,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_12_103717) do
     t.string "EAN"
     t.string "book_type"
     t.string "image_url"
+    t.integer "thriller_score"
+    t.integer "romance_score"
+    t.integer "aventure_score"
+    t.integer "jeunesse_score"
   end
 
   create_table "friend_relationships", force: :cascade do |t|
@@ -117,6 +121,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_12_103717) do
     t.string "avatar"
     t.integer "age"
     t.string "city"
+    t.integer "thriller_score"
+    t.integer "romance_score"
+    t.integer "aventure_score"
+    t.integer "jeunesse_score"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
