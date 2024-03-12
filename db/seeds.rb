@@ -514,7 +514,7 @@ book26 = Book.create!(
 )
 
 book27 = Book.create!(
-  title: "Nos chères voisins",
+  title: "Chers voisins",
   summary: "« Connards, vous n'êtes pas seuls au monde » Mots doux et petites querelles de voisinage.",
   author: "Aurélie C & Olivier V",
   genre: "humour",
@@ -531,7 +531,7 @@ book27 = Book.create!(
 )
 
 book28 = Book.create!(
-  title: "Veiller sur elle - Prix Goncourt 2023 ",
+  title: "Veiller sur elle - Prix Goncourt 2023",
   summary: "« Au grand jeu du destin, Mimo a tiré les mauvaises cartes. Né pauvre, il est confié en apprentissage à un sculpteur de pierre sans envergure. Mais il a du génie entre les mains. Toutes les fées ou presque se sont penchées sur Viola Orsini. Héritière d'une famille prestigieuse, elle a passé son enfance à l'ombre d'un palais génois. Mais elle a trop d'ambition pour se résigner à la place qu'on lui assigne.
   Ces deux-là n'auraient jamais dû se rencontrer. Au premier regard, ils se reconnaissent et se jurent de ne jamais se quitter. Viola et Mimo ne peuvent ni vivre ensemble, ni rester longtemps loin de l'autre. Liés par une attraction indéfectible, ils traversent des années de fureur quand l'Italie bascule dans le fascisme. Mimo prend sa revanche sur le sort, mais à quoi bon la gloire s'il doit perdre Viola ?
   Un roman plein de fougue et d'éclats, habité par la grâce et la beauté.",

@@ -1,5 +1,6 @@
 class DiscoversController < ApplicationController
   def index
-    @books = Book.all
+    @suggestions = Suggestion.where(user: current_user)
+    @wishlist = Suggestion.where(sender: current_user)
   end
 end

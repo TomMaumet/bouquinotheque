@@ -1,3 +1,4 @@
+
 require 'matrix'
 
 class Book < ApplicationRecord

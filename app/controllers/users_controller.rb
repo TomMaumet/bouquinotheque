@@ -3,6 +3,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @new_friend = FriendRelationship.new
 
-    @friend_relationships = FriendRelationship.where(user: @user)
+    @friends = @user.friends
   end
 end
