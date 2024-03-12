@@ -37,6 +37,6 @@ class Book < ApplicationRecord
   end
 
   def isbn
-    return ISBN.ten(self.EAN)
+    return ISBN.ten(self.EAN.strip)
   end
 end

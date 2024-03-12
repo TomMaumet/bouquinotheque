@@ -469,7 +469,7 @@ book23 = Book.create!(
   author: "Dan Brown",
   publisher: "J.-C. LATTÈS",
   publishing_year: 2003,
-  EAN: "9782709626996 ",
+  EAN: "9782709626996",
   book_type: "Livre broché",
   ratings: 3.72,
   image_url: "https://i.imgur.com/B0Xg4BT.jpeg",
