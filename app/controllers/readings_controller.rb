@@ -4,12 +4,22 @@ class ReadingsController < ApplicationController
   def index
     @genres = Book.pluck(:genre).uniq
     @authors = Book.pluck(:author).uniq
-    if params[:genre].present?
-      @readings = Reading.joins(:book).where(books: { genre: params[:genre] }, user: current_user)
-    elsif params[:author].present?
-      @readings = Reading.joins(:book).where(books: { author: params[:author] }, user: current_user)
-    else
-      @readings = Reading.where(user: current_user)
+
+    @readings = Reading.where(user: current_user)
+
+    @readings = Reading.filter_by_genre(params[:genre], current_user) if params[:genre].present?
+    @readings = Reading.filter_by_author(params[:author], current_user) if params[:author].present?
+
+    case params[:tri]
+    when "title a to z" then @readings = @readings.joins(:book).order(:title)
+    when "title z to a" then @readings = @readings.joins(:book).order(title: :desc)
+    when "author a to z" then @readings = @readings.joins(:book).order(:author)
+    when "author z to a" then @readings = @readings.joins(:book).order(author: :desc)
+    end
+
+    respond_to do |format|
+      format.html
+      format.text { render partial: "readings/reading_partial", locals: {readings: @readings}, formats: [:html] }
     end
   end
 

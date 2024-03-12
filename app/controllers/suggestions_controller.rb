@@ -4,7 +4,7 @@ class SuggestionsController < ApplicationController
   end
 
   def wishlist
-    @wishes = Suggestion.where(sender: current_user)
+    @wishes = Suggestion.where(sender_id: current_user.id)
   end
 
   def create

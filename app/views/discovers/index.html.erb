@@ -1,15 +1,23 @@
-<div class="container"><% @books.each do |book| %>
-  <%= link_to book_path(book), class:"book-card mb-3" do %>
-    <%= image_tag book.image_url, alt: book.title, class: "card-image" %>
-    <div class="card-content d-flex align-items-center">
-        <div>
-          <h1><%= book.title %></h1>
-          <p><%= book.author %></p>
+<div class="container"><h3>Suggestions de mes ami.e.s</h3>
+<div class="container-detail gap1">
+      <% @suggestions.first(6).each do |suggestion| %>
+        <div class="cards-playlist white-background">
+            <%= image_tag suggestion.book.image_url, class: "image-book" %>
+          <h5><%= suggestion.book.title %></h5>
+            <p><%= suggestion.book.author %></p>
         </div>
-        <div class="ratings">
-          <i class="fa-solid fa-star"></i><%= book.ratings %>
+        <% end %>
+    </div>
+</div>
+
+<div class="container"><h3>Ma liste de souhaits</h3>
+<div class="container-detail gap1">
+      <% @wishlist.first(6).each do |wish| %>
+<div class="cards-playlist white-background">
+            <%= image_tag wish.book.image_url, class: "image-book" %>
+          <h4><%= wish.book.title %></h4>
+            <p><%= wish.book.author %></p>
         </div>
-      </div>
-    <% end %>
-  <% end %>
+        <% end %>
+    </div>
 </div>

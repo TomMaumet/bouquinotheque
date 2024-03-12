@@ -27,8 +27,9 @@
         <%= f.button :submit, "Ajouter à ma bibliothèque", class: "btn btn-danger" %>
       <% end %>
       <%= simple_form_for [@book, @new_suggestion] do |f| %>
-    <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user }  %>
-    <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user } %>
+    <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id } %>
+    <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id } %>
+    <%= f.input :comment, :as => :hidden, :input_html => { :value => "wish" }  %>
     <%= f.button :submit, "Ajouter à ma liste de souhaits", class: "btn btn-danger" %>
   <% end %>
       <h3>Avis des lecteur.ice.s</h3>
@@ -60,4 +61,5 @@
 <div class="d-flex justify-content-center flex-column align-items-center">
    <h3>Acheter ce livre </h3>
    <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>' class="btn btn-danger">Voir sur Amazon</a>
+   <%= link_to "Voir les librairies à proximité de ${current_user.city}", book_store_path, class: "btn btn-danger" %>
 </div>

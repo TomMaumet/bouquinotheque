@@ -1,49 +1,34 @@
 <% @title = "ma bibliothèque" %>
-<div class="flex-container" style="padding: 20px">
-  <%= form_with url: readings_path, method: :get, class: "d-flex" do |f| %>
-    <div>
-      <input list="genre-select" name="genre">
-        <datalist id="genre-select">
-          <option value="">Genre</option>
-          <% @genres.each do |genre| %>
+<div data-controller="update-filters-input">
+  <div class="container">
+    <%= form_with url: readings_path, method: :get, html: {class: "d-flex", data: {update_filters_input_target: "form"}} do |f| %>
+      <div>
+        <%= select_tag :tri,
+          options_for_select([['titre A - Z',"title a to z"], ['titre Z - A',"title z to a"], ['auteur.ice A - Z',"author a to z"], ['auteur.ice Z - A',"author z to a"]],
+          params[:tri]), include_blank: "Trier par", class: "form-control", data: {update_filters_input_target: "inputTri", action: "change->update-filters-input#tri"} %>
+      </div>
+      <div>
+      <%= f.text_field :genre, class: "form-control", list: "genre-select", data: {update_filters_input_target: "inputGenre", action: "keyup->update-filters-input#genre"} %>
+          <datalist id="genre-select">
+            <% @genres.each do |genre| %>
             <option value="<%= genre %>"><%= genre %></option>
-          <% end %>
-        </datalist>
-      </input>
-      <input name="author" list="author-select">
-        <datalist id="author-select">
-          <option value="">Auteur.rice.s</option>
-          <% @authors.each do |author| %>
-            <option value="<%= author %>"><%= author %></option>
-          <% end %>
-        </datalist>
-      </input>
-    </div>
-    <%= submit_tag "Rechercher", class: "btn-add" %>
-  <% end %>
-</div>
-
-<div class="container">
-<center><%= link_to "Ajouter un livre à ma bibliothèque", new_reading_path, class: "btn btn-success" %></center><br>
-    <% @readings.each do |reading| %>
-      <%= link_to reading_path(reading), class: "book-card" do %>
-          <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
-          <div class="card-content">
-              <h1><%= reading.book.title %></h1>
-              <p><%= reading.book.author %></p>
-            <div class="reading-status">
-              <% if reading.reading_status == "unread" %>
-                <div class="reading-status-bar" style="width:0%"></div>
-              <% elsif reading.reading_status == "reading" %>
-                <div class="reading-status-bar" style="width:50%"></div>
-              <% elsif reading.reading_status == "read" %>
-                <div class="reading-status-bar" style="width:100%"></div>
-              <% end %>
-            </div>
-          </div>
-          <% if reading.shared_to.present? %>
-                <i class="fa-solid fa-share"></i>
-              <% end %>
-      <% end %>
+            <% end %>
+          </datalist>
+        </div>
+        <div>
+        <%= f.text_field :author, include_blank: "Auteur.ice.s", class: "form-control", list: "author-select", data: {update_filters_input_target: "inputAuthor", action: "keyup->update-filters-input#author"} %>
+          <datalist id="author-select">
+            <% @authors.each do |author| %>
+              <option value="<%= author %>"><%= author %></option>
+            <% end %>
+          </datalist>
+      </div>
     <% end %>
+  </div>
+
+  <center><%= link_to "Ajouter un livre à ma bibliothèque", new_reading_path, class: "btn btn-success" %></center><br>
+
+  <div class="container" data-update-filters-input-target="readings">
+      <%= render 'reading_partial', readings: @readings %>
+  </div>
 </div>
