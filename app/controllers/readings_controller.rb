@@ -35,6 +35,9 @@ class ReadingsController < ApplicationController
 
   def update
     @reading.update(reading_params)
+    current_user.update_recommandation_score(@reading.book.new_rating_vector)
+    raise
+    current_user.save
     redirect_to reading_path(@reading)
   end
 
