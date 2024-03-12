@@ -7,6 +7,7 @@ class ReadingsController < ApplicationController
 
     @readings = Reading.where(user: current_user)
 
+    @readings = Reading.filter_by_status(params[:reading_status], current_user) if params[:reading_status].present?
     @readings = Reading.filter_by_genre(params[:genre], current_user) if params[:genre].present?
     @readings = Reading.filter_by_author(params[:author], current_user) if params[:author].present?
 
@@ -56,7 +57,7 @@ class ReadingsController < ApplicationController
     if @reading.save
       redirect_to reading_path(@reading)
     else
-      redirect_to new_book_path
+      redirect_to new_book_path(reading_params)
     end
   end
 
@@ -67,6 +68,6 @@ class ReadingsController < ApplicationController
   end
 
   def reading_params
-    params.require(:reading).permit(:comment, :my_rating, :reading_status, :shared_to)
+    params.require(:reading).permit(:comment, :my_rating, :reading_status, :shared_to, :title, :EAN)
   end
 end

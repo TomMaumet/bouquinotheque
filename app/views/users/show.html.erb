@@ -1,11 +1,11 @@
 <% @title = @user.nickname %>
 
-<div class="container white-background d-flex my-3">
-  <%= image_tag @user.avatar, alt: @user.nickname, class: "profile-avatar"%>
-    <ul>
-      <li><%= @user.age %> ans</li>
-      <li><%= @user.city %></li>
-    </ul>
+<div class="container d-flex my-3 profile">
+<%= image_tag @user.avatar, alt: @user.nickname, class: "profile-avatar"%>
+<div class="white-background d-flex justify-content-center flex-column ms-3" style="width: 100%">
+      <p><i class="fa-solid fa-cake-candles"></i> <%= @user.age %> ans</p>
+      <p><i class="fa-solid fa-city"></i> <%= @user.city %></p>
+    </div>
 </div>
 
 <center><% if @user != current_user && !@friends.include?(current_user) %>
