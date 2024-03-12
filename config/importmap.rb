@@ -9,3 +9,5 @@ pin "bootstrap", to: "bootstrap.min.js", preload: true
 pin "@popperjs/core", to: "popper.js", preload: true
 pin "@ericblade/quagga2", to: "@ericblade--quagga2.js" # @1.8.4
 pin "isbn" # @0.4.0
+pin "mapbox-gl" # @3.1.2
+pin "process" # @2.0.1
