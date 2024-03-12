@@ -8,6 +8,11 @@
           params[:tri]), include_blank: "Trier par", class: "form-control", data: {update_filters_input_target: "inputTri", action: "change->update-filters-input#tri"} %>
       </div>
       <div>
+        <%= select_tag :reading_status,
+          options_for_select([['lu',"read"], ['en cours',"reading"], ['non lu',"unread"]],
+          params[:reading_status]), include_blank: "Statut", class: "form-control", data: {update_filters_input_target: "inputStatus", action: "change->update-filters-input#status"} %>
+      </div>
+      <div>
       <%= f.text_field :genre, class: "form-control", list: "genre-select", data: {update_filters_input_target: "inputGenre", action: "keyup->update-filters-input#genre"} %>
           <datalist id="genre-select">
             <% @genres.each do |genre| %>

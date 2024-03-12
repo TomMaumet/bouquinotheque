@@ -7,8 +7,8 @@
    <div class="white-background">
       <%= image_tag @book.image_url, alt: @book.title, class: "book-cover"%>
       <ul>
-         <li><i class="fa-solid fa-bookmark"></i><%= @book.publisher %>, <%= @book.publishing_year %></li>
-         <li><i class="fa-solid fa-bookmark"></i><%= @book.book_type.capitalize %>: <%= @book.genre %></li>
+         <li><%= @book.publisher %>, <%= @book.publishing_year %></li>
+         <li><%= @book.book_type.capitalize %>: <%= @book.genre %></li>
       </ul>
       <div data-controller="display-all" class="summary">
          <p data-display-all-target="summary">
@@ -24,16 +24,16 @@
    <center>
       <%= simple_form_for @reading do |f| %>
         <%= f.input :book_id, :as => :hidden, :input_html => { :value => @book.id }  %>
-        <%= f.button :submit, "Ajouter à ma bibliothèque", class: "btn btn-danger" %>
+        <%= f.button :submit, "Ajouter à ma bibliothèque", class: "btn btn-success" %>
       <% end %>
       <%= simple_form_for [@book, @new_suggestion] do |f| %>
     <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id } %>
     <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id } %>
     <%= f.input :comment, :as => :hidden, :input_html => { :value => "wish" }  %>
-    <%= f.button :submit, "Ajouter à ma liste de souhaits", class: "btn btn-danger" %>
+    <%= f.button :submit, "Ajouter à ma liste de souhaits", class: "btn btn-success" %>
   <% end %>
       <h3>Avis des lecteur.ice.s</h3>
-      <div class="book-reviews">
+      <div class="book-reviews mb-3">
          <% @book.reviews[0,2].each do |review| %>
          <div class="book-review">
             <div class="h3">
@@ -50,16 +50,18 @@
          <% end %>
       </div>
       <%= link_to "Lire davantage d'avis", book_reviews_path(@book), class: "btn btn-danger"%>
-  <%= simple_form_for [@book, @new_suggestion] do |f| %>
+  <div data-controller="display-all"><a data-display-all-target="button" class="btn btn-primary" data-action="click->display-all#displayForm">Suggérer à un.e ami</a>
+  <%= simple_form_for [@book, @new_suggestion], html: { data: { display_all_target: "form"}, class: "d-none" } do |f| %>
     <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
     <%= f.input :user_id, label: false, as: :select, collection: @friends.map { |friend| [friend.nickname, friend.id] }, include_blank: false %>
     <%= f.input :comment %>
-    <%= f.button :submit, "Suggérer à un.e ami", class: "btn btn-danger" %>
+    <%= f.button :submit, "Suggérer" %>
   <% end %>
+  </div>
   </center>
 </div>
 <div class="d-flex justify-content-center flex-column align-items-center">
    <h3>Acheter ce livre </h3>
-   <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>' class="btn btn-danger">Voir sur Amazon</a>
-   <%= link_to "Voir les librairies à proximité de ${current_user.city}", book_store_path, class: "btn btn-danger" %>
+   <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar"></a>
+   <%= link_to "Librairies à proximité de #{current_user.city}", book_stores_path, class: "btn btn-danger" %>
 </div>

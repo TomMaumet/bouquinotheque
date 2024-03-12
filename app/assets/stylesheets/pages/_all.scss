@@ -13,6 +13,22 @@ flex-direction: column}
   background-color:white;
   padding: 1rem;
   border-radius: 1rem;
+
+  li {
+    list-style: none;
+  }
+
+  li:before {
+    content: '\f02e';
+    font-family: "Font Awesome 6 Free";
+    padding-right: 1rem;
+    color: $yellow
+  }
+
+  ul {
+    margin: 1rem 0px;
+    padding: 0px
+  }
 }
 
 .gap1 {

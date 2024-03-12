@@ -7,6 +7,7 @@ class ReadingsController < ApplicationController
 
     @readings = Reading.where(user: current_user)
 
+    @readings = Reading.filter_by_status(params[:reading_status], current_user) if params[:reading_status].present?
     @readings = Reading.filter_by_genre(params[:genre], current_user) if params[:genre].present?
     @readings = Reading.filter_by_author(params[:author], current_user) if params[:author].present?
 
