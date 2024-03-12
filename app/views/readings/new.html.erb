@@ -5,7 +5,7 @@
   <%= simple_form_for @reading do |f| %>
     <%= f.association :book, label: "Titre", input_html: {data: {controller: "tom-select"}, id: "select-beast", placeholder: "Select a person...", autocomplete: "off"} %>
     <%= f.input :EAN, input_html: { data: { scanner_target: "EAN" } } %>
-    <center><%= f.button :submit, "Ajouter", class: "btn btn-danger" %></center>
+    <center><%= f.button :submit, "Ajouter", class: "btn btn-danger", :input_html => { :value => :EAN } %></center>
   <% end %>
   <div id="interactive" class="viewport">
   </div>
