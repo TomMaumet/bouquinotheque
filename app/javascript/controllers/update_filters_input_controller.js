@@ -18,7 +18,7 @@ export default class extends Controller {
   }
 
   status() {
-    const url = `${this.formTarget.action}?status=${this.inputTriTarget.value}`
+    const url = `${this.formTarget.action}?reading_status=${this.inputStatusTarget.value}`
     fetch(url, {headers: {"Accept": "text/plain"}})
     .then(response => response.text())
     .then((data) => {
