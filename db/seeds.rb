@@ -10,28 +10,48 @@ user1 = User.create!(nickname: "Admin",
   password_confirmation: 'password',
   avatar: "https://i.imgur.com/WdjuE7y.jpeg",
   city: "Paris",
-  age: 30)
+  age: 30,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
 user2 = User.create!(nickname: "Thomas",
   email: "thomas@mail.fr",
   password: 'password',
   password_confirmation: 'password',
   avatar: "https://i.imgur.com/6VpQxPy.jpeg",
   city: "Bordeaux",
-  age: 30)
+  age: 30,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
 user3 = User.create!(nickname: "Bastien",
   email: "bastien@mail.fr",
   password: 'password',
   password_confirmation: 'password',
   avatar: "https://i.imgur.com/Mr2E09v.png",
   city: "Bayonne",
-  age: 26)
+  age: 26,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
 user4 = User.create!(nickname: "Camille",
   email: "camille@mail.fr",
   password: 'password',
   password_confirmation: 'password',
   avatar: "https://i.imgur.com/7VtAuwV.jpeg",
   city: "Toulouse",
-  age: 25)
+  age: 25,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5
+)
 
 puts 'Utilisateurs créés'
 
@@ -52,7 +72,11 @@ book1 = Book.create!(
   EAN: "9782221252055",
   book_type: "roman",
   ratings: 4.32,
-  image_url: "https://i.imgur.com/TJhapDH.jpeg"
+  image_url: "https://i.imgur.com/TJhapDH.jpeg",
+  thriller_score: 4,
+  romance_score:5,
+  aventure_score: 9,
+  jeunesse_score: 7,
 )
 
 book2 = Book.create!(
@@ -65,7 +89,11 @@ book2 = Book.create!(
   EAN: "9782070368075",
   book_type: "roman",
   ratings: 3.97,
-  image_url: "https://i.imgur.com/5bcIyNE.jpeg"
+  image_url: "https://i.imgur.com/5bcIyNE.jpeg",
+  thriller_score: 6,
+  romance_score:9,
+  aventure_score: 4,
+  jeunesse_score: 2,
 )
 
 book3 = Book.create!(
@@ -78,7 +106,11 @@ book3 = Book.create!(
   EAN: "9782070360024",
   book_type: "roman",
   ratings: 3.98,
-  image_url: "https://i.imgur.com/vBFMVs9.jpeg"
+  image_url: "https://i.imgur.com/vBFMVs9.jpeg",
+  thriller_score: 7,
+  romance_score:6,
+  aventure_score: 4,
+  jeunesse_score: 1,
 )
 
 book4 = Book.create!(
@@ -91,7 +123,11 @@ book4 = Book.create!(
   EAN: "9782290352625",
   book_type: "roman",
   image_url: "https://i.imgur.com/qHlk143.jpeg",
-  ratings: 4.34
+  ratings: 4.34,
+  thriller_score: 6,
+  romance_score:2,
+  aventure_score: 10,
+  jeunesse_score: 8,
 )
 
 book5 = Book.create!(
@@ -105,7 +141,11 @@ book5 = Book.create!(
   EAN: "9782070325030",
   book_type: "essai",
   ratings: 3.98,
-  image_url: "https://i.imgur.com/gcxaF5l.jpeg"
+  image_url: "https://i.imgur.com/gcxaF5l.jpeg",
+  thriller_score: 2,
+  romance_score:5,
+  aventure_score: 3,
+  jeunesse_score: 2,
 )
 
 book6 = Book.create!(
@@ -118,7 +158,11 @@ book6 = Book.create!(
   EAN: "9782075134040",
   book_type: "roman",
   ratings: 4.38,
-  image_url: "https://imgur.com/9I2ySb7"
+  image_url: "https://imgur.com/9I2ySb7",
+  thriller_score: 3,
+  romance_score:3,
+  aventure_score: 8,
+  jeunesse_score: 4,
 )
 
 book7 = Book.create!(
@@ -132,7 +176,11 @@ book7 = Book.create!(
   EAN: "9782877068161",
   book_type: "roman",
   ratings: 4.16,
-  image_url: "https://imgur.com/eOEM3KZ"
+  image_url: "https://imgur.com/eOEM3KZ",
+  thriller_score: 10,
+  romance_score: 7,
+  aventure_score: 5,
+  jeunesse_score: 2,
 )
 
 book8 = Book.create!(
@@ -146,7 +194,11 @@ book8 = Book.create!(
   EAN: "9782070381654",
   book_type: "roman",
   ratings: 4.14,
-  image_url: "https://imgur.com/7SwaMMf"
+  image_url: "https://imgur.com/7SwaMMf",
+  thriller_score: 7,
+  romance_score:8,
+  aventure_score: 5,
+  jeunesse_score: 2,
 )
 
 book9 = Book.create!(
@@ -159,7 +211,11 @@ book9 = Book.create!(
   EAN: "9782080705464",
   book_type: "roman",
   ratings: 4.38,
-  image_url: "https://imgur.com/AHFjmGb"
+  image_url: "https://imgur.com/AHFjmGb",
+  thriller_score: 7,
+  romance_score:4,
+  aventure_score: 7,
+  jeunesse_score: 8,
 )
 
 book10 = Book.create!(
@@ -175,7 +231,11 @@ book10 = Book.create!(
   EAN: "9782253121206",
   book_type: "roman",
   ratings: 3.66,
-  image_url: "https://imgur.com/xdpKREB"
+  image_url: "https://imgur.com/xdpKREB",
+  thriller_score: 6,
+  romance_score:9,
+  aventure_score: 3,
+  jeunesse_score: 4,
 )
 
 book11 = Book.create!(
@@ -190,7 +250,11 @@ book11 = Book.create!(
   EAN: "9782072764929",
   book_type: "roman",
   ratings: 3.93,
-  image_url: "https://i.imgur.com/Tmkfv7p.jpeg"
+  image_url: "https://i.imgur.com/Tmkfv7p.jpeg",
+  thriller_score: 2,
+  romance_score:8,
+  aventure_score: 4,
+  jeunesse_score: 3,
 )
 
 book12 = Book.create!(
@@ -206,7 +270,11 @@ book12 = Book.create!(
   EAN: "9782290252437",
   book_type: "roman",
   ratings: 4.07,
-  image_url: "https://i.imgur.com/nhpv5LI.jpeg"
+  image_url: "https://i.imgur.com/nhpv5LI.jpeg",
+  thriller_score: 6,
+  romance_score:8,
+  aventure_score: 5,
+  jeunesse_score: 2,
 )
 
 book13 = Book.create!(
@@ -219,7 +287,11 @@ book13 = Book.create!(
   EAN: "9782080709684",
   book_type: "pièce de théâtre",
   ratings: 3.53,
-  image_url: "https://i.imgur.com/2AYS7l1.jpeg"
+  image_url: "https://i.imgur.com/2AYS7l1.jpeg",
+  thriller_score: 2,
+  romance_score:8,
+  aventure_score: 4,
+  jeunesse_score: 3,
 )
 
 book14 = Book.create!(
@@ -235,7 +307,11 @@ book14 = Book.create!(
   EAN: "9782070782369",
   book_type: "roman",
   ratings: 4.12,
-  image_url: "https://i.imgur.com/WaIuTTw.jpeg"
+  image_url: "https://i.imgur.com/WaIuTTw.jpeg",
+  thriller_score: 5,
+  romance_score:8,
+  aventure_score: 4,
+  jeunesse_score: 3,
 )
 
 book15 = Book.create!(
@@ -250,7 +326,11 @@ book15 = Book.create!(
   EAN: "9782413041511",
   book_type: "bande dessinée",
   ratings: 4.47,
-  image_url: "https://i.imgur.com/LtLmRRY.jpeg"
+  image_url: "https://i.imgur.com/LtLmRRY.jpeg",
+  thriller_score: 3,
+  romance_score:4,
+  aventure_score: 7,
+  jeunesse_score: 10,
 )
 
 book16 = Book.create!(
@@ -266,7 +346,11 @@ book16 = Book.create!(
   EAN: "9782723442756",
   book_type: "bande dessinée",
   ratings: 4.25,
-  image_url: "https://i.imgur.com/WeoluBq.jpeg"
+  image_url: "https://i.imgur.com/WeoluBq.jpeg",
+  thriller_score: 2,
+  romance_score:4,
+  aventure_score: 7,
+  jeunesse_score: 10,
 )
 
 book17 = Book.create!(
@@ -280,7 +364,11 @@ book17 = Book.create!(
   EAN: "9782246857334",
   book_type: "roman",
   ratings: 4.29,
-  image_url: "https://i.imgur.com/0M8n2EQ.jpeg"
+  image_url: "https://i.imgur.com/0M8n2EQ.jpeg",
+  thriller_score: 2,
+  romance_score:8,
+  aventure_score: 5,
+  jeunesse_score: 3,
 )
 
 book18 = Book.create!(
@@ -293,7 +381,11 @@ book18 = Book.create!(
   EAN: "9782707311030",
   book_type: "pièce de théâtre",
   ratings: 3.86,
-  image_url: "https://i.imgur.com/1FRuJ6D.jpeg"
+  image_url: "https://i.imgur.com/1FRuJ6D.jpeg",
+  thriller_score: 2,
+  romance_score:8,
+  aventure_score: 4,
+  jeunesse_score: 3,
 )
 
 book19 = Book.create!(
@@ -306,7 +398,11 @@ book19 = Book.create!(
   EAN: "9782021117707",
   book_type: "pièce de théâtre",
   ratings: 3.72,
-  image_url: "https://i.imgur.com/DwL3RQe.jpeg"
+  image_url: "https://i.imgur.com/DwL3RQe.jpeg",
+  thriller_score: 5,
+  romance_score:8,
+  aventure_score: 4,
+  jeunesse_score: 3,
 )
 
 book20 = Book.create!(
@@ -320,7 +416,11 @@ book20 = Book.create!(
   EAN: "9782014001334",
   book_type: "bande dessinée",
   ratings: 3.82,
-  image_url: "https://i.imgur.com/Jxfuvu4.png"
+  image_url: "https://i.imgur.com/Jxfuvu4.png",
+  thriller_score: 2,
+  romance_score:4,
+  aventure_score: 9,
+  jeunesse_score: 10,
 )
 
 book21 = Book.create!(
@@ -336,7 +436,11 @@ book21 = Book.create!(
   EAN: "9782709625791",
   book_type: "Livre broché",
   ratings: 3.73,
-  image_url: "https://i.imgur.com/8nlSnaB.jpeg"
+  image_url: "https://i.imgur.com/8nlSnaB.jpeg",
+  thriller_score: 9,
+  romance_score:4,
+  aventure_score: 7,
+  jeunesse_score: 3,
 )
 
 book22 = Book.create!(
@@ -349,7 +453,11 @@ book22 = Book.create!(
   EAN: "9782266198356",
   book_type: "Livre broché",
   ratings: 3.75,
-  image_url: "https://i.imgur.com/r063U2I.jpeg"
+  image_url: "https://i.imgur.com/r063U2I.jpeg",
+  thriller_score: 9,
+  romance_score:5,
+  aventure_score: 7,
+  jeunesse_score: 3
 )
 
 book23 = Book.create!(
@@ -361,10 +469,14 @@ book23 = Book.create!(
   author: "Dan Brown",
   publisher: "J.-C. LATTÈS",
   publishing_year: 2003,
-  EAN: "9782709626996 ",
+  EAN: "9782709626996",
   book_type: "Livre broché",
   ratings: 3.72,
-  image_url: "https://i.imgur.com/B0Xg4BT.jpeg"
+  image_url: "https://i.imgur.com/B0Xg4BT.jpeg",
+  thriller_score: 9,
+  romance_score:5,
+  aventure_score: 7,
+  jeunesse_score: 3,
 )
 
 book25 = Book.create!(
@@ -377,7 +489,11 @@ book25 = Book.create!(
   EAN: "9782709643740",
   book_type: "Livre broché",
   ratings: 3.9,
-  image_url: "https://i.imgur.com/pBGCcR6.jpeg"
+  image_url: "https://i.imgur.com/pBGCcR6.jpeg",
+  thriller_score: 9,
+  romance_score:4,
+  aventure_score: 7,
+  jeunesse_score: 3,
 )
 
 book26 = Book.create!(
@@ -392,7 +508,11 @@ book26 = Book.create!(
   EAN: "9782709659802",
   book_type: "Livre broché",
   ratings: 3.73,
-  image_url: "https://i.imgur.com/ZlOG4VO.jpeg"
+  image_url: "https://i.imgur.com/ZlOG4VO.jpeg",
+  thriller_score: 9,
+  romance_score:4,
+  aventure_score: 7,
+  jeunesse_score: 3,
 )
 
 book27 = Book.create!(
@@ -405,7 +525,11 @@ book27 = Book.create!(
   EAN: "9782290059463",
   book_type: "recueil",
   ratings: 3.35,
-  image_url: "https://i.imgur.com/SZ9IKjg.jpeg"
+  image_url: "https://i.imgur.com/SZ9IKjg.jpeg",
+  thriller_score: 3,
+  romance_score:5,
+  aventure_score: 1,
+  jeunesse_score: 7,
 )
 
 book28 = Book.create!(
@@ -420,7 +544,11 @@ book28 = Book.create!(
   EAN: "9782378803759",
   book_type: "Roman",
   ratings: 4.33,
-  image_url: "https://i.imgur.com/JyqvMh2.jpeg"
+  image_url: "https://i.imgur.com/JyqvMh2.jpeg",
+  thriller_score: 6,
+  romance_score:8,
+  aventure_score: 7,
+  jeunesse_score: 3,
 )
 
 book29 = Book.create!(
@@ -438,7 +566,11 @@ book29 = Book.create!(
   EAN: "9782226481474",
   book_type: "Livre broché",
   ratings: 4.26,
-  image_url: "https://i.imgur.com/xhmGoDp.jpeg"
+  image_url: "https://i.imgur.com/xhmGoDp.jpeg",
+  thriller_score: 9,
+  romance_score:4,
+  aventure_score: 7,
+  jeunesse_score: 3,
 )
 
 book30 = Book.create!(
@@ -456,7 +588,11 @@ book30 = Book.create!(
   EAN: "9782702183694",
   book_type: "Livre broché",
   ratings: 4.2,
-  image_url: "https://i.imgur.com/hc4qe25.jpeg"
+  image_url: "https://i.imgur.com/hc4qe25.jpeg",
+  thriller_score: 4,
+  romance_score:8,
+  aventure_score: 6,
+  jeunesse_score: 3,
 )
 
 book31 = Book.create!(
@@ -473,7 +609,11 @@ book31 = Book.create!(
   EAN: "9782253906568",
   book_type: "Livre de poche",
   ratings: 4.5,
-  image_url: "https://i.imgur.com/TLbsZbn.jpeg"
+  image_url: "https://i.imgur.com/TLbsZbn.jpeg",
+  thriller_score: 4,
+  romance_score:8,
+  aventure_score: 6,
+  jeunesse_score: 3,
 )
 
 book32 = Book.create!(
@@ -486,7 +626,11 @@ book32 = Book.create!(
   EAN: "9782889116546",
   book_type: "Livre de poche",
   ratings: 4.7,
-  image_url: "https://i.imgur.com/iFeadDz.jpeg"
+  image_url: "https://i.imgur.com/iFeadDz.jpeg",
+  thriller_score: 2,
+  romance_score:6,
+  aventure_score: 4,
+  jeunesse_score: 9,
 )
 
 
