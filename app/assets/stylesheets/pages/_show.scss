@@ -1,4 +1,6 @@
 .book-show {
+  padding: 0px 1rem 1rem !important;
+
   .h3 {
     display: flex;
     justify-content: space-between;
@@ -65,12 +67,12 @@
   }
 
   .shared_link {
-    margin-left: -0.5rem;
+    margin-left: 0.5rem;
     position: absolute;
   }
 
   .shared_link i {
-    margin-top: 0.5rem
+    margin-top: 1.5rem
   }
 
   .shared_link i:before {

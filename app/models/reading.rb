@@ -2,7 +2,7 @@ class Reading < ApplicationRecord
   belongs_to :book
   belongs_to :user
   has_many :playlist_items, dependent: :destroy
-  attr_reader :EAN
+  attr_reader :EAN, :title
 
   scope :filter_by_status, ->(reading_status, user) { where(reading_status: reading_status, user: user) }
   scope :filter_by_genre, ->(genre, user) { joins(:book).where(books: { genre: genre }, user: user) }

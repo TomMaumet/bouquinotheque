@@ -36,19 +36,22 @@ class ReadingsController < ApplicationController
 
   def update
     @reading.update(reading_params)
-    current_user.update_recommandation_score((@reading.book.new_rating_vector * @reading.my_rating)/5)
+    unless @reading.my_rating.nil?
+      current_user.update_recommandation_score((@reading.book.new_rating_vector * @reading.my_rating)/5)
+    end
     current_user.save
     redirect_to reading_path(@reading)
   end
 
   def new
+    @titles = Book.pluck(:title).uniq
     @reading = Reading.new
   end
 
   def create
     @reading = Reading.new
-    if params[:reading][:book_id].present?
-      @book = Book.find(params[:reading][:book_id])
+    if params[:reading][:title].present?
+      @book = Book.find_by(title: params[:reading][:title])
     else
       @book = Book.find_by(EAN: params[:reading][:EAN])
     end

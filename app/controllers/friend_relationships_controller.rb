@@ -2,6 +2,8 @@ class FriendRelationshipsController < ApplicationController
   def create
     @new_friend = FriendRelationship.new(friend_relationships_params)
     @new_friend.save
+    @user = User.find(params[:user_id])
+    redirect to user_path(@user)
   end
 
   def destroy

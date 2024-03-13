@@ -39,22 +39,22 @@
     <%= f.button :submit, "Ajouter à ma liste de souhaits", class: "btn btn-success" %>
   <% end %>
       <h3>Avis des lecteur.ice.s</h3>
-      <div class="book-reviews mb-3">
-         <% @book.reviews[0,2].each do |review| %>
-         <div class="book-review">
-            <div class="h3">
-               <%= review.title %>
-               <h6>
-                  <%= review.rating %>
-                  /5
-               </h6>
-            </div>
-            <p>
-               <%= review.content %>
-            </p>
-         </div>
-         <% end %>
-      </div>
+        <div class="book-reviews mb-3">
+          <% @book.reviews[0,2].each do |review| %>
+          <div class="book-review">
+              <div class="h3">
+                <%= review.title %>
+                <h6>
+                    <%= review.rating %>
+                    /5
+                </h6>
+              </div>
+              <p>
+                <%= review.content %>
+              </p>
+          </div>
+          <% end %>
+        </div>
       <%= link_to "Lire davantage d'avis", book_reviews_path(@book), class: "btn btn-danger"%>
   <div data-controller="display-all"><a data-display-all-target="button" class="btn btn-primary" data-action="click->display-all#displayForm">Suggérer à un.e ami</a>
   <%= simple_form_for [@book, @new_suggestion], html: { data: { display_all_target: "form"}, class: "d-none" } do |f| %>
@@ -65,9 +65,9 @@
   <% end %>
   </div>
   </center>
-</div>
 <div class="d-flex justify-content-center flex-column align-items-center">
    <h3>Acheter ce livre </h3>
    <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar"></a>
    <%= link_to "Librairies à proximité de #{current_user.city}", book_stores_path, class: "btn btn-danger" %>
+</div>
 </div>

@@ -40,6 +40,7 @@ user3 = User.create!(nickname: "Bastien",
   aventure_score: 5,
   jeunesse_score: 5,
 )
+
 user4 = User.create!(nickname: "Camille",
   email: "camille@mail.fr",
   password: 'password',
@@ -47,6 +48,71 @@ user4 = User.create!(nickname: "Camille",
   avatar: "https://i.imgur.com/7VtAuwV.jpeg",
   city: "Toulouse",
   age: 25,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5
+)
+
+user5 = User.create!(nickname: "Clément",
+  email: "clement@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/7VtAuwV.jpeg",
+  city: "Bordeaux",
+  age: 27,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5
+)
+
+user6 = User.create!(nickname: "Benoit",
+  email: "benoit@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/WdjuE7y.jpeg",
+  city: "Bordeaux",
+  age: 35,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
+
+user7 = User.create!(nickname: "Téo",
+  email: "teo@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/6VpQxPy.jpeg",
+  city: "Bordeaux",
+  age: 22,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
+
+user8 = User.create!(nickname: "Marine",
+  email: "marine@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/Mr2E09v.png",
+  city: "Bordeaux",
+  age: 25,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5,
+)
+
+user9 = User.create!(nickname: "Honorine",
+  email: "honorine@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/7VtAuwV.jpeg",
+  city: "Bordeaux",
+  age: 24,
   thriller_score: 5,
   romance_score:5,
   aventure_score: 5,
@@ -74,9 +140,9 @@ book1 = Book.create!(
   ratings: 4.32,
   image_url: "https://i.imgur.com/TJhapDH.jpeg",
   thriller_score: 4,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 9,
-  jeunesse_score: 7,
+  jeunesse_score: 7
 )
 
 book2 = Book.create!(
@@ -91,9 +157,9 @@ book2 = Book.create!(
   ratings: 3.97,
   image_url: "https://i.imgur.com/5bcIyNE.jpeg",
   thriller_score: 6,
-  romance_score:9,
+  romance_score: 3,
   aventure_score: 4,
-  jeunesse_score: 2,
+  jeunesse_score: 2
 )
 
 book3 = Book.create!(
@@ -108,9 +174,9 @@ book3 = Book.create!(
   ratings: 3.98,
   image_url: "https://i.imgur.com/vBFMVs9.jpeg",
   thriller_score: 7,
-  romance_score:6,
+  romance_score: 6,
   aventure_score: 4,
-  jeunesse_score: 1,
+  jeunesse_score: 1
 )
 
 book4 = Book.create!(
@@ -125,9 +191,9 @@ book4 = Book.create!(
   image_url: "https://i.imgur.com/qHlk143.jpeg",
   ratings: 4.34,
   thriller_score: 6,
-  romance_score:2,
+  romance_score: 2,
   aventure_score: 10,
-  jeunesse_score: 8,
+  jeunesse_score: 8
 )
 
 book5 = Book.create!(
@@ -143,9 +209,9 @@ book5 = Book.create!(
   ratings: 3.98,
   image_url: "https://i.imgur.com/gcxaF5l.jpeg",
   thriller_score: 2,
-  romance_score:5,
+  romance_score: 1,
   aventure_score: 3,
-  jeunesse_score: 2,
+  jeunesse_score: 2
 )
 
 book6 = Book.create!(
@@ -160,9 +226,9 @@ book6 = Book.create!(
   ratings: 4.38,
   image_url: "https://imgur.com/9I2ySb7",
   thriller_score: 3,
-  romance_score:3,
+  romance_score: 3,
   aventure_score: 8,
-  jeunesse_score: 4,
+  jeunesse_score: 4
 )
 
 book7 = Book.create!(
@@ -180,7 +246,7 @@ book7 = Book.create!(
   thriller_score: 10,
   romance_score: 7,
   aventure_score: 5,
-  jeunesse_score: 2,
+  jeunesse_score: 2
 )
 
 book8 = Book.create!(
@@ -196,9 +262,9 @@ book8 = Book.create!(
   ratings: 4.14,
   image_url: "https://imgur.com/7SwaMMf",
   thriller_score: 7,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 5,
-  jeunesse_score: 2,
+  jeunesse_score: 2
 )
 
 book9 = Book.create!(
@@ -213,9 +279,9 @@ book9 = Book.create!(
   ratings: 4.38,
   image_url: "https://imgur.com/AHFjmGb",
   thriller_score: 7,
-  romance_score:4,
+  romance_score: 4,
   aventure_score: 7,
-  jeunesse_score: 8,
+  jeunesse_score: 8
 )
 
 book10 = Book.create!(
@@ -233,9 +299,9 @@ book10 = Book.create!(
   ratings: 3.66,
   image_url: "https://imgur.com/xdpKREB",
   thriller_score: 6,
-  romance_score:9,
+  romance_score: 9,
   aventure_score: 3,
-  jeunesse_score: 4,
+  jeunesse_score: 4
 )
 
 book11 = Book.create!(
@@ -251,10 +317,10 @@ book11 = Book.create!(
   book_type: "roman",
   ratings: 3.93,
   image_url: "https://i.imgur.com/Tmkfv7p.jpeg",
-  thriller_score: 2,
-  romance_score:8,
+  thriller_score: 9,
+  romance_score: 2,
   aventure_score: 4,
-  jeunesse_score: 3,
+  jeunesse_score: 1
 )
 
 book12 = Book.create!(
@@ -271,10 +337,10 @@ book12 = Book.create!(
   book_type: "roman",
   ratings: 4.07,
   image_url: "https://i.imgur.com/nhpv5LI.jpeg",
-  thriller_score: 6,
-  romance_score:8,
+  thriller_score: 1,
+  romance_score: 8,
   aventure_score: 5,
-  jeunesse_score: 2,
+  jeunesse_score: 2
 )
 
 book13 = Book.create!(
@@ -289,9 +355,9 @@ book13 = Book.create!(
   ratings: 3.53,
   image_url: "https://i.imgur.com/2AYS7l1.jpeg",
   thriller_score: 2,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 4,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book14 = Book.create!(
@@ -309,9 +375,9 @@ book14 = Book.create!(
   ratings: 4.12,
   image_url: "https://i.imgur.com/WaIuTTw.jpeg",
   thriller_score: 5,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 4,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book15 = Book.create!(
@@ -328,9 +394,9 @@ book15 = Book.create!(
   ratings: 4.47,
   image_url: "https://i.imgur.com/LtLmRRY.jpeg",
   thriller_score: 3,
-  romance_score:4,
-  aventure_score: 7,
-  jeunesse_score: 10,
+  romance_score: 4,
+  aventure_score: 3,
+  jeunesse_score: 2
 )
 
 book16 = Book.create!(
@@ -348,9 +414,9 @@ book16 = Book.create!(
   ratings: 4.25,
   image_url: "https://i.imgur.com/WeoluBq.jpeg",
   thriller_score: 2,
-  romance_score:4,
+  romance_score: 4,
   aventure_score: 7,
-  jeunesse_score: 10,
+  jeunesse_score: 10
 )
 
 book17 = Book.create!(
@@ -366,9 +432,9 @@ book17 = Book.create!(
   ratings: 4.29,
   image_url: "https://i.imgur.com/0M8n2EQ.jpeg",
   thriller_score: 2,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 5,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book18 = Book.create!(
@@ -383,9 +449,9 @@ book18 = Book.create!(
   ratings: 3.86,
   image_url: "https://i.imgur.com/1FRuJ6D.jpeg",
   thriller_score: 2,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 4,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book19 = Book.create!(
@@ -400,9 +466,9 @@ book19 = Book.create!(
   ratings: 3.72,
   image_url: "https://i.imgur.com/DwL3RQe.jpeg",
   thriller_score: 5,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 4,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book20 = Book.create!(
@@ -418,9 +484,9 @@ book20 = Book.create!(
   ratings: 3.82,
   image_url: "https://i.imgur.com/Jxfuvu4.png",
   thriller_score: 2,
-  romance_score:4,
+  romance_score: 4,
   aventure_score: 9,
-  jeunesse_score: 10,
+  jeunesse_score: 10
 )
 
 book21 = Book.create!(
@@ -438,9 +504,9 @@ book21 = Book.create!(
   ratings: 3.73,
   image_url: "https://i.imgur.com/8nlSnaB.jpeg",
   thriller_score: 9,
-  romance_score:4,
+  romance_score: 4,
   aventure_score: 7,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book22 = Book.create!(
@@ -455,7 +521,7 @@ book22 = Book.create!(
   ratings: 3.75,
   image_url: "https://i.imgur.com/r063U2I.jpeg",
   thriller_score: 9,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 7,
   jeunesse_score: 3
 )
@@ -474,9 +540,9 @@ book23 = Book.create!(
   ratings: 3.72,
   image_url: "https://i.imgur.com/B0Xg4BT.jpeg",
   thriller_score: 9,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 7,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book25 = Book.create!(
@@ -491,9 +557,9 @@ book25 = Book.create!(
   ratings: 3.9,
   image_url: "https://i.imgur.com/pBGCcR6.jpeg",
   thriller_score: 9,
-  romance_score:4,
+  romance_score: 4,
   aventure_score: 7,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book26 = Book.create!(
@@ -510,9 +576,9 @@ book26 = Book.create!(
   ratings: 3.73,
   image_url: "https://i.imgur.com/ZlOG4VO.jpeg",
   thriller_score: 9,
-  romance_score:4,
+  romance_score: 4,
   aventure_score: 7,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book27 = Book.create!(
@@ -527,13 +593,13 @@ book27 = Book.create!(
   ratings: 3.35,
   image_url: "https://i.imgur.com/SZ9IKjg.jpeg",
   thriller_score: 3,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 1,
-  jeunesse_score: 7,
+  jeunesse_score: 7
 )
 
 book28 = Book.create!(
-  title: "Veiller sur elle - Prix Goncourt 2023",
+  title: "Veiller sur elle",
   summary: "« Au grand jeu du destin, Mimo a tiré les mauvaises cartes. Né pauvre, il est confié en apprentissage à un sculpteur de pierre sans envergure. Mais il a du génie entre les mains. Toutes les fées ou presque se sont penchées sur Viola Orsini. Héritière d'une famille prestigieuse, elle a passé son enfance à l'ombre d'un palais génois. Mais elle a trop d'ambition pour se résigner à la place qu'on lui assigne.
   Ces deux-là n'auraient jamais dû se rencontrer. Au premier regard, ils se reconnaissent et se jurent de ne jamais se quitter. Viola et Mimo ne peuvent ni vivre ensemble, ni rester longtemps loin de l'autre. Liés par une attraction indéfectible, ils traversent des années de fureur quand l'Italie bascule dans le fascisme. Mimo prend sa revanche sur le sort, mais à quoi bon la gloire s'il doit perdre Viola ?
   Un roman plein de fougue et d'éclats, habité par la grâce et la beauté.",
@@ -546,9 +612,9 @@ book28 = Book.create!(
   ratings: 4.33,
   image_url: "https://i.imgur.com/JyqvMh2.jpeg",
   thriller_score: 6,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 7,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book29 = Book.create!(
@@ -568,9 +634,9 @@ book29 = Book.create!(
   ratings: 4.26,
   image_url: "https://i.imgur.com/xhmGoDp.jpeg",
   thriller_score: 9,
-  romance_score:4,
+  romance_score: 4,
   aventure_score: 7,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book30 = Book.create!(
@@ -590,9 +656,9 @@ book30 = Book.create!(
   ratings: 4.2,
   image_url: "https://i.imgur.com/hc4qe25.jpeg",
   thriller_score: 4,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 6,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book31 = Book.create!(
@@ -611,9 +677,9 @@ book31 = Book.create!(
   ratings: 4.5,
   image_url: "https://i.imgur.com/TLbsZbn.jpeg",
   thriller_score: 4,
-  romance_score:8,
+  romance_score: 8,
   aventure_score: 6,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book32 = Book.create!(
@@ -628,11 +694,10 @@ book32 = Book.create!(
   ratings: 4.7,
   image_url: "https://i.imgur.com/iFeadDz.jpeg",
   thriller_score: 2,
-  romance_score:6,
+  romance_score: 6,
   aventure_score: 4,
-  jeunesse_score: 9,
+  jeunesse_score: 9
 )
-
 
 puts 'Livres créés'
 
@@ -779,7 +844,6 @@ review1 = Review.create!(
 
 puts 'Reviews créées'
 
-
 puts 'Création des friends'
 
 friend1 = FriendRelationship.create!(
@@ -790,6 +854,36 @@ friend1 = FriendRelationship.create!(
 friend2 = FriendRelationship.create!(
   user: user1,
   friend: user3
+)
+
+friend3 = FriendRelationship.create!(
+  user: user1,
+  friend: user4
+)
+
+friend4 = FriendRelationship.create!(
+  user: user1,
+  friend: user5
+)
+
+friend5 = FriendRelationship.create!(
+  user: user1,
+  friend: user6
+)
+
+friend6 = FriendRelationship.create!(
+  user: user1,
+  friend: user7
+)
+
+friend7 = FriendRelationship.create!(
+  user: user1,
+  friend: user8
+)
+
+friend8 = FriendRelationship.create!(
+  user: user1,
+  friend: user9
 )
 
 puts 'Friends créés'

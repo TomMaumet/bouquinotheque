@@ -34,12 +34,20 @@ class BooksController < ApplicationController
       publisher = book_form["volumeInfo"]["publisher"]
       genre = book_form["volumeInfo"]["categories"]
       image_url = book_form["volumeInfo"]["imageLinks"]["thumbnail"]
+      thriller_score = rand(0..10)
+      romance_score = rand(0..10)
+      aventure_score = rand(0..10)
+      jeunesse_score = rand(0..10)
+      @book = Book.new(title: title, author: author, summary: summary, publisher: publisher, publishing_year: publishing_year, genre: genre, EAN: params[:EAN], image_url: image_url)
     end
-    @book = Book.new(title: title, author: author, summary: summary, publisher: publisher, publishing_year: publishing_year, genre: genre, EAN: params[:EAN], image_url: image_url)
   end
 
   def create
     @book = Book.new(book_params)
+    @book.thriller_score = rand(0..10)
+    @book.romance_score = rand(0..10)
+    @book.aventure_score = rand(0..10)
+    @book.jeunesse_score = rand(0..10)
     if @book.save
       Reading.create(user: current_user, book: @book)
       redirect_to readings_path(@readings)

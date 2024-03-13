@@ -1,9 +1,13 @@
-<div class="container white-background my-3" data-controller="scanner"><center><h1>Ajouter un livre à ma bibliothèque</h1>
-
+<% @title = "Ajouter un livre à ma bibliothèque" %>
+<div class="container white-background m-3" data-controller="scanner"><center>
   <button class="btn btn-danger" data-action="click->scanner#scan">Scanner mon livre</button><br></center>
-
   <%= simple_form_for @reading do |f| %>
-    <%= f.association :book, label: "Titre", input_html: {data: {controller: "tom-select"}, id: "select-beast", placeholder: "Select a person...", autocomplete: "off"} %>
+    <%= f.text_field :title, placeholder: "Titre", style: "width: 100px", class: "form-control", list: "title-select" %>
+          <datalist id="title-select">
+            <% @titles.each do |title| %>
+            <option value="<%= title %>"><%= title %></option>
+            <% end %>
+          </datalist>
     <%= f.input :EAN, input_html: { data: { scanner_target: "EAN" } } %>
     <center><%= f.button :submit, "Ajouter", class: "btn btn-danger", :input_html => { :value => :EAN } %></center>
   <% end %>
