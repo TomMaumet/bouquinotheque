@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "readings#index"
 
   devise_for :users
-  resources :users, only: [:show]
+  resources :users, only: [:index, :show]
   resources :book_stores, only: [:index]
   resources :friend_relationships, only: [:create, :destroy]
 

@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="update-filters-input"
 export default class extends Controller {
-  static targets = ["form", "inputTri", "inputAuthor", "inputGenre", "inputStatus", "readings"]
+  static targets = ["form", "inputTri", "inputAuthor", "inputGenre", "inputStatus", "readings", "books"]
 
   connect() {
   }
@@ -14,6 +14,7 @@ export default class extends Controller {
     .then((data) => {
       console.log(data)
       this.readingsTarget.innerHTML = data
+      this.booksTarget.innerHTML = data
     })
   }
 
@@ -32,6 +33,7 @@ export default class extends Controller {
     .then(response => response.text())
     .then((data) => {
       this.readingsTarget.innerHTML = data
+      this.booksTarget.innerHTML = data
     })
   }
 
@@ -41,6 +43,7 @@ export default class extends Controller {
     .then(response => response.text())
     .then((data) => {
       this.readingsTarget.innerHTML = data
+      this.booksTarget.innerHTML = data
     })
   }
 }

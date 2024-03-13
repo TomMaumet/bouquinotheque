@@ -1,3 +1,5 @@
+<% @title = @playlist.title %>
+
 <div id="title" class="text-center mb-4 d-flex align-items-center" data-controller="uptdate-playlist">
   <h1 data-uptdate-playlist-target="title" ><%= @playlist.title %></h1>
   <div class="d-none" data-uptdate-playlist-target="form">
@@ -7,7 +9,7 @@
     <% end %>
   </div>
   <i class="fa-solid fa-pen fa-xl ps-3" data-uptdate-playlist-target="pen" data-action="click->uptdate-playlist#display_title" ></i>
-  <%= link_to playlist_path(@playlist), method: :destroy, data: { turbo_method: :delete, turbo_confirm: "Êtes vous sur ?"} do %>
+  <%= link_to playlist_path(@playlist), method: :destroy, data: { turbo_method: :delete, turbo_confirm: "Êtes vous sûr.e ?"} do %>
   <i id="trashcan"class="fa-solid fa-trash fa-xl"></i>
   <% end %>
 </div>

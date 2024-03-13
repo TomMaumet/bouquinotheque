@@ -1,0 +1,14 @@
+<% @title = "Les utilisateur.ice.s de Bouquinotheque" %>
+<div class="container p-3 d-flex flex-wrap gap1 justify-content-between">
+  <% @users.each do |user| %>
+    <%= link_to user_path(user), style: "width: calc(50% - 0.5rem); border: 2.5px solid #86BBD8", class:"white-background" do %>
+      <center>
+        <%= image_tag user.avatar, class: "avatar" %>
+        <h2>
+        <%= user.nickname %>
+        </h2>
+        <p><%= user.age %> ans, <%= user.city %></p>
+      </center>
+    <% end %>
+  <% end %>
+</div>
