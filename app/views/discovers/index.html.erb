@@ -1,43 +1,70 @@
 <% @title = "découvrir" %>
 
-<div class="container"><h3 class="px-3">Suggestions de mes amis</h3>
+<div class="container"><%= link_to users_path do %>
+<h3 class="px-3">Les utilisateur.ices de Bouquinotheque</h3>
+<% end %>
+<div class="container-detail gap1">
+  <% @users.first(6).each do |user| %>
+      <%= link_to user_path(user) do %>
+        <div class="cards-playlist white-background">
+          <%= image_tag user.avatar, class: "image-book" %>
+          <h1><%= user.nickname %></h1>
+          <p><%= user.age %> ans, <%= user.city %></p>
+        </div>
+      <% end %>
+  <% end %>
+</div>
+
+<%= link_to books_path do %>
+<h3 class="px-3">Une infinité d'ouvrages à découvrir...</h3>
+<% end %>
+<div class="container-detail gap1">
+  <% @books.first(6).each do |book| %>
+      <%= link_to book_path(book) do %>
+        <div class="cards-playlist white-background">
+          <%= image_tag book.image_url, class: "image-book" %>
+          <h1><%= book.title %></h1>
+          <p><%= book.author %></p>
+        </div>
+      <% end %>
+  <% end %>
+</div>
+
+<h3 class="px-3">Suggestions de mes amis</h3>
 <div class="container-detail gap1">
       <% @suggestions.first(6).each do |suggestion| %>
         <%= link_to book_path(suggestion.book) do %>
           <div class="cards-playlist white-background">
             <%= image_tag suggestion.book.image_url, class: "image-book" %>
-            <h5><%= suggestion.book.title %></h5>
+            <h1><%= suggestion.book.title %></h1>
             <p><%= suggestion.book.author %></p>
           </div>
         <% end %>
       <% end %>
     </div>
-</div>
-
-
-<div class="container"><h3 class="px-3">Ma liste de souhaits</h3>
+<h3 class="px-3">Ma liste de souhaits</h3>
 <div class="container-detail gap1">
       <% @wishlist.first(6).each do |wish| %>
           <%= link_to book_path(wish.book) do %>
             <div class="cards-playlist white-background">
               <%= image_tag wish.book.image_url, class: "image-book" %>
-              <h4><%= wish.book.title %></h4>
+              <h1><%= wish.book.title %></h1>
               <p><%= wish.book.author %></p>
             </div>
           <% end %>
         <% end %>
     </div>
 </div>
-<div class="container text-decoration-none">
+
   <h3 class="px-3">Mes recommandations</h3>
 <div class="container-detail gap1">
     <% current_user.recs_books.first(6).each do |recommandation| %>
       <%= link_to book_path(recommandation[:book]) do %>
       <div class="cards-playlist white-background">
         <%= image_tag recommandation[:book].image_url, class: "image-book" %>
-        <h4><%= recommandation[:book].title %></h4>
+        <h1><%= recommandation[:book].title %></h1>
         <p><%= recommandation[:book].author %></p>
-        <p><%= recommandation[:similarity].to_i %> % </p>
+        <p><%= recommandation[:similarity].to_i %>% de<br>correspondance<br>avec votre profil</p>
       </div>
       <% end %>
     <% end %>

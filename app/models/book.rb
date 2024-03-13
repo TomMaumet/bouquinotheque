@@ -1,4 +1,3 @@
-
 require 'matrix'
 
 class Book < ApplicationRecord
@@ -16,6 +15,9 @@ class Book < ApplicationRecord
   # validates :ratings, presence: true
   # validates :book_type, presence: true
   validates :image_url, presence: true
+
+  scope :filter_by_genre, ->(genre) { where(genre: genre) }
+  scope :filter_by_author, ->(author) { where(author: author) }
 
   def similarity_score_book(book)
     vector_a = Vector[self.thriller_score, self.romance_score, self.aventure_score, self.jeunesse_score]

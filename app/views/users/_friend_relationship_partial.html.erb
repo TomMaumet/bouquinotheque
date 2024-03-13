@@ -5,7 +5,7 @@
       <h4>
         <%= friend.nickname %>
         <% if @user == current_user %>
-          <%= link_to friend_relationship_path(friend: friend), data: { turbo_method: :delete, turbo_confirm: "êtes vous sûr.e ?" } do %>
+          <%= link_to friend_relationship_path(friend: friend), data: { turbo_method: :delete, turbo_confirm: "Êtes vous sûr.e" } do %>
             <i class="fa-solid fa-xmark"></i>
           <% end %>
         <% end %>

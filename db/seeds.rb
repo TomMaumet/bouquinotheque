@@ -67,7 +67,7 @@ user5 = User.create!(nickname: "Clément",
   jeunesse_score: 5
 )
 
-user6 = User.create!(nickname: "Benoit",
+user6 = User.create!(nickname: "Benoît",
   email: "benoit@mail.fr",
   password: 'password',
   password_confirmation: 'password',
@@ -113,6 +113,32 @@ user9 = User.create!(nickname: "Honorine",
   avatar: "https://i.imgur.com/7VtAuwV.jpeg",
   city: "Bordeaux",
   age: 24,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5
+)
+
+user10 = User.create!(nickname: "Hugo",
+  email: "hugo@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/7VtAuwV.jpeg",
+  city: "Bordeaux",
+  age: 20,
+  thriller_score: 5,
+  romance_score:5,
+  aventure_score: 5,
+  jeunesse_score: 5
+)
+
+user11 = User.create!(nickname: "Stéphane",
+  email: "stephane@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/7VtAuwV.jpeg",
+  city: "Bordeaux",
+  age: 34,
   thriller_score: 5,
   romance_score:5,
   aventure_score: 5,
@@ -579,23 +605,6 @@ book26 = Book.create!(
   romance_score: 4,
   aventure_score: 7,
   jeunesse_score: 3
-)
-
-book27 = Book.create!(
-  title: "Chers voisins",
-  summary: "« Connards, vous n'êtes pas seuls au monde » Mots doux et petites querelles de voisinage.",
-  author: "Aurélie C & Olivier V",
-  genre: "humour",
-  publisher: "J'ai lu",
-  publishing_year: 2013,
-  EAN: "9782290059463",
-  book_type: "recueil",
-  ratings: 3.35,
-  image_url: "https://i.imgur.com/SZ9IKjg.jpeg",
-  thriller_score: 3,
-  romance_score: 5,
-  aventure_score: 1,
-  jeunesse_score: 7
 )
 
 book28 = Book.create!(
