@@ -1,4 +1,5 @@
 .cards-playlist {
+  width: 13rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +15,7 @@
   }
 
   h4 {
-    width:  250px;
+    width:  100%;
     text-align:center;
     white-space: nowrap;
     overflow-x: hidden;
@@ -22,7 +23,7 @@
   }
 
   p {
-    width: 250px;
+    width: 100%;
     font-size: 1rem;
     white-space: nowrap;
     overflow-x: hidden;
