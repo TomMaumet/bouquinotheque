@@ -69,7 +69,7 @@
   </center>
 <div class="d-flex justify-content-center flex-column align-items-center">
    <h3>Acheter ce livre </h3>
-   <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar"></a>
+   <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar mb-3"></a>
    <%= link_to "Librairies à proximité de #{current_user.city}", book_stores_path, class: "btn btn-danger" %>
 </div>
 </div>
