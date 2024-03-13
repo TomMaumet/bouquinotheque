@@ -55,8 +55,8 @@
          </div>
          <% end %>
       </div>
-      <%= link_to "Lire davantage d'avis", book_reviews_path(@book), class: "btn btn-danger"%>
-  <div data-controller="display-all"><a data-display-all-target="button" class="btn btn-primary" data-action="click->display-all#displayForm">Suggérer à un.e ami</a>
+      <%= link_to "Lire davantage d'avis", book_reviews_path(@book), class: "btn btn-danger mb-3"%>
+  <div data-controller="display-all"><a data-display-all-target="button" class="btn btn-danger mb-3" data-action="click->display-all#displayForm">Suggérer à un.e ami</a>
   <%= simple_form_for [@book, @new_suggestion], html: { data: { display_all_target: "form"}, class: "d-none" } do |f| %>
     <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
     <%= f.input :user_id, label: false, as: :select, collection: @friends.map { |friend| [friend.nickname, friend.id] }, include_blank: false %>
@@ -68,6 +68,6 @@
 </div>
 <div class="d-flex justify-content-center flex-column align-items-center">
    <h3>Acheter ce livre </h3>
-   <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar"></a>
+   <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar mb-3"></a>
    <%= link_to "Librairies à proximité de #{current_user.city}", book_stores_path, class: "btn btn-danger" %>
 </div>
