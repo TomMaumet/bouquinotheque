@@ -12,7 +12,6 @@ class User < ApplicationRecord
   has_many :friend_relationships, dependent: :destroy
   validates :nickname, presence: true
   validates :city, presence: true
-  after_create :create_user_profil_recommandation
 
   def user_profile
     Vector[self.thriller_score, self.romance_score, self.aventure_score, self.jeunesse_score]

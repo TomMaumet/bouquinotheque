@@ -457,7 +457,7 @@ book22 = Book.create!(
   thriller_score: 9,
   romance_score:5,
   aventure_score: 7,
-  jeunesse_score: 3,
+  jeunesse_score: 3
 )
 
 book23 = Book.create!(
