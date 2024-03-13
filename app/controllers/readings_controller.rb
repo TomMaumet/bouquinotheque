@@ -5,8 +5,7 @@ class ReadingsController < ApplicationController
     @genres = Book.pluck(:genre).uniq
     @authors = Book.pluck(:author).uniq
 
-    @readings = Reading.all
-    # where(user: current_user)
+    @readings = Reading.where(user: current_user)
 
     @readings = Reading.filter_by_status(params[:reading_status], current_user) if params[:reading_status].present?
     @readings = Reading.filter_by_genre(params[:genre], current_user) if params[:genre].present?
@@ -45,13 +44,14 @@ class ReadingsController < ApplicationController
   end
 
   def new
+    @titles = Book.pluck(:title).uniq
     @reading = Reading.new
   end
 
   def create
     @reading = Reading.new
-    if params[:reading][:book_id].present?
-      @book = Book.find(params[:reading][:book_id])
+    if params[:reading][:title].present?
+      @book = Book.find_by(title: params[:reading][:title])
     else
       @book = Book.find_by(EAN: params[:reading][:EAN])
     end
