@@ -50,7 +50,9 @@ class ReadingsController < ApplicationController
 
   def create
     @reading = Reading.new
-    if params[:reading][:title].present?
+    if params[:reading][:book_id].present?
+      @book = Book.find(params[:reading][:book_id])
+    elsif params[:reading][:title].present?
       @book = Book.find_by(title: params[:reading][:title])
     else
       @book = Book.find_by(EAN: params[:reading][:EAN])
