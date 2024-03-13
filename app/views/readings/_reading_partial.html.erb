@@ -1,7 +1,8 @@
 <% readings.each do |reading| %>
   <%= link_to reading_path(reading), class: "book-card" do %>
-      <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
       <div class="card-content">
+      <%= image_tag reading.book.image_url, alt: reading.book.title, class: "card-image"%>
+      <div>
           <h1><%= reading.book.title %></h1>
           <p><%= reading.book.author %></p>
         <div class="reading-status">
@@ -13,9 +14,10 @@
             <div class="reading-status-bar" style="width:100%"></div>
           <% end %>
         </div>
-      </div>
       <% if reading.shared_to.present? %>
             <i class="fa-solid fa-share"></i>
       <% end %>
+      </div>
+    </div>
   <% end %>
 <% end %>

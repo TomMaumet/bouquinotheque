@@ -24,7 +24,7 @@
   }
 
   .summary a {
-    color: $green;
+    color: $orange;
     font-style:italic;
   }
 
@@ -37,7 +37,7 @@
     align-items: center;
     gap: 1rem;
     justify-content: space-between;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
   }
 
   .reading-status-bloc {
@@ -47,7 +47,7 @@
   }
 
   .reading-status-bar {
-    background-color: green;
+    background-color: $red;
     height: 5px;
   }
 
@@ -72,16 +72,23 @@
   }
 
   .shared_link i {
-    margin-top: 1.5rem
+    margin-top: 1.5rem;
   }
 
   .shared_link i:before {
     border-radius: 50%;
     background-color: #f1f0f0;
-    padding: 1rem
+    padding: 1rem;
+    color: $blue
   }
 
   .white-background {
-    outline: 2.5px solid #8B2635;
+    outline: 2.5px solid $blue;
+  }
+
+  .fa-check {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: $orange
   }
 }
