@@ -607,6 +607,25 @@ book26 = Book.create!(
   jeunesse_score: 3
 )
 
+book27 = Book.create!(
+  title: "Chers voisins",
+  summary: "« Connards, vous n'êtes pas seuls au monde » Mots doux et petites querelles de voisinage.",
+  author: "Aurélie C & Olivier V",
+  genre: "humour",
+  publisher: "J'ai lu",
+  publishing_year: 2013,
+  EAN: "9782290059463",
+  book_type: "recueil",
+  ratings: 3.35,
+  image_url: "https://i.imgur.com/SZ9IKjg.jpeg",
+  thriller_score: 3,
+  romance_score:5,
+  romance_score: 5,
+  aventure_score: 1,
+  jeunesse_score: 7,
+  jeunesse_score: 7
+)
+
 book28 = Book.create!(
   title: "Veiller sur elle",
   summary: "« Au grand jeu du destin, Mimo a tiré les mauvaises cartes. Né pauvre, il est confié en apprentissage à un sculpteur de pierre sans envergure. Mais il a du génie entre les mains. Toutes les fées ou presque se sont penchées sur Viola Orsini. Héritière d'une famille prestigieuse, elle a passé son enfance à l'ombre d'un palais génois. Mais elle a trop d'ambition pour se résigner à la place qu'on lui assigne.
