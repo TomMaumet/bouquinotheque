@@ -1,5 +1,5 @@
 .cards-playlist {
-  width: 13rem;
+  width: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@
   .image-book {
   width: 150px;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 1rem;
   }
 
