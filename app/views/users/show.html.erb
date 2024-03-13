@@ -1,8 +1,8 @@
 <% @title = @user.nickname %>
 
-<div class="container d-flex my-3 profile">
+<div class="container d-flex profile m-3">
 <%= image_tag @user.avatar, alt: @user.nickname, class: "profile-avatar"%>
-<div class="white-background d-flex justify-content-center flex-column ms-3" style="width: 100%">
+<div class="white-background d-flex justify-content-center flex-column ms-3" style="width: 100%;gap: 0.5rem">
       <p><i class="fa-solid fa-cake-candles"></i> <%= @user.age %> ans</p>
       <p><i class="fa-solid fa-city"></i> <%= @user.city %></p>
     </div>
@@ -17,19 +17,19 @@
 <% end %></center>
 
 <% if @friends.length != 0 %>
-  <h3 class="m-3">Liste d'ami.e.s</h3>
-  <div data-controller="display-all" class="container white-background">
+  <h3 class="m-3">Ami.e.s</h3>
+  <div data-controller="display-all remove-whitespaces" class="white-background container mx-3">
     <div data-display-all-target="summary">
-      <div class="d-flex gap1">
-        <%= render 'friend_relationship_partial', collection: @friends[0,5] %>
+      <div class="d-flex gap1 justify-content-evenly">
+        <%= render 'friend_relationship_partial', collection: @friends[0,3] %>
       </div>
-      <a data-action="click->display-all#displaySummary" data-display-all-target="summary">voir plus</a>
+      <center><a data-action="click->display-all#displaySummary" data-display-all-target="summary">afficher davantage d'ami.e.s</a></center>
     </div>
     <div class="d-none" data-display-all-target="summary_all">
-      <div class="d-flex gap1">
+      <div class="d-flex gap1 justify-content-evenly flex-wrap">
         <%= render 'friend_relationship_partial', collection: @friends %>
       </div>
-      <a data-action="click->display-all#displaySummary" data-display-all-target="summary">voir moins</a>
+      <center><a data-action="click->display-all#displaySummary" data-display-all-target="summary">afficher moins d'ami.e.s</a></center>
     </div>
   </div>
 <% end %>

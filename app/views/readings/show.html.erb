@@ -15,7 +15,7 @@
 			<a data-display-all-target="button" data-action="click->display-all#displayForm">non lu <i class="fa-solid fa-check"></i></a>
 		</div>
 		<% elsif @reading.reading_status == "reading" %>
-		<div class="reading-status-bloc">
+		<div -class="reading-status-bloc">
 			<div class="reading-status-bar" style="width:50%"></div>
 		</div>
 		<div>
@@ -30,8 +30,8 @@
 		</div>
 		<% end %>
 		<div data-display-all-target="form" class="d-none">
-			<%= simple_form_for @reading, html: { class: "d-flex align-items-center"} do |f| %>
-        <%= f.input :reading_status, label: false, as: :select, collection: [["lu", "read"], ["non lu", "unread"], ["en cours", "reading"]], input_html: { style: "margin-bottom: -1rem" } %>
+			<%= simple_form_for @reading, html: { class: "d-flex align-items-center" } do |f| %>
+        <%= f.input :reading_status, label: false, as: :select, collection: [["lu", "read"], ["non lu", "unread"], ["en cours", "reading"]], input_html: { style: "margin-bottom: -1rem;width: 150px" } %>
         <%= f.button :submit, "modifier", data: {action: "click->display-all#displayForm"} %>
 			<% end %>
 		</div>

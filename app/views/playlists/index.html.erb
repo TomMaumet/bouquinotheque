@@ -17,7 +17,7 @@
 
 <div class="container">
   <% @playlists.each do |playlist| %>
-      <h3><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h3>
+      <h2 style="text-align:center;margin-bottom: 0px"><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h2>
     <div class="container-detail gap1">
       <% playlist.readings.first(6).each do |reading| %>
         <% link_to @playlist %><div class="cards-playlist white-background">
