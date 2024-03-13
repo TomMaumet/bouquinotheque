@@ -9,10 +9,11 @@ class BooksController < ApplicationController
   end
 
   def show
-    @reading = Reading.new
+    @new_reading = Reading.new
     @book = Book.find(params[:id])
     @new_suggestion = Suggestion.new
     @friends = current_user.friends
+    @reading = Reading.find_by(book: @book, user: current_user)
   end
 
   def new

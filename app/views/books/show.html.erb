@@ -28,7 +28,8 @@
       </div>
    </div>
    <center>
-      <%= simple_form_for @reading do |f| %>
+   <% if !@reading.present? %>
+      <%= simple_form_for @new_reading do |f| %>
         <%= f.input :book_id, :as => :hidden, :input_html => { :value => @book.id }  %>
         <%= f.button :submit, "Ajouter à ma bibliothèque", class: "btn btn-success" %>
       <% end %>
@@ -38,10 +39,11 @@
     <%= f.input :comment, :as => :hidden, :input_html => { :value => "wish" }  %>
     <%= f.button :submit, "Ajouter à ma liste de souhaits", class: "btn btn-success" %>
   <% end %>
+  <% end %>
       <h3>Avis des lecteur.ice.s</h3>
-        <div class="book-reviews mb-3">
+        <div class="book-reviews">
           <% @book.reviews[0,2].each do |review| %>
-          <div class="book-review">
+          <div class="book-review mb-3">
               <div class="h3">
                 <%= review.title %>
                 <h6>
