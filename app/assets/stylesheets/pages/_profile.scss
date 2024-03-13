@@ -5,3 +5,13 @@
 
   .fa-solid {width: 35px}
 }
+
+a.friend {
+  width: calc(33% - 1rem);
+  text-decoration: none;
+  color: black
+}
+
+a.friend:empty {
+  display:none !important
+}
