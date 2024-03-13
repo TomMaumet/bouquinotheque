@@ -12,21 +12,21 @@
 			<div class="reading-status-bar" style="width:0%"></div>
     </div>
 		<div>
-			<a data-display-all-target="button" data-action="click->display-all#displayForm">non lu <i class="fa-solid fa-check"></i></a>
+			<a data-display-all-target="button" data-action="click->display-all#displayForm">non lu<i class="fa-solid fa-check"></i></a>
 		</div>
 		<% elsif @reading.reading_status == "reading" %>
 		<div -class="reading-status-bloc">
 			<div class="reading-status-bar" style="width:50%"></div>
 		</div>
 		<div>
-			<a data-display-all-target="button" data-action="click->display-all#displayForm">en cours <i class="fa-solid fa-check"></i></a>
+			<a data-display-all-target="button" data-action="click->display-all#displayForm">en cours<i class="fa-solid fa-check"></i></a>
 		</div>
 		<% elsif @reading.reading_status == "read" %>
 		<div class="reading-status-bloc">
 			<div class="reading-status-bar" style="width:100%"></div>
 		</div>
 		<div>
-			<a data-display-all-target="button" data-action="click->display-all#displayForm">lu <i class="fa-solid fa-check"></i></a>
+			<a data-display-all-target="button" data-action="click->display-all#displayForm">lu<i class="fa-solid fa-check"></i></a>
 		</div>
 		<% end %>
 		<div data-display-all-target="form" class="d-none">
