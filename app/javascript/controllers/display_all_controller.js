@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="display-all-summary"
 export default class extends Controller {
-  static targets = ["summary", "summary_all", "form", "button"]
+  static targets = ["summary", "summary_all", "form", "button","bye"]
 
   connect() {
   }
@@ -15,5 +15,7 @@ export default class extends Controller {
   displayForm() {
     this.formTarget.classList.toggle("d-none")
     this.buttonTarget.classList.toggle("d-none")
+    this.byeTarget.classList.add("d-none")
+    console.log(this.byeTarget)
   }
 }
