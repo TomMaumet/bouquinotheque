@@ -35,14 +35,18 @@ flex-direction: column}
   gap: 1rem
 }
 
-.form-control {background-color: white;
+.form-control {
+  background-color: white;
 padding: 0.25rem;
+border: 1px solid $orange;
 border-radius: 1rem;
-text-align: center}
+text-align: center
+}
 
-.form-select{
+.form-select {
   background-image: inherit;
 }
+
 .container {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;

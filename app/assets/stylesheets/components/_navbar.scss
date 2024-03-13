@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: flex-end;
-  background: white;
+  background: $yellow;
   position:sticky;
   top: 0;
   z-index: 99999;
@@ -15,12 +15,13 @@
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
-  border: 1px solid $light-grey;
+  border: 1px solid white;
   padding: 5px
 }
 
 .navbar-lewagon h1 {
   width: 300px;
+  text-shadow: 1px 1px white;
   text-align: right
 }
 
@@ -42,7 +43,7 @@
 }
 
 .bottom-navbar {
-  background-color: white;
+  background-color: $yellow;
   padding: 1rem;
   display: flex;
   position: sticky;
@@ -59,11 +60,14 @@
 
   a {display:block;
   text-decoration: none;
-  color: $green;
+  color: black;
+  font-weight: 600;
+  text-shadow: 1px 1px white;
   text-transform: lowercase;}
 
   .fa-solid {
-    color: $light-grey;
-    display:block
+    color: white;
+    display:block;
+    text-shadow: none !important;
   }
 }
