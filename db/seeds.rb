@@ -619,10 +619,8 @@ book27 = Book.create!(
   ratings: 3.35,
   image_url: "https://i.imgur.com/SZ9IKjg.jpeg",
   thriller_score: 3,
-  romance_score:5,
   romance_score: 5,
   aventure_score: 1,
-  jeunesse_score: 7,
   jeunesse_score: 7
 )
 
