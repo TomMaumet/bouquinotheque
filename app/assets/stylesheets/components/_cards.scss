@@ -5,16 +5,16 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  outline: 2.5px solid;
+  outline: 2.5px solid $blue;
 
   .image-book {
   width: 150px;
   height: 200px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 1rem;
   }
 
-  h4 {
+  h1 {
     width:  100%;
     text-align:center;
     white-space: nowrap;
@@ -24,6 +24,7 @@
 
   p {
     width: 100%;
+    text-align:center;
     font-size: 1rem;
     white-space: nowrap;
     overflow-x: hidden;
@@ -103,4 +104,6 @@ a.book-card {
     position: absolute;
     background-color: $blue;
   }
+
+  .fa-star {margin-right: 0.5rem}
 }

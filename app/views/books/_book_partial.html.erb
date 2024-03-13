@@ -1,0 +1,14 @@
+<% books.each do |book| %>
+    <%= link_to book_path(book), class:"book-card mb-3" do %>
+      <div class="card-content d-flex" style="width:100%">
+        <%= image_tag book.image_url, alt: book.title, class: "card-image" %>
+          <div>
+            <h1><%= book.title %></h1>
+            <p><%= book.author %></p>
+          <div class="ratings">
+            <i class="fa-solid fa-star"></i><%= book.ratings %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
