@@ -29,6 +29,7 @@
 			<a data-display-all-target="button" data-action="click->display-all#displayForm">lu<i class="fa-solid fa-check"></i></a>
 		</div>
 		<% end %>
+
 		<div data-display-all-target="form" class="d-none">
 			<%= simple_form_for @reading, html: { class: "d-flex align-items-center" } do |f| %>
         <%= f.input :reading_status, label: false, as: :select, collection: [["lu", "read"], ["non lu", "unread"], ["en cours", "reading"]], input_html: { style: "margin-bottom: -1rem;width: 150px" } %>
@@ -36,6 +37,7 @@
 			<% end %>
 		</div>
 	</div>
+
 	<div data-controller="display-all">
 		<% if @reading.shared_to.present? %><div class="reading-shared" data-display-all-target="button">
 		<a data-display-all-target="button" data-action="click->display-all#displayForm">
@@ -71,20 +73,20 @@
 				<%= @reading.comment %>
 			</p>
 			<% end %>
-			<center><a class="btn btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Mon commentaire</a></center>
+			<center><a class="btn mt-3 btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Mon commentaire</a></center>
 			<div data-display-all-target="form" class="d-none">
 				<%= simple_form_for @reading do |f| %>
 				<%= f.input :my_rating, :label =>
 				"Note", as: :select, collection: 0..5 %>
 				<%= f.input :comment, :as =>
 				:text, label: "Commentaire" %>
-				<center><%= f.button :submit, "Ajouter", data: {action: "click->display-all#displayForm"}, class: "btn btn-danger" %></center>
+				<center><%= f.button :submit, "Ajouter", data: {action: "click->display-all#displayForm"}, class: " mt-3 btn btn-danger" %></center>
 				<% end %>
 			</div>
 		</div>
 	</div>
-  <div class="btn-group d-flex justify-content-evenly mb-3">
-    <div data-controller="display-all"><a class="btn btn-danger" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une liste de favoris</a>
+  <div class="btn-group btn-readingshow d-flex justify-content-evenly mb-3">
+    <div data-controller="display-all"><a class="btn mt-3 btn-danger" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une liste de favoris</a>
       <div data-display-all-target="form" class="d-none">
         <%= simple_form_for [@reading, @playlist_item] do |f| %>
         <%= f.input :playlist, label: false, as: :select, collection: @playlists, include_blank: false %>
@@ -97,3 +99,4 @@
       </p>
     </div>
   </div>
+</div>
