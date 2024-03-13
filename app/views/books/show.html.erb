@@ -69,10 +69,11 @@
   </center>
 <div class="d-flex justify-content-center flex-column align-items-center mb-3">
    <h3>Acheter ce livre </h3>
-   <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar mb-3"></a>
-   <%= image_tag "https://i.imgur.com/VSWATo5.png", class: "avatar-icon avatar mb-3" %>
-   <%= image_tag "https://i.imgur.com/Rm4E7lA.png", class: "avatar-icon avatar mb-3" %>
-   <%= image_tag "https://imgur.com/DhK7erI", class: "avatar-icon avatar mb-3" %>
+   <div class="container d-flex gap-4 my-3 ">
+    <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar-icon avatar mb-3"></a>
+    <%= image_tag "https://i.imgur.com/VSWATo5.png", class: "avatar-icon avatar mb-3" %>
+    <%= image_tag "https://i.imgur.com/Rm4E7lA.png", class: "avatar-icon avatar mb-3" %>
+   </div>
    <%= link_to "Librairies à proximité de #{current_user.city}", book_stores_path, class: "btn btn-danger mb-3" %>
 </div>
 </div>
