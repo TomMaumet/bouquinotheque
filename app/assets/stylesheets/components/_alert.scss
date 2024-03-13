@@ -1,6 +1,9 @@
 .alert {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 10rem;
+  right: 5rem;
   z-index: 1000;
+  background-color: $red;
+  box-shadow: black;
+  color:white;
 }
