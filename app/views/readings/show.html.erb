@@ -73,30 +73,27 @@
 				<%= @reading.comment %>
 			</p>
 			<% end %>
-			<center><a class="btn mt-3 btn-success" data-display-all-target="button" data-action="click->display-all#displayForm">Mon commentaire</a></center>
+			<center><a class="btn mt-3 btn-warning" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter une note</a></center>
 			<div data-display-all-target="form" class="d-none">
 				<%= simple_form_for @reading do |f| %>
 				<%= f.input :my_rating, :label =>
 				"Note", as: :select, collection: 0..5 %>
 				<%= f.input :comment, :as =>
 				:text, label: "Commentaire" %>
-				<center><%= f.button :submit, "Ajouter", data: {action: "click->display-all#displayForm"}, class: " mt-3 btn btn-danger" %></center>
+				<center><%= f.button :submit, "Ajouter", data: {action: "click->display-all#displayForm"}, class: "mt-3 btn btn-warning" %></center>
 				<% end %>
 			</div>
 		</div>
 	</div>
-  <div class="btn-group btn-readingshow d-flex justify-content-evenly mb-3">
-    <div data-controller="display-all"><a class="btn mt-3 btn-danger" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une liste de favoris</a>
+  <center>
+    <div data-controller="display-all">
+    <a class="btn my-3 btn-warning" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une liste de favoris</a>
       <div data-display-all-target="form" class="d-none">
         <%= simple_form_for [@reading, @playlist_item] do |f| %>
-        <%= f.input :playlist, label: false, as: :select, collection: @playlists, include_blank: false %>
-        <%= f.button :submit,"Ajouter", data: {action: "click->display-all#displayForm"}, class: "btn btn-danger" %>
+        <%= f.input :playlist, label: false, as: :select, collection: @playlists, include_blank: false, class: "form-control" %>
+        <%= f.button :submit,"Ajouter", data: {action: "click->display-all#displayForm"}, class: "btn btn-warning" %>
         <% end %>
       </div>
     </div>
-    <div>
-      <%= link_to "Retirer de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "Êtes vous sûr.e" }, class: "btn btn-danger" %>
-      </p>
-    </div>
-  </div>
-</div>
+      <%= link_to "Retirer de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "Êtes vous sûr.e" }, class: "btn btn-warning" %>
+  </center></div>

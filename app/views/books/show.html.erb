@@ -31,13 +31,13 @@
    <% if !@reading.present? %>
       <%= simple_form_for @new_reading do |f| %>
         <%= f.input :book_id, :as => :hidden, :input_html => { :value => @book.id }  %>
-        <%= f.button :submit, "Ajouter à ma bibliothèque", class: "btn btn-success mb-3" %>
+        <%= f.button :submit, "Ajouter à ma bibliothèque", class: "btn btn-warning mb-3" %>
       <% end %>
       <%= simple_form_for [@book, @new_suggestion] do |f| %>
     <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id } %>
     <%= f.input :user_id, :as => :hidden, :input_html => { :value => current_user.id } %>
     <%= f.input :comment, :as => :hidden, :input_html => { :value => "wish" }  %>
-    <%= f.button :submit, "Ajouter à ma liste de souhaits", class: "btn btn-success mb-3" %>
+    <%= f.button :submit, "Ajouter à ma liste de souhaits", class: "btn btn-warning mb-3" %>
   <% end %>
   <% end %>
       <h3>Avis des lecteur.ice.s</h3>
@@ -57,12 +57,12 @@
           </div>
           <% end %>
         </div>
-      <%= link_to "Lire davantage d'avis", book_reviews_path(@book), class: "btn btn-danger mb-3"%>
-  <div data-controller="display-all"><a data-display-all-target="button" class="btn btn-primary mb-3" data-action="click->display-all#displayForm">Suggérer à un.e ami</a>
+      <%= link_to "Lire davantage d'avis", book_reviews_path(@book), class: "btn btn-warning mb-3"%>
+  <div data-controller="display-all"><a data-display-all-target="button" class="btn btn-warning mb-3" data-action="click->display-all#displayForm">Suggérer à un.e ami</a>
   <%= simple_form_for [@book, @new_suggestion], html: { data: { display_all_target: "form"}, class: "d-none" } do |f| %>
     <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
     <%= f.input :user_id, label: false, as: :select, collection: @friends.map { |friend| [friend.nickname, friend.id] }, include_blank: false %>
-    <%= f.input :comment %>
+    <%= f.input :comment, label: "Commentaire" %>
     <%= f.button :submit, "Suggérer", data: { display_all_target: "button", action: "click->display-all#displayForm"} %>
   <% end %>
   </div>
@@ -74,6 +74,6 @@
     <%= image_tag "https://i.imgur.com/VSWATo5.png", class: "avatar-icon avatar mb-3" %>
     <%= image_tag "https://i.imgur.com/Rm4E7lA.png", class: "avatar-icon avatar mb-3" %>
    </div>
-   <%= link_to "Librairies à proximité de #{current_user.city}", book_stores_path, class: "btn btn-danger mb-3" %>
+   <%= link_to "Librairies à proximité de #{current_user.city}", book_stores_path, class: "btn btn-warning mb-3" %>
 </div>
 </div>
