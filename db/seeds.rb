@@ -4,7 +4,8 @@ User.destroy_all
 
 puts "Création des utilisateurs"
 
-user1 = User.create!(nickname: "Admin",
+user1 = User.create!(
+  nickname: "Admin",
   email: "admin@mail.fr",
   password: 'password',
   password_confirmation: 'password',
@@ -12,11 +13,12 @@ user1 = User.create!(nickname: "Admin",
   city: "Paris",
   age: 30,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5,
 )
-user2 = User.create!(nickname: "Thomas",
+user2 = User.create!(
+  nickname: "Thomas",
   email: "thomas@mail.fr",
   password: 'password',
   password_confirmation: 'password',
@@ -24,11 +26,12 @@ user2 = User.create!(nickname: "Thomas",
   city: "Bordeaux",
   age: 30,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5,
 )
-user3 = User.create!(nickname: "Bastien",
+user3 = User.create!(
+  nickname: "Bastien",
   email: "bastien@mail.fr",
   password: 'password',
   password_confirmation: 'password',
@@ -36,12 +39,13 @@ user3 = User.create!(nickname: "Bastien",
   city: "Bayonne",
   age: 26,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5,
 )
 
-user4 = User.create!(nickname: "Camille",
+user4 = User.create!(
+  nickname: "Camille",
   email: "camille@mail.fr",
   password: 'password',
   password_confirmation: 'password',
@@ -49,25 +53,27 @@ user4 = User.create!(nickname: "Camille",
   city: "Toulouse",
   age: 25,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5
 )
 
-user5 = User.create!(nickname: "Clément",
+user5 = User.create!(
+  nickname: "Clément",
   email: "clement@mail.fr",
   password: 'password',
   password_confirmation: 'password',
-  avatar: "https://i.imgur.com/7VtAuwV.jpeg",
+  avatar: "https://i.imgur.com/0KMkG5w.jpeg",
   city: "Bordeaux",
   age: 27,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5
 )
 
-user6 = User.create!(nickname: "Benoît",
+user6 = User.create!(
+  nickname: "Benoît",
   email: "benoit@mail.fr",
   password: 'password',
   password_confirmation: 'password',
@@ -75,12 +81,13 @@ user6 = User.create!(nickname: "Benoît",
   city: "Bordeaux",
   age: 35,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5,
 )
 
-user7 = User.create!(nickname: "Téo",
+user7 = User.create!(
+  nickname: "Téo",
   email: "teo@mail.fr",
   password: 'password',
   password_confirmation: 'password',
@@ -88,12 +95,13 @@ user7 = User.create!(nickname: "Téo",
   city: "Bordeaux",
   age: 22,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5,
 )
 
-user8 = User.create!(nickname: "Marine",
+user8 = User.create!(
+  nickname: "Marine",
   email: "marine@mail.fr",
   password: 'password',
   password_confirmation: 'password',
@@ -101,46 +109,49 @@ user8 = User.create!(nickname: "Marine",
   city: "Bordeaux",
   age: 25,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5,
 )
 
-user9 = User.create!(nickname: "Honorine",
+user9 = User.create!(
+  nickname: "Honorine",
   email: "honorine@mail.fr",
   password: 'password',
   password_confirmation: 'password',
-  avatar: "https://i.imgur.com/7VtAuwV.jpeg",
+  avatar: "https://i.imgur.com/qJSo7Px.jpeg",
   city: "Bordeaux",
   age: 24,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5
 )
 
-user10 = User.create!(nickname: "Hugo",
+user10 = User.create!(
+  nickname: "Hugo",
   email: "hugo@mail.fr",
   password: 'password',
   password_confirmation: 'password',
-  avatar: "https://i.imgur.com/7VtAuwV.jpeg",
+  avatar: "https://i.imgur.com/j2AGbGP.jpeg",
   city: "Bordeaux",
   age: 20,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5
 )
 
-user11 = User.create!(nickname: "Stéphane",
+user11 = User.create!(
+  nickname: "Stéphane",
   email: "stephane@mail.fr",
   password: 'password',
   password_confirmation: 'password',
-  avatar: "https://i.imgur.com/7VtAuwV.jpeg",
+  avatar: "https://i.imgur.com/YCEMoJQ.jpeg",
   city: "Bordeaux",
   age: 34,
   thriller_score: 5,
-  romance_score:5,
+  romance_score: 5,
   aventure_score: 5,
   jeunesse_score: 5
 )
@@ -286,7 +297,7 @@ book8 = Book.create!(
   EAN: "9782070381654",
   book_type: "roman",
   ratings: 4.14,
-  image_url: "fhttps://i.imgur.com/7SwaMM.jpeg",
+  image_url: "https://i.imgur.com/7SwaMM.jpeg",
   thriller_score: 7,
   romance_score: 8,
   aventure_score: 5,
@@ -427,10 +438,7 @@ book15 = Book.create!(
 
 book16 = Book.create!(
   title: "Lou !, tome 1 : Journal infime",
-  summary: "Sous le regard émerveillé de leur fils, ils dansent sur «Mr. Bojangles» de Nina Simone. Leur amour est magique, vertigineux, une fête perpétuelle. Chez eux, il n’y a de place que pour le plaisir, la fantaisie et les amis.
-  Celle qui donne le ton, qui mène le bal, c’est la mère, feu follet imprévisible et extravagant. C’est elle qui a adopté le quatrième membre de la famille, Mlle Superfétatoire, un grand oiseau exotique qui déambule dans l’appartement. C’est elle qui n’a de cesse de les entraîner dans un tourbillon de poésie et de chimères.
-  Un jour, pourtant, elle va trop loin. Et père et fils feront tout pour éviter l’inéluctable, pour que la fête continue, coûte que coûte.
-  L’amour fou n’a jamais si bien porté son nom.",
+  summary: "Lou est une petite fille qui ne connaît pas son papa, qui vit seule avec sa maman et le petit chat qu'elles ont adopté. Toutes les deux ont une grande complicité, elles jouent à la console, dînent dans des pizzerias... Lou est amoureuse de son voisin d'en face mais, bien sûr, n'ose pas lui avouer... C'est une petite fille très à la mode avec des dons de styliste. Sa meilleure copine s'appelle Mina, et ensemble elles partagent beaucoup de choses. Lou se dit aussi que Richard, qui vient d'emménager sur son palier, pourrait très bien plaire à sa mère. D'ailleurs, elle va se débrouiller pour les faire se rencontrer...",
   author: "Julien Neel",
   genre: "jeunesse",
   publisher: "Glénat",
@@ -711,7 +719,7 @@ book31 = Book.create!(
 book32 = Book.create!(
   title: "Les quatre accords toltèques: La voie de la liberté personnelle",
   summary: "Castaneda a fait découvrir au grand public les enseignements des chamans mexicains qui ont pour origine la tradition toltèque, gardienne des connaissances de Quetzacoatl, le serpent à plumes. Dans ce livre, Don Miguel révèle la source des croyances limi-tatrices qui nous privent de joie et créent des souffrances inutiles. Il montre en des termes très simples comment on peut se libérer du conditionnement collectif - le rêve de la planète, basé sur la peur - afin de retrouver la dimension d'a mour inconditionnel qui est à notre origine et constitue le fondement de s enseignements toltèques. Les quatre accords proposent un puissant code de conduite capable de transformer rapidement notre vie en une expérience de liberté, de vrai bonheur et d'amour. Le monde fascinant de la Connaissance véritable et incarnée est enfin à la portée de chacun.",
-  author: "Sabrina Philippe ",
+  author: "Sabrina Philippe",
   genre: "développement personnel",
   publisher: "Jouvence",
   publishing_year: 2016,
@@ -839,33 +847,17 @@ puts 'Création des reviews'
 review1 = Review.create!(
   user: user1,
   book: book1,
-  rating: 3,
-  title: "super",
-  content: "j'ai adoré"
+  rating: 5,
+  title: "Excellent",
+  content: "J'ai adoré ce bouquin, je le recommande à tous mes proches"
 )
 
-review1 = Review.create!(
+review2 = Review.create!(
   user: user2,
   book: book1,
   rating: 4,
-  title: "génial",
-  content: "j'ai vraiment adoré"
-)
-
-review1 = Review.create!(
-  user: user3,
-  book: book1,
-  rating: 2,
-  title: "nul",
-  content: "je n'ai pas adoré"
-)
-
-review1 = Review.create!(
-  user: user4,
-  book: book1,
-  rating: 5,
-  title: "chef d'oeuvre",
-  content: "pépite !"
+  title: "Génial",
+  content: "Une lecture passionnante"
 )
 
 puts 'Reviews créées'

@@ -7,43 +7,41 @@ export default class extends Controller {
   connect() {
   }
 
-  tri() {
-    const url = `${this.formTarget.action}?tri=${this.inputTriTarget.value}`
-    fetch(url, {headers: {"Accept": "text/plain"}})
-    .then(response => response.text())
-    .then((data) => {
-      console.log(data)
-      this.readingsTarget.innerHTML = data
-      this.booksTarget.innerHTML = data
-    })
+  triR() {
+    this.#filter("tri", this.inputTriTarget, this.readingsTarget)
   }
 
-  status() {
-    const url = `${this.formTarget.action}?reading_status=${this.inputStatusTarget.value}`
-    fetch(url, {headers: {"Accept": "text/plain"}})
-    .then(response => response.text())
-    .then((data) => {
-      this.readingsTarget.innerHTML = data
-    })
+  statusR() {
+    this.#filter("reading_status", this.inputStatusTarget, this.readingsTarget)
   }
 
-  author() {
-    const url = `${this.formTarget.action}?author=${this.inputAuthorTarget.value}`
-    fetch(url, {headers: {"Accept": "text/plain"}})
-    .then(response => response.text())
-    .then((data) => {
-      this.readingsTarget.innerHTML = data
-      this.booksTarget.innerHTML = data
-    })
+  authorR() {
+    this.#filter("author", this.inputAuthorTarget, this.readingsTarget)
   }
 
-  genre() {
-    const url = `${this.formTarget.action}?genre=${this.inputGenreTarget.value}`
+  genreR() {
+    this.#filter("genre", this.inputGenreTarget, this.readingsTarget)
+  }
+
+  triB() {
+    this.#filter("tri", this.inputTriTarget, this.booksTarget)
+  }
+
+  authorB() {
+    this.#filter("author", this.inputAuthorTarget, this.booksTarget)
+  }
+
+  genreB() {
+    this.#filter("genre", this.inputGenreTarget, this.booksTarget)
+  }
+
+  #filter(action, targetI, targetC) {
+    const url = `${this.formTarget.action}?${action}=${targetI.value}`
+    console.log(url)
     fetch(url, {headers: {"Accept": "text/plain"}})
     .then(response => response.text())
     .then((data) => {
-      this.readingsTarget.innerHTML = data
-      this.booksTarget.innerHTML = data
+      targetC.innerHTML = data
     })
   }
 }
