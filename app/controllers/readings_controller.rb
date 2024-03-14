@@ -71,7 +71,7 @@ class ReadingsController < ApplicationController
     else
       redirect_to new_book_path(reading_params)
     end
-    end
+  end
 
   private
 
