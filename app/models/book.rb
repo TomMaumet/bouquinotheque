@@ -15,6 +15,7 @@ class Book < ApplicationRecord
   # validates :ratings, presence: true
   # validates :book_type, presence: true
   validates :image_url, presence: true
+  before_validation :set_default_image_url
 
   scope :filter_by_genre, ->(genre) { where(genre: genre) }
   scope :filter_by_author, ->(author) { where(author: author) }
@@ -40,5 +41,13 @@ class Book < ApplicationRecord
 
   def isbn
     return ISBN.ten(self.EAN.strip)
+  end
+
+  def set_default_image_url
+    self.image_url ||= default_image_url if image_url.blank?
+  end
+
+  def default_image_url
+    "https://i.imgur.com/BaQcS05.png"
   end
 end
