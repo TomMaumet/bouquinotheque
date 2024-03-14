@@ -2,8 +2,8 @@ class ReadingsController < ApplicationController
   before_action :set_reading, only: [:show, :update, :destroy]
 
   def index
-    @genres = Book.pluck(:genre).uniq
-    @authors = Book.pluck(:author).uniq
+    @genres = Book.pluck(:genre).uniq.sort
+    @authors = Book.pluck(:author).uniq.sort
 
     @readings = Reading.where(user: current_user)
 
@@ -12,10 +12,11 @@ class ReadingsController < ApplicationController
     @readings = Reading.filter_by_author(params[:author], current_user) if params[:author].present?
 
     case params[:tri]
-    when "title a to z" then @readings = @readings.joins(:book).order(:title)
-    when "title z to a" then @readings = @readings.joins(:book).order(title: :desc)
-    when "author a to z" then @readings = @readings.joins(:book).order(:author)
-    when "author z to a" then @readings = @readings.joins(:book).order(author: :desc)
+    when "titleaz" then @readings = @readings.joins(:book).order(:title)
+    when "titleza" then @readings = @readings.joins(:book).order(title: :desc)
+    when "authoraz" then @readings = @readings.joins(:book).order(:author)
+    when "authorza" then @readings = @readings.joins(:book).order(author: :desc)
+    else @readings = @readings.joins(:book).order(:title)
     end
 
     respond_to do |format|

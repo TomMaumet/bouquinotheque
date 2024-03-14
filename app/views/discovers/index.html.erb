@@ -1,35 +1,6 @@
 <% @title = "Découvrir" %>
 
-<div class="container"><%= link_to users_path do %>
-<h3 class="px-3">Les utilisateur.ices de Bouquinotheque</h3>
-<% end %>
-<div class="container-detail gap1">
-  <% @users.first(6).each do |user| %>
-      <%= link_to user_path(user) do %>
-        <div class="cards-playlist white-background">
-          <%= image_tag user.avatar, class: "image-book", style: "width:150px; height: 150px" %>
-          <h1><%= user.nickname %></h1>
-          <p><%= user.age %> ans, <%= user.city %></p>
-        </div>
-      <% end %>
-  <% end %>
-</div>
-
-<%= link_to books_path do %>
-<h3 class="px-3">Une infinité d'ouvrages à découvrir...</h3>
-<% end %>
-<div class="container-detail gap1">
-  <% @books.first(6).each do |book| %>
-      <%= link_to book_path(book) do %>
-        <div class="cards-playlist white-background">
-          <%= image_tag book.image_url, class: "image-book" %>
-          <h1><%= book.title %></h1>
-          <p><%= book.author %></p>
-        </div>
-      <% end %>
-  <% end %>
-</div>
-
+<div class="container">
 <%= link_to suggestions_path do %>
 <h3 class="px-3">Suggestions de mes amis</h3>
 <% end %>
@@ -44,6 +15,21 @@
         <% end %>
       <% end %>
     </div>
+
+<h3 class="px-3">Mes recommandations</h3>
+<div class="container-detail gap1">
+    <% current_user.recs_books.first(10).each do |recommandation| %>
+      <%= link_to book_path(recommandation[:book]) do %>
+      <div class="cards-playlist white-background">
+        <%= image_tag recommandation[:book].image_url, class: "image-book" %>
+        <h1><%= recommandation[:book].title %></h1>
+        <p><%= recommandation[:book].author %></p>
+        <p><%= recommandation[:similarity].to_i %>% de<br>correspondance<br>avec votre profil</p>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to wishlist_path do %>
 <h3 class="px-3">Ma liste de souhaits</h3>
@@ -61,17 +47,32 @@
     </div>
 </div>
 
-  <h3 class="px-3">Mes recommandations</h3>
+<%= link_to books_path do %>
+<h3 class="px-3">Une infinité d'ouvrages à découvrir...</h3>
+<% end %>
 <div class="container-detail gap1">
-    <% current_user.recs_books.first(6).each do |recommandation| %>
-      <%= link_to book_path(recommandation[:book]) do %>
-      <div class="cards-playlist white-background">
-        <%= image_tag recommandation[:book].image_url, class: "image-book" %>
-        <h1><%= recommandation[:book].title %></h1>
-        <p><%= recommandation[:book].author %></p>
-        <p><%= recommandation[:similarity].to_i %>% de<br>correspondance<br>avec votre profil</p>
-      </div>
+  <% @books.first(6).each do |book| %>
+      <%= link_to book_path(book) do %>
+        <div class="cards-playlist white-background">
+          <%= image_tag book.image_url, class: "image-book" %>
+          <h1><%= book.title %></h1>
+          <p><%= book.author %></p>
+        </div>
       <% end %>
-    <% end %>
-  </div>
+  <% end %>
+</div>
+
+<%= link_to users_path do %>
+<h3 class="px-3">Les utilisateur.ices de Bouquinotheque</h3>
+<% end %>
+<div class="container-detail gap1">
+  <% @users.first(6).each do |user| %>
+      <%= link_to user_path(user) do %>
+        <div class="cards-playlist white-background">
+          <%= image_tag user.avatar, class: "image-book", style: "width:150px; height: 150px" %>
+          <h1><%= user.nickname %></h1>
+          <p><%= user.age %> ans, <%= user.city %></p>
+        </div>
+      <% end %>
+  <% end %>
 </div>
