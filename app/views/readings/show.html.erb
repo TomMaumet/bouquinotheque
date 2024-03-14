@@ -90,7 +90,7 @@
     <a class="btn my-3 btn-warning" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une liste de favoris</a>
       <div data-display-all-target="form" class="d-none">
         <%= simple_form_for [@reading, @playlist_item] do |f| %>
-        <%= f.input :playlist, label: false, as: :select, collection: @playlists, include_blank: false, class: "form-control text-align-center" %>
+        <%= f.input :playlist, label: false, as: :select, collection: @playlists, include_blank: false, class: "form-control" %>
         <%= f.button :submit,"Ajouter", data: {action: "click->display-all#displayForm"}, class: "btn btn-warning mb-3" %>
         <% end %>
       </div>
