@@ -1,15 +1,14 @@
 <% @title = "Libraries à proximité de #{current_user.city}" %>
-<div class="container d-flex flex-column gap1 p-3" data-controller="link-to-library">
+<div class="container d-flex flex-column gap1 p-3">
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-city-value="<%= current_user.city %>"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
-<div data-link-to-library-target="libraries">
 <% @book_stores.each do |book_store| %>
 <div class="white-background mb-3" style="width: 100%">
-<h1 data-link-to-library-target="libraryName" style="margin-top:0px;margin-bottom:1rem"><%= book_store.name %></h1>
+<a class="h1" style="margin-top:0px;margin-bottom:1rem" id="anchorname<%= book_store.id %>"><%= book_store.name %></a>
 <ul style="margin:0px"><li><%= book_store.store_type %></li>
 <li><%= book_store.address %></li>
 <li><%= book_store.details %></li>

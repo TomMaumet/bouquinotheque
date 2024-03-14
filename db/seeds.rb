@@ -317,7 +317,7 @@ book8 = Book.create!(
   EAN: "9782070381654",
   book_type: "roman",
   ratings: 4.14,
-  image_url: "https://i.imgur.com/7SwaMM.jpeg",
+  image_url: "https://www.babelio.com/couv/CVT_CVT_LInsoutenable-legerete-de-letre_1363.jpg",
   thriller_score: 7,
   romance_score: 8,
   aventure_score: 5,
