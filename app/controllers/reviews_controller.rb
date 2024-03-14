@@ -13,6 +13,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to book_reviews_path(@book)
     else
+      @reviews = Review.where(book: @book)
       render :index, status: :unprocessable_entity
     end
   end

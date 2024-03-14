@@ -85,7 +85,7 @@
 			</div>
 		</div>
 	</div>
-  <center>
+  <center><% if !@playlists.include?(@reading.id) %>
     <div data-controller="display-all">
     <a class="btn my-3 btn-warning" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une liste de favoris</a>
       <div data-display-all-target="form" class="d-none">
@@ -95,5 +95,6 @@
         <% end %>
       </div>
     </div>
+    <% end %>
       <%= link_to "Retirer de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "Êtes vous sûr.e" }, class: "btn btn-warning" %>
   </center></div>
