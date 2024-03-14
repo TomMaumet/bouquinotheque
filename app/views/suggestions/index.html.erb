@@ -1,7 +1,17 @@
-<% @suggestions.each do |suggestion| %>
-<%= suggestion.sender.nickname %>
-<%= suggestion.book.title %>
-<%= suggestion.book.author %>
-<%= suggestion.book.ratings %>
-<%= suggestion.comment %>
+<% @title = "Les suggestions de mes ami.e.s" %>
+
+<div class="container mt-3"><% @suggestions.each do |suggestion| %>
+  <%= link_to book_path(suggestion.book), class:"book-card mb-3" do %>
+    <div class="card-content d-flex" style="width:100%">
+      <%= image_tag suggestion.book.image_url, alt: suggestion.book.title, class: "card-image" %>
+      <div>
+        <h1><%= suggestion.book.title %></h1>
+        <p><%= suggestion.book.author %></p>
+        <div class="ratings">
+          <i class="fa-solid fa-star"></i><%= suggestion.book.ratings %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 <% end %>
+</div>

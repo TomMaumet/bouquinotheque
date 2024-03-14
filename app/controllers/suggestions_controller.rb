@@ -1,6 +1,6 @@
 class SuggestionsController < ApplicationController
   def index
-    @suggestions = Suggestion.where(user: current_user)
+    @suggestions = Suggestion.where(user: current_user).where.not(sender_id: current_user.id)
   end
 
   def wishlist

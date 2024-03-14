@@ -108,3 +108,12 @@ a.book-card {
 
   .fa-star {margin-right: 0.5rem}
 }
+
+
+.mapboxgl-popup-content {
+  border-radius: 1rem;
+  padding: 1rem;
+  h2, p {
+    margin: 0px
+  }
+}

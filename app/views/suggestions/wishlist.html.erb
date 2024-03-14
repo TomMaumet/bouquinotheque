@@ -1,5 +1,17 @@
-<% @wishes.each do |wish| %>
-<%= wish.book.title %>
-<%= wish.book.author %>
-<%= wish.book.ratings %>
+<% @title = "Ma liste de souhaits" %>
+
+<div class="container mt-3"><% @wishes.each do |wish| %>
+  <%= link_to book_path(wish.book), class:"book-card mb-3" do %>
+    <div class="card-content d-flex" style="width:100%">
+      <%= image_tag wish.book.image_url, alt: wish.book.title, class: "card-image" %>
+      <div>
+        <h1><%= wish.book.title %></h1>
+        <p><%= wish.book.author %></p>
+        <div class="ratings">
+          <i class="fa-solid fa-star"></i><%= wish.book.ratings %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 <% end %>
+</div>

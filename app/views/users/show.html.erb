@@ -12,7 +12,7 @@
   <%= simple_form_for @new_friend do |f| %>
     <%= f.input :friend_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
     <%= f.input :user_id, :as => :hidden, :input_html => { :value => @user.id }  %>
-    <%= f.button :submit, "Ajouter en ami.e", class: "btn btn-danger" %>
+    <%= f.button :submit, "Ajouter en ami.e", class: "btn btn-warning" %>
   <% end %>
 <% end %></center>
 

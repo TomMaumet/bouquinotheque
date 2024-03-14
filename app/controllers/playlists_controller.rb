@@ -2,13 +2,13 @@ class PlaylistsController < ApplicationController
   before_action :set_user, only: [:create, :show, :index]
 
   def index
-    @playlists = Playlist.all.where(user_id: @user.id)
+    @playlists = Playlist.where(user_id: @user.id)
     @playlist_new = Playlist.new
   end
 
   def show
     @playlist = Playlist.find(params[:id])
-    @readings = @playlist.readings
+    @readings = @playlist.readings.uniq
   end
 
   def create

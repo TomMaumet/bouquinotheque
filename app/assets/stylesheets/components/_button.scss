@@ -32,7 +32,7 @@
   margin-bottom: 1rem;
 }
 
-.btn-warning {
+.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:focus {
   color: white;
     text-shadow: 1px 1px #c74400;
 }

@@ -26,7 +26,8 @@ class ReadingsController < ApplicationController
   end
 
   def show
-    @playlist_item = PlaylistItem.new
+    @new_playlist_item = PlaylistItem.new
+    # @playlist_item = PlaylistItem.where(reading: @reading)
     @playlists = Playlist.where(user: current_user)
   end
 
@@ -50,6 +51,7 @@ class ReadingsController < ApplicationController
   end
 
   def create
+    @readings = Reading.where(user: current_user)
     @reading = Reading.new
     if params[:reading][:book_id].present?
       @book = Book.find(params[:reading][:book_id])
@@ -60,12 +62,16 @@ class ReadingsController < ApplicationController
     end
     @reading.book = @book
     @reading.user = current_user
-    if @reading.save
+    if @readings.find_by(book_id: @reading.book.id)
+      redirect_to new_reading_path
+      @titles = Book.pluck(:title).uniq
+      flash.alert = "Ce livre est déjà présent dans votre bibliothèque"
+    elsif @reading.save
       redirect_to reading_path(@reading)
     else
       redirect_to new_book_path(reading_params)
     end
-  end
+    end
 
   private
 
