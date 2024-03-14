@@ -40,10 +40,18 @@
     <%= f.button :submit, "Ajouter à ma liste de souhaits", class: "btn btn-warning mb-3" %>
   <% end %>
   <% end %>
-      <h3>Avis des lecteur.ice.s</h3>
+  <div data-controller="display-all"><a data-display-all-target="button" class="btn btn-warning mt-3" data-action="click->display-all#displayForm">Suggérer à un.e ami.e</a>
+  <%= simple_form_for [@book, @new_suggestion], html: { data: { display_all_target: "form"}, class: "d-none" } do |f| %>
+    <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
+    <%= f.input :user_id, label: false, as: :select, collection: @friends.map { |friend| [friend.nickname, friend.id] }, include_blank: false %>
+    <%= f.input :comment, label: "Commentaire" %>
+    <%= f.button :submit, "Suggérer", data: { display_all_target: "button", action: "click->display-all#displayForm"} %>
+  <% end %>
+  </div>
+      <h3 class="my-6 box-shadow">Avis des lecteur.ice.s</h3>
         <div class="book-reviews">
           <% @book.reviews[0,2].each do |review| %>
-          <div class="book-review mb-3">
+          <div class="book-review" style="width: calc(50% - 0.5rem)">
               <div class="h3">
                 <%= review.title %>
                 <h6>
@@ -58,17 +66,9 @@
           <% end %>
         </div>
       <%= link_to "Lire davantage d'avis", book_reviews_path(@book), class: "btn btn-warning mb-3"%>
-  <div data-controller="display-all"><a data-display-all-target="button" class="btn btn-warning mb-3" data-action="click->display-all#displayForm">Suggérer à un.e ami</a>
-  <%= simple_form_for [@book, @new_suggestion], html: { data: { display_all_target: "form"}, class: "d-none" } do |f| %>
-    <%= f.input :sender_id, :as => :hidden, :input_html => { :value => current_user.id }  %>
-    <%= f.input :user_id, label: false, as: :select, collection: @friends.map { |friend| [friend.nickname, friend.id] }, include_blank: false %>
-    <%= f.input :comment, label: "Commentaire" %>
-    <%= f.button :submit, "Suggérer", data: { display_all_target: "button", action: "click->display-all#displayForm"} %>
-  <% end %>
-  </div>
   </center>
-<div class="d-flex justify-content-center flex-column align-items-center mb-3">
-   <h3>Acheter ce livre </h3>
+<div class="d-flex justify-content-center flex-column align-items-center">
+   <h3 class="box-shadow">Acheter cet ouvrage</h3>
    <div class="container d-flex gap-4 my-3 ">
     <a href='https://www.amazon.fr/<%= @book.title %>/dp/<%= @book.isbn%>'><img src="https://i.imgur.com/Qwfo1tK.png" class="avatar-icon avatar mb-3"></a>
     <%= image_tag "https://i.imgur.com/VSWATo5.png", class: "avatar-icon avatar mb-3" %>
