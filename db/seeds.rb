@@ -526,7 +526,7 @@ book19 = Book.create!(
 )
 
 book20 = Book.create!(
-  title: "Astérix, tome 40 : L'Iris Blanc",
+  title: "L'Iris Blanc",
   summary: "L’Iris Blanc est le nom d’une nouvelle école de pensée positive, venue de Rome qui commence à se propager dans les grandes villes, de Rome à Lutèce. César décide que cette méthode peut avoir un effet bénéfique sur les camps qui se trouvent autour du célèbre village gaulois. Mais les préceptes de cette école exercent aussi une influence sur les villageois qui croisent son chemin…
   Qu’est-il arrivé à notre chef Gaulois préféré et pourquoi cette mine renfrognée ?",
   author: "René Goscinny, Didier Conrad, Albert Uderzo & Fabcaro",
@@ -752,6 +752,461 @@ book32 = Book.create!(
   aventure_score: 4,
   jeunesse_score: 9
 )
+
+book33 = Book.create!(
+  title: "La Peste",
+  summary: "Une épidémie de peste s'abat sur la ville d'Oran, en Algérie, plongeant ses habitants dans un désarroi total. Le docteur Bernard Rieux et ses collègues se battent non seulement contre la maladie physique, mais aussi contre l'indifférence et la panique qui se propagent parmi la population.",
+  author: "Albert Camus",
+  genre: "absurde",
+  publisher: "Gallimard",
+  publishing_year: 1947,
+  EAN: "9782070360420",
+  book_type: "roman",
+  ratings: 4.25,
+  image_url: "https://i.imgur.com/laPeste.jpeg",
+  thriller_score: 8,
+  romance_score: 5,
+  aventure_score: 3,
+  jeunesse_score: 2
+)
+
+book34 = Book.create!(
+  title: "1984",
+  summary: "Dans une société totalitaire où la liberté individuelle est réprimée et où la pensée indépendante est considérée comme un crime, Winston Smith lutte pour préserver sa propre humanité et sa dignité face à un régime oppressif et omniprésent.",
+  author: "George Orwell",
+  genre: "dystopie",
+  publisher: "Secker & Warburg",
+  publishing_year: 1949,
+  EAN: "9780451524935",
+  book_type: "roman",
+  ratings: 4.16,
+  image_url: "https://i.imgur.com/1984.jpeg",
+  thriller_score: 9,
+  romance_score: 2,
+  aventure_score: 4,
+  jeunesse_score: 3
+)
+
+book35 = Book.create!(
+  title: "Le Procès",
+  summary: "Josef K. se réveille un matin pour découvrir qu'il est arrêté et accusé d'un crime étrange et mystérieux dont il ignore la nature. Il se retrouve alors entraîné dans un système judiciaire absurde et oppressif où il lutte pour comprendre et se défendre contre des forces qui semblent insaisissables.",
+  author: "Franz Kafka",
+  genre: "absurde",
+  publisher: "Die Schmiede",
+  publishing_year: 1925,
+  EAN: "9782253003647",
+  book_type: "roman",
+  ratings: 4.22,
+  image_url: "https://i.imgur.com/leProces.jpeg",
+  thriller_score: 8,
+  romance_score: 3,
+  aventure_score: 5,
+  jeunesse_score: 1
+)
+
+book36 = Book.create!(
+  title: "Le Maître et Marguerite",
+  summary: "Dans le Moscou des années 1930, le diable se rend en ville, accompagné d'un étrange entourage, pour semer le chaos et la destruction. Pendant ce temps, le maître, un écrivain en proie au doute et à la désillusion, trouve l'inspiration grâce à sa muse, Marguerite.",
+  author: "Mikhaïl Boulgakov",
+  genre: "satire",
+  publisher: "Éditions Phébus",
+  publishing_year: 1967,
+  EAN: "9782070360425",
+  book_type: "roman",
+  ratings: 4.39,
+  image_url: "https://i.imgur.com/leMaitreEtMarguerite.jpeg",
+  thriller_score: 6,
+  romance_score: 7,
+  aventure_score: 3,
+  jeunesse_score: 2
+)
+
+book37 = Book.create!(
+  title: "Fahrenheit 451",
+  summary: "Dans un monde où les livres sont interdits et brûlés, Guy Montag, un pompier chargé de détruire les œuvres littéraires, commence à remettre en question son rôle et à découvrir le pouvoir de la connaissance et de la pensée indépendante.",
+  author: "Ray Bradbury",
+  genre: "dystopie",
+  publisher: "Ballantine Books",
+  publishing_year: 1953,
+  EAN: "9781451673319",
+  book_type: "roman",
+  ratings: 4.09,
+  image_url: "https://i.imgur.com/fahrenheit451.jpeg",
+  thriller_score: 7,
+  romance_score: 3,
+  aventure_score: 5,
+  jeunesse_score: 2
+)
+
+book38 = Book.create!(
+  title: "Les Chants de Maldoror",
+  summary: "Une œuvre poétique sombre et provocante qui explore les thèmes de la rébellion, de la transgression et de la perversion. L'auteur, Isidore Ducasse, alias Comte de Lautréamont, nous emmène dans un voyage hallucinatoire à travers les méandres de l'âme humaine.",
+  author: "Comte de Lautréamont",
+  genre: "poésie",
+  publisher: "Éditions Pauvert",
+  publishing_year: 1868,
+  EAN: "9782720210951",
+  book_type: "poésie",
+  ratings: 4.08,
+  image_url: "https://www.babelio.com/couv/CVT_Les-Chants-de-Maldoror_1945.jpg",
+  thriller_score: 5,
+  romance_score: 2,
+  aventure_score: 3,
+  jeunesse_score: 1
+)
+
+book39 = Book.create!(
+  title: "Les Faux-Monnayeurs",
+  summary: "Une fresque complexe qui explore les relations entre les personnages issus de différents milieux sociaux et culturels. À travers le personnage central, Bernard Profitendieu, André Gide offre une réflexion profonde sur l'art, la moralité et l'authenticité.",
+  author: "André Gide",
+  genre: "roman expérimental",
+  publisher: "Librairie Gallimard",
+  publishing_year: 1925,
+  EAN: "9782070364374",
+  book_type: "roman",
+  ratings: 4.12,
+  image_url: "https://i.imgur.com/lesFauxMonnayeurs.jpeg",
+  thriller_score: 6,
+  romance_score: 4,
+  aventure_score: 3,
+  jeunesse_score: 1
+)
+
+book40 = Book.create!(
+  title: "Les Misérables",
+  summary: "Une saga épique qui suit les destins croisés de plusieurs personnages, dont Jean Valjean, un ancien bagnard en quête de rédemption, et Cosette, la jeune fille qu'il recueille et élève comme sa propre fille. À travers leurs aventures, Victor Hugo explore les thèmes de la justice, de l'amour et de la rédemption.",
+  author: "Victor Hugo",
+  genre: "roman historique",
+  publisher: "Charles Laffitte",
+  publishing_year: 1862,
+  EAN: "9782253001766",
+  book_type: "roman",
+  ratings: 4.18,
+  image_url: "https://i.imgur.com/lesMiserables.jpeg",
+  thriller_score: 5,
+  romance_score: 7,
+  aventure_score: 6,
+  jeunesse_score: 3
+)
+
+book41 = Book.create!(
+  title: "Le Petit Prince",
+  summary: "Un jeune prince voyageur rencontre un pilote échoué dans le désert. Ensemble, ils explorent des mondes étranges et découvrent des leçons sur l'amitié, l'amour et la responsabilité. Une histoire intemporelle qui charme les lecteurs de tous âges.",
+  author: "Antoine de Saint-Exupéry",
+  genre: "conte philosophique",
+  publisher: "Éditions Gallimard",
+  publishing_year: 1943,
+  EAN: "9782070362400",
+  book_type: "conte",
+  ratings: 4.30,
+  image_url: "https://i.imgur.com/lePetitPrince.jpeg",
+  thriller_score: 4,
+  romance_score: 8,
+  aventure_score: 5,
+  jeunesse_score: 9
+)
+
+book42 = Book.create!(
+  title: "Astérix chez les Pictes",
+  summary: "Astérix et Obélix se lancent dans une aventure en Écosse, où ils rencontrent les Pictes, un peuple mystérieux connu pour leur bravoure et leur amour du combat. Ils doivent aider le jeune peintre Mac Oloch à prouver son courage pour épouser la fille du chef.",
+  author: "Jean-Yves Ferri",
+  genre: "humour",
+  publisher: "Les Éditions Albert René",
+  publishing_year: 2013,
+  EAN: "9782864972816",
+  book_type: "bande dessinée",
+  ratings: 4.20,
+  image_url: "https://i.imgur.com/asterixChezLesPictes.jpeg"
+)
+
+book43 = Book.create!(
+  title: "Tintin au Tibet",
+  summary: "Tintin part au Tibet à la recherche de son ami Tchang, dont l'avion s'est écrasé en montagne. Malgré les obstacles et les dangers, Tintin est déterminé à retrouver son ami vivant. Une histoire d'amitié et de courage dans les hauteurs de l'Himalaya.",
+  author: "Hergé",
+  genre: "aventure",
+  publisher: "Casterman",
+  publishing_year: 1960,
+  EAN: "9782203001143",
+  book_type: "bande dessinée",
+  ratings: 4.39,
+  image_url: "https://i.imgur.com/tintinAuTibet.jpeg"
+)
+
+book44 = Book.create!(
+  title: "Maus",
+  summary: "Une bande dessinée autobiographique qui raconte l'histoire de l'auteur, Art Spiegelman, et de son père, survivants de l'Holocauste. Les personnages sont représentés sous forme d'animaux, les Juifs étant des souris et les Nazis des chats.",
+  author: "Art Spiegelman",
+  genre: "biographie",
+  publisher: "Pantheon Books",
+  publishing_year: 1986,
+  EAN: "9780394747231",
+  book_type: "bande dessinée",
+  ratings: 4.55,
+  image_url: "https://i.imgur.com/maus.jpeg"
+)
+
+book45 = Book.create!(
+  title: "Persepolis",
+  summary: "Une bande dessinée autobiographique qui raconte l'histoire de Marjane Satrapi, une jeune fille iranienne, pendant et après la Révolution islamique. À travers ses yeux, nous découvrons les défis de grandir dans un pays en proie à la guerre et à la répression.",
+  author: "Marjane Satrapi",
+  genre: "autobiographie",
+  publisher: "L'Association",
+  publishing_year: 2000,
+  EAN: "9780375714382",
+  book_type: "bande dessinée",
+  ratings: 4.25,
+  image_url: "https://i.imgur.com/persepolis.jpeg"
+)
+
+book46 = Book.create!(
+  title: "Batman: Year One",
+  summary: "Une réinterprétation des origines de Batman, écrite par Frank Miller et illustrée par David Mazzucchelli. Nous suivons le parcours de Bruce Wayne alors qu'il devient le Chevalier Noir et commence sa croisade contre le crime dans les rues sombres de Gotham City.",
+  author: "Frank Miller",
+  genre: "super-héros",
+  publisher: "DC Comics",
+  publishing_year: 1987,
+  EAN: "9781401207526",
+  book_type: "bande dessinée",
+  ratings: 4.26,
+  image_url: "https://i.imgur.com/batmanYearOne.jpeg"
+)
+
+book47 = Book.create!(
+  title: "Sandman: Preludes & Nocturnes",
+  summary: "Le premier volume de la série Sandman, créée par Neil Gaiman. Nous suivons les aventures de Dream, l'une des Éternelles, alors qu'il s'échappe de sa captivité et tente de récupérer ses artefacts volés pour restaurer l'équilibre du rêve et de la réalité.",
+  author: "Neil Gaiman",
+  genre: "fantastique",
+  publisher: "Vertigo",
+  publishing_year: 1989,
+  EAN: "9781563890116",
+  book_type: "bande dessinée",
+  ratings: 4.24,
+  image_url: "https://i.imgur.com/sandmanPreludesNocturnes.jpeg"
+)
+
+book48 = Book.create!(
+  title: "Watchmen",
+  summary: "Une bande dessinée de super-héros révolutionnaire, créée par Alan Moore et Dave Gibbons. Dans un monde dystopique où les super-héros sont traités comme des parias, une enquête sur le meurtre d'un ancien justicier dévoile un complot qui pourrait changer le cours de l'histoire.",
+  author: "Alan Moore",
+  genre: "super-héros",
+  publisher: "DC Comics",
+  publishing_year: 1986,
+  EAN: "9781401245252",
+  book_type: "bande dessinée",
+  ratings: 4.37,
+  image_url: "https://i.imgur.com/watchmen.jpeg"
+)
+
+book49 = Book.create!(
+  title: "Asterix: Le Tour de Gaule d'Astérix",
+  summary: "Astérix et Obélix entreprennent un voyage à travers la Gaule pour livrer une potion magique au chef Abraracourcix. En chemin, ils affrontent les Romains et rencontrent une série de personnages hauts en couleur.",
+  author: "René Goscinny",
+  genre: "humour",
+  publisher: "Les Éditions Albert René",
+  publishing_year: 1965,
+  EAN: "9782864970003",
+  book_type: "bande dessinée",
+  ratings: 4.15,
+  image_url: "https://i.imgur.com/asterixLeTourDeGaule.jpeg"
+)
+
+book50 = Book.create!(
+  title: "Spider-Man: Blue",
+  summary: "Une histoire émouvante de Spider-Man, écrite par Jeph Loeb et illustrée par Tim Sale. Peter Parker se remémore son premier amour, Gwen Stacy, à travers une série de flashbacks alors qu'il enregistre des messages audio pour elle après sa mort.",
+  author: "Jeph Loeb",
+  genre: "super-héros",
+  publisher: "Marvel Comics",
+  publishing_year: 2002,
+  EAN: "9780785110713",
+  book_type: "bande dessinée",
+  ratings: 4.28,
+  image_url: "https://i.imgur.com/spiderManBlue.jpeg"
+)
+
+book51 = Book.create!(
+  title: "Calvin et Hobbes: La Saison des floraisons",
+  summary: "Une collection des bandes dessinées hilarantes de Calvin et Hobbes, créées par Bill Watterson. Suivez les aventures imaginatives et souvent farfelues de Calvin, un jeune garçon inventif, et de son tigre en peluche, Hobbes.",
+  author: "Bill Watterson",
+  genre: "humour",
+  publisher: "Andrews McMeel Publishing",
+  publishing_year: 1986,
+  EAN: "9780836218251",
+  book_type: "bande dessinée",
+  ratings: 4.74,
+  image_url: "https://i.imgur.com/calvinEtHobbes.jpeg"
+)
+
+book52 = Book.create!(
+  title: "Les Fleurs du Mal",
+  summary: "Un recueil de poésie majeur de Charles Baudelaire, qui explore des thèmes tels que l'amour, la beauté, la mélancolie et la corruption de la société moderne. Ces poèmes, souvent considérés comme provocateurs à leur époque, sont maintenant reconnus comme des chefs-d'œuvre de la littérature française.",
+  author: "Charles Baudelaire",
+  genre: "poésie",
+  publisher: "n/a",
+  publishing_year: 1857,
+  EAN: "9782253099627",
+  book_type: "recueil de poésie",
+  ratings: 4.09,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51bKYjNwk1L._SX320_BO1,204,203,200_.jpg"
+)
+
+book53 = Book.create!(
+  title: "Le Parfum",
+  summary: "L'histoire de Jean-Baptiste Grenouille, un jeune homme doté d'un sens de l'odorat extraordinaire mais dénué d'odeur propre, qui se lance dans une quête obsessionnelle pour créer le parfum ultime en utilisant les essences de jeunes filles.",
+  author: "Patrick Süskind",
+  genre: "romance",
+  publisher: "Fischer Verlag",
+  publishing_year: 1985,
+  EAN: "9780330243759",
+  book_type: "roman",
+  ratings: 4.06,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/41gM5PGVUfL._SX304_BO1,204,203,200_.jpg"
+)
+
+book54 = Book.create!(
+  title: "Voyage au bout de la nuit",
+  summary: "L'histoire de Ferdinand Bardamu, un jeune homme désillusionné qui s'engage dans l'armée pendant la Première Guerre mondiale et part ensuite à la dérive à travers le monde, cherchant désespérément un sens à sa vie.",
+  author: "Louis-Ferdinand Céline",
+  genre: "romance",
+  publisher: "Gallimard",
+  publishing_year: 1932,
+  EAN: "9782070373734",
+  book_type: "roman",
+  ratings: 4.10,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51UOZvHJy3L._SX324_BO1,204,203,200_.jpg"
+)
+
+book55 = Book.create!(
+  title: "Le Portrait de Dorian Gray",
+  summary: "L'histoire de Dorian Gray, un jeune homme d'une beauté exceptionnelle dont le portrait vieillit et se dégrade tandis que lui reste jeune éternellement. Dorian se lance dans une vie de débauche et de péché, ignorant les conséquences tragiques de ses actes.",
+  author: "Oscar Wilde",
+  genre: "romance",
+  publisher: "Lippincott's Monthly Magazine",
+  publishing_year: 1890,
+  EAN: "9780141199498",
+  book_type: "roman",
+  ratings: 4.07,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51O-AwXHoRL._SX316_BO1,204,203,200_.jpg"
+)
+
+book56 = Book.create!(
+  title: "Les Liaisons dangereuses",
+  summary: "L'histoire de la marquise de Merteuil et du vicomte de Valmont, deux aristocrates manipulateurs du XVIIIe siècle qui se lancent dans un jeu pervers de séduction et de trahison. Le roman explore les thèmes de l'amour, de la vengeance et de la moralité.",
+  author: "Pierre Choderlos de Laclos",
+  genre: "romance",
+  publisher: "Durand Neveu",
+  publishing_year: 1782,
+  EAN: "9782253160289",
+  book_type: "roman",
+  ratings: 4.07,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51LTFFB6AAL._SX324_BO1,204,203,200_.jpg"
+)
+
+book57 = Book.create!(
+  title: "Le Rouge et le Noir",
+  summary: "L'histoire de Julien Sorel, un jeune homme ambitieux et intelligent qui cherche à échapper à sa condition sociale en gravissant les échelons de la société française au XIXe siècle. Le roman explore les thèmes de l'ambition, de la passion et de la classe sociale.",
+  author: "Stendhal",
+  genre: "romance",
+  publisher: "Levasseur",
+  publishing_year: 1830,
+  EAN: "9782070383030",
+  book_type: "roman",
+  ratings: 3.87,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51XG5r3wUEL._SX314_BO1,204,203,200_.jpg"
+)
+
+book58 = Book.create!(
+  title: "La Nausée",
+  summary: "L'histoire d'Antoine Roquentin, un homme qui se sent envahi par un sentiment de malaise et de dégoût face à l'absurdité de la vie et à l'existence humaine. Le roman explore les thèmes de l'existentialisme et de l'angoisse de l'existence.",
+  author: "Jean-Paul Sartre",
+  genre: "philosophie",
+  publisher: "Gallimard",
+  publishing_year: 1938,
+  EAN: "9782070368222",
+  book_type: "roman",
+  ratings: 3.93,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/516q6JfgrwL._SX322_BO1,204,203,200_.jpg"
+)
+
+book59 = Book.create!(
+  title: "Les Trois Mousquetaires",
+  summary: "L'histoire de d'Artagnan, un jeune homme ambitieux qui se rend à Paris pour devenir mousquetaire du roi. Il se lie d'amitié avec trois mousquetaires, Athos, Porthos et Aramis, et se lance dans une série d'aventures pour défendre l'honneur de la reine Anne d'Autriche.",
+  author: "Alexandre Dumas",
+  genre: "romance",
+  publisher: "Baudry",
+  publishing_year: 1844,
+  EAN: "9782253010224",
+  book_type: "roman",
+  ratings: 4.13,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51bUm8deBLL._SX325_BO1,204,203,200_.jpg"
+)
+
+book60 = Book.create!(
+  title: "Crime et Châtiment",
+  summary: "L'histoire de Rodion Raskolnikov, un jeune étudiant russe tourmenté par la pauvreté et l'aliénation sociale, qui se lance dans un plan pour commettre un meurtre et justifier ainsi son droit de transcender les lois morales pour le bien de l'humanité.",
+  author: "Fyodor Dostoevsky",
+  genre: "romance",
+  publisher: "The Russian Messenger",
+  publishing_year: 1866,
+  EAN: "9782253082421",
+  book_type: "roman",
+  ratings: 4.22,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51ic+3zT9qL._SX314_BO1,204,203,200_.jpg"
+)
+
+book61 = Book.create!(
+  title: "Madame Bovary",
+  summary: "L'histoire d'Emma Bovary, une jeune femme insatisfaite de sa vie provinciale et de son mariage avec Charles Bovary, un médecin de campagne. Elle se lance dans une série d'aventures amoureuses et de dépenses extravagantes pour échapper à sa vie ennuyeuse.",
+  author: "Gustave Flaubert",
+  genre: "romance",
+  publisher: "Revue de Paris",
+  publishing_year: 1856,
+  EAN: "9780141394674",
+  book_type: "roman",
+  ratings: 3.64,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51T7Kv8dMFL._SX314_BO1,204,203,200_.jpg"
+)
+
+book62 = Book.create!(
+  title: "Faust",
+  summary: "L'histoire du docteur Faust, un savant allemand qui vend son âme au diable en échange de la connaissance et du pouvoir terrestre. Cette tragédie de Goethe explore les thèmes de l'ambition, de la morale et de la quête de sens.",
+  author: "Johann Wolfgang von Goethe",
+  genre: "philosophie",
+  publisher: "n/a",
+  publishing_year: 1808,
+  EAN: "9782253160289",
+  book_type: "tragédie",
+  ratings: 4.03,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51V22rxGc9L._SX304_BO1,204,203,200_.jpg"
+)
+
+book63 = Book.create!(
+  title: "La Divine Comédie",
+  summary: "Une œuvre épique majeure de Dante Alighieri, qui décrit son voyage à travers l'enfer, le purgatoire et le paradis. À travers ses rencontres avec une série de personnages historiques et mythologiques, Dante explore les concepts de péché, de rédemption et de la nature divine de l'homme.",
+  author: "Dante Alighieri",
+  genre: "philosophie",
+  publisher: "n/a",
+  publishing_year: 1320,
+  EAN: "9781857150178",
+  book_type: "poésie",
+  ratings: 4.06,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51MKMbPFeoL._SX321_BO1,204,203,200_.jpg"
+)
+
+book64 = Book.create!(
+  title: "Les Contemplations",
+  summary: "Un recueil de poésie majeur de Victor Hugo, qui explore des thèmes tels que l'amour, la mort, la nature et la religion. Ces poèmes, écrits pendant une période de deuil après la mort de sa fille Léopoldine, sont parmi les plus célèbres de la littérature française.",
+  author: "Victor Hugo",
+  genre: "poésie",
+  publisher: "n/a",
+  publishing_year: 1856,
+  EAN: "9782070368178",
+  book_type: "recueil de poésie",
+  ratings: 4.22,
+  image_url: "https://images-na.ssl-images-amazon.com/images/I/51WTUJZ66-L._SX327_BO1,204,203,200_.jpg"
+)
+
+# Vous pouvez ajouter d'autres bandes dessinées si vous le souhaitez...
+
 
 puts 'Livres créés'
 

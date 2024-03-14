@@ -5,10 +5,11 @@ export default class extends Controller {
 static targets = ["link", "libraryName", "libraries"]
 
   connect() {
-    contole.log(typeof this.librariesTarget)
+    console.log(this.libraryNameTargets)
   }
 
   redirect() {
-    this.linkTarget.innerHTML === this.libraryNameTarget.innerHTML
+    library = this.libraryNameTargets.find((this.linkTarget.innerHTML), this.linkTarget.innerHTML === this.libraryNameTarget.innerHTML)
+    console.log(library)
   }
 }
