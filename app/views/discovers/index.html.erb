@@ -7,7 +7,7 @@
   <% @users.first(6).each do |user| %>
       <%= link_to user_path(user) do %>
         <div class="cards-playlist white-background">
-          <%= image_tag user.avatar, class: "image-book" %>
+          <%= image_tag user.avatar, class: "image-book", style: "width:150px; height: 150px" %>
           <h1><%= user.nickname %></h1>
           <p><%= user.age %> ans, <%= user.city %></p>
         </div>
