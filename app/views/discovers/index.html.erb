@@ -1,4 +1,4 @@
-<% @title = "découvrir" %>
+<% @title = "Découvrir" %>
 
 <div class="container"><%= link_to users_path do %>
 <h3 class="px-3">Les utilisateur.ices de Bouquinotheque</h3>
@@ -7,7 +7,7 @@
   <% @users.first(6).each do |user| %>
       <%= link_to user_path(user) do %>
         <div class="cards-playlist white-background">
-          <%= image_tag user.avatar, class: "image-book" %>
+          <%= image_tag user.avatar, class: "image-book", style: "width:150px; height: 150px" %>
           <h1><%= user.nickname %></h1>
           <p><%= user.age %> ans, <%= user.city %></p>
         </div>
@@ -30,7 +30,9 @@
   <% end %>
 </div>
 
+<%= link_to suggestions_path do %>
 <h3 class="px-3">Suggestions de mes amis</h3>
+<% end %>
 <div class="container-detail gap1">
       <% @suggestions.first(6).each do |suggestion| %>
         <%= link_to book_path(suggestion.book) do %>
@@ -42,7 +44,10 @@
         <% end %>
       <% end %>
     </div>
+
+<%= link_to wishlist_path do %>
 <h3 class="px-3">Ma liste de souhaits</h3>
+<% end %>
 <div class="container-detail gap1">
       <% @wishlist.first(6).each do |wish| %>
           <%= link_to book_path(wish.book) do %>
