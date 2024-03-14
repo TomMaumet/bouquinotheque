@@ -62,7 +62,7 @@ class ReadingsController < ApplicationController
     end
     @reading.book = @book
     @reading.user = current_user
-    if @readings.find_by(book_id: @reading.book.id)
+    if @readings.find_by(book_id: @reading.book_id)
       redirect_to new_reading_path
       @titles = Book.pluck(:title).uniq
       flash.alert = "Ce livre est déjà présent dans votre bibliothèque"
