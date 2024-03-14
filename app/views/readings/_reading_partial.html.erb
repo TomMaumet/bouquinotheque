@@ -7,7 +7,7 @@
           <p><%= reading.book.author %></p>
         <div class="reading-status">
           <% if reading.reading_status == "unread" %>
-            <div class="reading-status-bar" style="width:0%"></div>
+            <div class="reading-status-bar" style="width:10%"></div>
           <% elsif reading.reading_status == "reading" %>
             <div class="reading-status-bar" style="width:50%"></div>
           <% elsif reading.reading_status == "read" %>
