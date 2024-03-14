@@ -59,9 +59,10 @@ class User < ApplicationRecord
   end
 
   def recs_books
+    book_ids = self.readings.map(&:book_id)
     book_rec_array = []
     user_profile()
-    Book.all.each do |book|
+    Book.where.not(id: book_ids).each do |book|
       score = similarity_score(book)
       book_rec_array.push( { book: book, similarity: score } )
     end
