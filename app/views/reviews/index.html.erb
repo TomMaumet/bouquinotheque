@@ -2,14 +2,15 @@
 	<h1>Les avis des lecteur.ice.s de
 	<%= @book.title %></h1>
 </center>
-<div class="container d-flex flex-wrap" style="gap:1rem">
+<div class="container p-3">
 	<% @reviews.each do |review| %>
 	  <div class="book-review">
-			<div class="h5">
-        <%= review.title %>
+			<div class="h5"><div><%= link_to user_path(review.user) do %>
+      @<%= review.user.nickname.downcase %>:
+      <% end %>
+        <%= review.title %></div>
         <h6>
-          <%= review.rating %>
-          /5
+          <%= review.rating %>/5
         </h6>
 			</div>
       <p>

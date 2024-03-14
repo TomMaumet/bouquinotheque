@@ -6,17 +6,19 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    @genres = Book.pluck(:genre).uniq
-    @authors = Book.pluck(:author).uniq
+
+    @genres = Book.pluck(:genre).uniq.sort
+    @authors = Book.pluck(:author).uniq.sort
 
     @books = Book.filter_by_genre(params[:genre]) if params[:genre].present?
     @books = Book.filter_by_author(params[:author]) if params[:author].present?
 
     case params[:tri]
-    when "title a to z" then @books = @books.joins(:book).order(:title)
-    when "title z to a" then @books = @books.joins(:book).order(title: :desc)
-    when "author a to z" then @books = @books.joins(:book).order(:author)
-    when "author z to a" then @books = @books.joins(:book).order(author: :desc)
+    when "titleaz" then @books = @books.order(:title)
+    when "titleza" then @books = @books.order(title: :desc)
+    when "authoraz" then @books = @books.order(:author)
+    when "authorza" then @books = @books.order(author: :desc)
+    else @books = @books.order(:title)
     end
 
     respond_to do |format|
@@ -51,7 +53,7 @@ class BooksController < ApplicationController
       summary = book_form["volumeInfo"]["description"]
       publisher = book_form["volumeInfo"]["publisher"]
       genre = book_form["volumeInfo"]["categories"]
-      image_url = book_form["volumeInfo"]["imageLinks"]["thumbnail"]
+      image_url = book_form["volumeInfo"]["imageLinks"] ? book_form["volumeInfo"]["imageLinks"]["thumbnail"] : "https://i.imgur.com/BaQcS05.png"
       thriller_score = rand(0..10)
       romance_score = rand(0..10)
       aventure_score = rand(0..10)

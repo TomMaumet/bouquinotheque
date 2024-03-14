@@ -15,7 +15,7 @@
 			<a data-display-all-target="button" data-action="click->display-all#displayForm">non lu<i class="fa-solid fa-check"></i></a>
 		</div>
 		<% elsif @reading.reading_status == "reading" %>
-		<div -class="reading-status-bloc">
+		<div class="reading-status-bloc">
 			<div class="reading-status-bar" style="width:50%"></div>
 		</div>
 		<div>
@@ -85,15 +85,16 @@
 			</div>
 		</div>
 	</div>
-  <center>
+  <center><% if !@playlists.include?(@reading.id) %>
     <div data-controller="display-all">
     <a class="btn my-3 btn-warning" data-display-all-target="button" data-action="click->display-all#displayForm">Ajouter à une liste de favoris</a>
       <div data-display-all-target="form" class="d-none">
         <%= simple_form_for [@reading, @playlist_item] do |f| %>
-        <%= f.input :playlist, label: false, as: :select, collection: @playlists, include_blank: false, class: "form-control" %>
-        <%= f.button :submit,"Ajouter", data: {action: "click->display-all#displayForm"}, class: "btn btn-warning" %>
+        <%= f.input :playlist, label: false, as: :select, collection: @playlists, include_blank: false, class: "form-control text-align-center" %>
+        <%= f.button :submit,"Ajouter", data: {action: "click->display-all#displayForm"}, class: "btn btn-warning mb-3" %>
         <% end %>
       </div>
     </div>
+    <% end %>
       <%= link_to "Retirer de ma bibliothèque", reading_path(@reading), data: {turbo_method: :delete, turbo_confirm: "Êtes vous sûr.e" }, class: "btn btn-warning" %>
   </center></div>

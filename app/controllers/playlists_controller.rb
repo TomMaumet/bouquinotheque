@@ -17,7 +17,8 @@ class PlaylistsController < ApplicationController
     if @playlist_new.save
       redirect_to playlist_path(@playlist_new)
     else
-      render playlists_path, status: :unprocessable_entity
+      @playlists = Playlist.all.where(user_id: @user.id)
+      render :index, status: :unprocessable_entity
     end
   end
 
