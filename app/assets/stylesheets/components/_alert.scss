@@ -1,10 +1,10 @@
 .alert {
   position: fixed;
-  bottom: 10rem;
-  right: 5rem;
+  bottom: 6rem;
+  right: 1rem;
+  left: 1rem;
   z-index: 1000;
   background-color: $red;
-  box-shadow: black;
   border: 0px;
   color:white;
 }

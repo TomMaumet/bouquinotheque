@@ -2,6 +2,12 @@ FriendRelationship.destroy_all
 
 User.destroy_all
 
+PlaylistItem.destroy_all
+
+Suggestion.destroy_all
+
+Playlist.destroy_all
+
 puts "Création des utilisateurs"
 
 user1 = User.create!(
@@ -91,7 +97,7 @@ user7 = User.create!(
   email: "teo@mail.fr",
   password: 'password',
   password_confirmation: 'password',
-  avatar: "https://i.imgur.com/WdjuE7y.jpeg",
+  avatar: "https://i.imgur.com/8DFOiZK.png",
   city: "Bordeaux",
   age: 22,
   thriller_score: 5,
@@ -150,6 +156,20 @@ user11 = User.create!(
   avatar: "https://i.imgur.com/YCEMoJQ.jpeg",
   city: "Bordeaux",
   age: 34,
+  thriller_score: 5,
+  romance_score: 5,
+  aventure_score: 5,
+  jeunesse_score: 5
+)
+
+user12 = User.create!(
+  nickname: "Étienne",
+  email: "etienne@mail.fr",
+  password: 'password',
+  password_confirmation: 'password',
+  avatar: "https://i.imgur.com/DVCED8n.png",
+  city: "Bordeaux",
+  age: 36,
   thriller_score: 5,
   romance_score: 5,
   aventure_score: 5,
@@ -966,7 +986,7 @@ book_store6 = BookStore.create!(
 
 book_store7 = BookStore.create!(
   store_type: "généraliste",
-  name: "Gibert Toulouse",
+  name: "Gibert Joseph Toulouse",
   address: "3 Rue du Taur, 31000 Toulouse",
   details: "du lundi au samedi de 10h à 19h",
   phone_number: "05 61 11 17 77",

@@ -1,6 +1,6 @@
 <% @title = "Ajouter un livre à ma bibliothèque" %>
 <div class="container white-background m-3" data-controller="scanner"><center>
-  <button class="btn btn-danger" data-action="click->scanner#scan">Scanner mon livre</button><br></center>
+  <button class="btn btn-warning" data-action="click->scanner#scan">Scanner mon livre</button><br></center>
   <%= simple_form_for @reading do |f| %>
   <div style="margin-bottom: 0.5rem; margin-top: 1rem">Titre</div>
     <%= f.text_field :title, label: "Titre", class: "form-control", list: "title-select", style: "margin-bottom: 1rem" %>
@@ -10,7 +10,7 @@
             <% end %>
           </datalist>
     <%= f.input :EAN, input_html: { data: { scanner_target: "EAN" } } %>
-    <center><%= f.button :submit, "Ajouter", class: "btn btn-danger", :input_html => { :value => :EAN } %></center>
+    <center><%= f.button :submit, "Ajouter", class: "btn btn-warning", :input_html => { :value => :EAN } %></center>
   <% end %>
   <div id="interactive" class="viewport">
   </div>
