@@ -789,7 +789,7 @@ book34 = Book.create!(
 
 book35 = Book.create!(
   title: "1984",
-  summary: "Année 1984 en Océanie. 1984 ? C'est en tout cas ce qu'il semble à Winston, qui ne saurait toutefois en jurer. Le passé a été oblitéré et réinventé, et les événements les plus récents sont susceptibles d'être modifiés. Winston est lui-même chargé de récrire les archives qui contredisent le présent et les promesses de Big Brother. Grâce à une technologie de pointe, ce dernier sait tout, voit tout. Il n'est pas une âme dont il ne puisse connaître les pensées. On ne peut se fier à personne et les enfants sont encore les meilleurs espions qui soient. Liberté est Servitude. Ignorance est Puissance. Telles sont les devises du régime de Big Brother. La plupart des Océaniens n'y voient guère à redire, surtout les plus jeunes qui n'ont pas connu l'époque de leurs grands-parents et le sens initial du mot "libre". Winston refuse cependant de perdre espoir. Il entame une liaison secrète et hautement dangereuse avec l'insoumise Julia et tous deux vont tenter d'intégrer la Fraternité, une organisation ayant pour but de renverser Big Brother. Mais celui-ci veille...",
+  summary: "Année 1984 en Océanie. 1984 ? C'est en tout cas ce qu'il semble à Winston, qui ne saurait toutefois en jurer. Le passé a été oblitéré et réinventé, et les événements les plus récents sont susceptibles d'être modifiés. Winston est lui-même chargé de récrire les archives qui contredisent le présent et les promesses de Big Brother. Grâce à une technologie de pointe, ce dernier sait tout, voit tout. Il n'est pas une âme dont il ne puisse connaître les pensées. On ne peut se fier à personne et les enfants sont encore les meilleurs espions qui soient. Liberté est Servitude. Ignorance est Puissance. Telles sont les devises du régime de Big Brother. La plupart des Océaniens n'y voient guère à redire, surtout les plus jeunes qui n'ont pas connu l'époque de leurs grands-parents et le sens initial du mot 'libre'. Winston refuse cependant de perdre espoir. Il entame une liaison secrète et hautement dangereuse avec l'insoumise Julia et tous deux vont tenter d'intégrer la Fraternité, une organisation ayant pour but de renverser Big Brother. Mais celui-ci veille...",
   author: "George Orwell",
   genre: "dystopie",
   publisher: "Secker & Warburg",
@@ -916,7 +916,7 @@ book42 = Book.create!(
   title: "Astérix le Gaulois",
   summary: "Nous sommes en 50 avant Jésus-Christ. Toute la Gaule est occupée par les Romains ... Toute ? Non ! Un village peuplé d'irréductibles Gaulois résiste encore et toujours à l'envahisseur.
   Dans un petit village d'Armorique, Astérix va s'adonner à son sport favori : la Chasse. Pendant ce temps, les romains, tente de résoudre le mystère de la puissance des gaulois. C'est ainsi que le légionnaire Caligula Minus est désigné volontaire pour se déguiser en gaulois, et découvre ainsi le secret de la puissance du village, la potion magique, qui donne une force surhumain à quiconque la boit. Pour se débarrasser des Gaulois, le centurion Caius Bonus fait capturer le druide, pour apprendre le secret de la potion magique, et ainsi prendre par la même occasion la place de César.
-  Afin d'en apprendre plus sur ceux que l'on appelle "les irréductibles Gaulois", ces derniers envoient Caligula Minus enquêter au sein du village d'Asterix...",
+  Afin d'en apprendre plus sur ceux que l'on appelle 'les irréductibles Gaulois', ces derniers envoient Caligula Minus enquêter au sein du village d'Asterix...",
   author: "René Goscinny et Albert Uderzo",
   genre: "jeunesse",
   publisher: "Dargaud",
@@ -958,7 +958,7 @@ book44 = Book.create!(
   author: "Art Spiegelman",
   genre: "autobiographie",
   publisher: "Pantheon Books",
-  publishing_year: ,
+  publishing_year: 1986,
   EAN: "9782080675347",
   book_type: "bande dessinée",
   ratings: 4.64,
@@ -980,23 +980,6 @@ book45 = Book.create!(
   book_type: "bande dessinée",
   ratings: 4.54,
   image_url: "https://m.media-amazon.com/images/I/31yFdTYhaKL._SX195_.jpg",
-  thriller_score: 2,
-  romance_score: 6,
-  aventure_score: 4,
-  jeunesse_score: 9
-)
-
-book = Book.create!(
-  title: "",
-  summary: "",
-  author: "",
-  genre: "",
-  publisher: "",
-  publishing_year: ,
-  EAN: "",
-  book_type: "",
-  ratings: ,
-  image_url: "https://i.imgur.com/iFeadDz.jpeg",
   thriller_score: 2,
   romance_score: 6,
   aventure_score: 4,
