@@ -20,7 +20,7 @@
       <h2 style="text-align:center;margin-bottom: 0px"><%= link_to playlist.title, playlist_path(playlist), class: "text-decoration-none" %></h2>
     <div class="container-detail gap1">
       <% playlist.readings.uniq.first(6).each do |reading| %>
-        <%= link_to book_path(reading) do %>
+        <%= link_to reading_path(reading) do %>
           <div class="cards-playlist white-background">
           <%= image_tag reading.book.image_url, class: "image-book" %>
           <h1><%= reading.book.title %></h1>
