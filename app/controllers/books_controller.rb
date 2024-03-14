@@ -53,7 +53,7 @@ class BooksController < ApplicationController
       summary = book_form["volumeInfo"]["description"]
       publisher = book_form["volumeInfo"]["publisher"]
       genre = book_form["volumeInfo"]["categories"]
-      image_url = book_form["volumeInfo"]["imageLinks"]["thumbnail"]
+      image_url = book_form["volumeInfo"]["imageLinks"] ? book_form["volumeInfo"]["imageLinks"]["thumbnail"] : "https://i.imgur.com/BaQcS05.png"
       thriller_score = rand(0..10)
       romance_score = rand(0..10)
       aventure_score = rand(0..10)
