@@ -1,5 +1,5 @@
 FriendRelationship.destroy_all
-
+Suggestion.destroy_all
 User.destroy_all
 
 puts "Création des utilisateurs"
